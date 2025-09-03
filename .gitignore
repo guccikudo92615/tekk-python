@@ -42,5 +42,4 @@ ENV/
 Thumbs.db
 
 # Reports (keep structure but not sensitive data)
-reports/*/security-report.json
-reports/*/security-tickets.json
+# Note: Security reports are now tracked in git for transparency
