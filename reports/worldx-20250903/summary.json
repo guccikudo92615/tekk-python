@@ -1,0 +1,45 @@
+{
+  "analysis_metadata": {
+    "repository": "https://github.com/guccikudo92615/worldx-9e116fb2.git",
+    "technology_stack": "React + TypeScript + Vite + Supabase + shadcn/ui",
+    "analysis_date": "2025-09-03",
+    "analysis_type": "Structural Security Analysis (Guardrails)",
+    "analyzer_version": "1.0.0"
+  },
+  "findings_summary": {
+    "total_findings": 5,
+    "missing_controls": 5,
+    "severity_breakdown": {
+      "Critical": 0,
+      "High": 0,
+      "Medium": 5,
+      "Low": 0
+    },
+    "priority_breakdown": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 5,
+      "P4": 0
+    }
+  },
+  "missing_controls": [
+    "Authentication",
+    "Authorization", 
+    "Rate Limiting",
+    "Security Headers",
+    "Audit Logging"
+  ],
+  "files": {
+    "security_report": "worldx-security-report.json",
+    "jira_tickets": "worldx-jira-tickets.json",
+    "summary": "summary.json",
+    "readme": "README.md"
+  },
+  "recommendations": [
+    "Implement authentication system (Supabase Auth recommended)",
+    "Add authorization framework for access control",
+    "Configure rate limiting for API endpoints",
+    "Set up security headers (CSP, HSTS, etc.)",
+    "Implement audit logging for security events"
+  ]
+}
