@@ -1,0 +1,142 @@
+[
+  {
+    "title": "[High] Hardcoded API Key",
+    "description": "## Security Issue: Hardcoded API Key\n\n**Why this is a problem:** Exposure of API keys can lead to unauthorized access to services.\n\n**Evidence:** const apiKey = '***MASKED***';\n\n**Location:** /Users/guccikudo/tekk3-python/test-repo/src/config.ts:10\n\n**Why it should be fixed:** This is a High severity issue with High likelihood of exploitation. \nIt violates security standards: OWASP-ASVS V4.0.3, OWASP Top 10 A2, CWE-798.\n\n## LLM Fix Instruction\n\nCopy and paste this instruction to an LLM to get specific fix guidance:\n\n```\nYour task is to fix Hardcoded API Key in this Secrets application.\n\n**Problem:** Exposure of API keys can lead to unauthorized access to services.\n\n**Security Control:** Secrets\n\n**What you need to do:**\n1. Identify the specific code causing this issue\n2. Implement a secure solution following best practices\n3. Ensure the fix doesn't break existing functionality\n4. Add appropriate error handling and validation\n5. Test the implementation\n\n**Requirements:**\n- Follow OWASP security guidelines\n- Use secure coding practices\n- Provide working code examples\n- Explain the security improvement\n- Consider edge cases and error scenarios\n\nPlease provide a complete, production-ready solution with explanations.\n```\n\n## Technical Details\n\n**Type:** Issue\n**Control:** Secrets\n**Category:** Secrets\n**Confidence:** High\n\n**Manual Fix Steps:**\n1. Remove hardcoded keys from source code.\n2. Use environment variables to manage secrets.\n\n**Secure Example:**\n```\nconst apiKey = process.env.API_KEY;\n```\n\n**Notes:** Ensure all secrets are rotated after removal from the codebase.",
+    "labels": [
+      "security",
+      "tekk",
+      "category:Secrets",
+      "control:Secrets",
+      "severity:High",
+      "type:Issue"
+    ],
+    "priority": "P2",
+    "source_finding_id": "SEC-001"
+  },
+  {
+    "title": "[Critical] Missing Authentication Mechanism",
+    "description": "## Security Issue: Missing Authentication Mechanism\n\n**Why this is a problem:** Without authentication, unauthorized users can access the application.\n\n**Evidence:** No authentication implementation found in src/auth/\n\n**Location:** src/auth/\n\n**Why it should be fixed:** This is a Critical severity issue with High likelihood of exploitation. \nIt violates security standards: OWASP-ASVS V4.0.1, OWASP Top 10 A5, CWE-306.\n\n## LLM Fix Instruction\n\nCopy and paste this instruction to an LLM to get specific fix guidance:\n\n```\nYour task is to fix Missing Authentication Mechanism in this AuthZ application.\n\n**Problem:** Without authentication, unauthorized users can access the application.\n\n**Security Control:** AuthN\n\n**What you need to do:**\n1. Identify the specific code causing this issue\n2. Implement a secure solution following best practices\n3. Ensure the fix doesn't break existing functionality\n4. Add appropriate error handling and validation\n5. Test the implementation\n\n**Requirements:**\n- Follow OWASP security guidelines\n- Use secure coding practices\n- Provide working code examples\n- Explain the security improvement\n- Consider edge cases and error scenarios\n\nPlease provide a complete, production-ready solution with explanations.\n```\n\n## Technical Details\n\n**Type:** MissingControl\n**Control:** AuthN\n**Category:** AuthZ\n**Confidence:** Medium\n\n**Manual Fix Steps:**\n1. Implement an authentication mechanism using OAuth or JWT.\n\n**Secure Example:**\n```\nImplement OAuth2.0 with a library like Passport.js.\n```\n\n**Notes:** Needs verification after implementation.",
+    "labels": [
+      "security",
+      "tekk",
+      "category:AuthZ",
+      "control:AuthN",
+      "severity:Critical",
+      "type:MissingControl"
+    ],
+    "priority": "P1",
+    "source_finding_id": "SEC-002"
+  },
+  {
+    "title": "[High] No Rate Limiting Implemented",
+    "description": "## Security Issue: No Rate Limiting Implemented\n\n**Why this is a problem:** Lack of rate limiting can lead to denial of service attacks.\n\n**Evidence:** No rate limiting found in server configurations.\n\n**Location:** src/server/\n\n**Why it should be fixed:** This is a High severity issue with Medium likelihood of exploitation. \nIt violates security standards: OWASP-ASVS V4.0.2, OWASP Top 10 A10, CWE-770.\n\n## LLM Fix Instruction\n\nCopy and paste this instruction to an LLM to get specific fix guidance:\n\n```\nYour task is to fix No Rate Limiting Implemented in this Other application.\n\n**Problem:** Lack of rate limiting can lead to denial of service attacks.\n\n**Security Control:** RateLimiting\n\n**What you need to do:**\n1. Identify the specific code causing this issue\n2. Implement a secure solution following best practices\n3. Ensure the fix doesn't break existing functionality\n4. Add appropriate error handling and validation\n5. Test the implementation\n\n**Requirements:**\n- Follow OWASP security guidelines\n- Use secure coding practices\n- Provide working code examples\n- Explain the security improvement\n- Consider edge cases and error scenarios\n\nPlease provide a complete, production-ready solution with explanations.\n```\n\n## Technical Details\n\n**Type:** MissingControl\n**Control:** RateLimiting\n**Category:** Other\n**Confidence:** Medium\n\n**Manual Fix Steps:**\n1. Implement rate limiting using middleware like express-rate-limit.\n\n**Secure Example:**\n```\napp.use(rateLimit({ windowMs: 15*60*1000, max: 100 }));\n```\n\n**Notes:** Consider different limits for different endpoints.",
+    "labels": [
+      "security",
+      "tekk",
+      "category:Other",
+      "control:RateLimiting",
+      "severity:High",
+      "type:MissingControl"
+    ],
+    "priority": "P2",
+    "source_finding_id": "SEC-003"
+  },
+  {
+    "title": "[Medium] Missing Security Headers",
+    "description": "## Security Issue: Missing Security Headers\n\n**Why this is a problem:** Absence of security headers increases the risk of attacks like XSS and clickjacking.\n\n**Evidence:** No security headers set in HTTP responses.\n\n**Location:** src/server/\n\n**Why it should be fixed:** This is a Medium severity issue with Medium likelihood of exploitation. \nIt violates security standards: OWASP-ASVS V4.0.5, OWASP Top 10 A6, CWE-693.\n\n## LLM Fix Instruction\n\nCopy and paste this instruction to an LLM to get specific fix guidance:\n\n```\nYour task is to fix Missing Security Headers in this Headers application.\n\n**Problem:** Absence of security headers increases the risk of attacks like XSS and clickjacking.\n\n**Security Control:** Headers\n\n**What you need to do:**\n1. Identify the specific code causing this issue\n2. Implement a secure solution following best practices\n3. Ensure the fix doesn't break existing functionality\n4. Add appropriate error handling and validation\n5. Test the implementation\n\n**Requirements:**\n- Follow OWASP security guidelines\n- Use secure coding practices\n- Provide working code examples\n- Explain the security improvement\n- Consider edge cases and error scenarios\n\nPlease provide a complete, production-ready solution with explanations.\n```\n\n## Technical Details\n\n**Type:** MissingControl\n**Control:** Headers\n**Category:** Headers\n**Confidence:** High\n\n**Manual Fix Steps:**\n1. Add security headers using helmet middleware.\n\n**Secure Example:**\n```\napp.use(helmet());\n```\n\n**Notes:** Ensure CSP, HSTS, and X-Frame-Options are configured.",
+    "labels": [
+      "security",
+      "tekk",
+      "category:Headers",
+      "control:Headers",
+      "severity:Medium",
+      "type:MissingControl"
+    ],
+    "priority": "P3",
+    "source_finding_id": "SEC-004"
+  },
+  {
+    "title": "[Low] Outdated Dependencies",
+    "description": "## Security Issue: Outdated Dependencies\n\n**Why this is a problem:** Outdated dependencies may contain known vulnerabilities.\n\n**Evidence:** Vulnerable package 'react' version 16.8.0 detected.\n\n**Location:** package.json\n\n**Why it should be fixed:** This is a Low severity issue with Low likelihood of exploitation. \nIt violates security standards: OWASP-ASVS V4.0.9, OWASP Top 10 A9, CWE-1104.\n\n## LLM Fix Instruction\n\nCopy and paste this instruction to an LLM to get specific fix guidance:\n\n```\nYour task is to fix Outdated Dependencies in this Dependencies application.\n\n**Problem:** Outdated dependencies may contain known vulnerabilities.\n\n**Security Control:** Dependencies\n\n**What you need to do:**\n1. Identify the specific code causing this issue\n2. Implement a secure solution following best practices\n3. Ensure the fix doesn't break existing functionality\n4. Add appropriate error handling and validation\n5. Test the implementation\n\n**Requirements:**\n- Follow OWASP security guidelines\n- Use secure coding practices\n- Provide working code examples\n- Explain the security improvement\n- Consider edge cases and error scenarios\n\nPlease provide a complete, production-ready solution with explanations.\n```\n\n## Technical Details\n\n**Type:** Issue\n**Control:** Dependencies\n**Category:** Dependencies\n**Confidence:** High\n\n**Manual Fix Steps:**\n1. Update 'react' to the latest stable version.\n\n**Secure Example:**\n```\n\"react\": \"^17.0.2\"\n```\n\n**Notes:** Regularly check for updates using npm audit.",
+    "labels": [
+      "security",
+      "tekk",
+      "category:Dependencies",
+      "control:Dependencies",
+      "severity:Low",
+      "type:Issue"
+    ],
+    "priority": "P4",
+    "source_finding_id": "SEC-005"
+  },
+  {
+    "title": "[Medium] Missing Authentication",
+    "description": "## Security Issue: Missing Authentication\n\n**Why this is a problem:** Application lacks authentication which is a fundamental security control\n\n**Evidence:** No authentication implementation found in No relevant files found\n\n**Location:** No relevant files found\n\n**Why it should be fixed:** This is a Medium severity issue with Medium likelihood of exploitation. \nIt violates security standards: OWASP-ASVS V4.0.\n\n## LLM Fix Instruction\n\nCopy and paste this instruction to an LLM to get specific fix guidance:\n\n```\nYour task is to fix Missing Authentication in this AuthZ application.\n\n**Problem:** Application lacks authentication which is a fundamental security control\n\n**Security Control:** AuthN\n\n**What you need to do:**\n1. Identify the specific code causing this issue\n2. Implement a secure solution following best practices\n3. Ensure the fix doesn't break existing functionality\n4. Add appropriate error handling and validation\n5. Test the implementation\n\n**Requirements:**\n- Follow OWASP security guidelines\n- Use secure coding practices\n- Provide working code examples\n- Explain the security improvement\n- Consider edge cases and error scenarios\n\nPlease provide a complete, production-ready solution with explanations.\n```\n\n## Technical Details\n\n**Type:** MissingControl\n**Control:** AuthN\n**Category:** AuthZ\n**Confidence:** Low\n\n**Manual Fix Steps:**\n1. Implement authentication framework\n2. Configure appropriate policies\n3. Test implementation thoroughly\n\n**Secure Example:**\n```\n// Implement authentication here\n```\n\n**Notes:** Needs verification - structural analysis only",
+    "labels": [
+      "security",
+      "tekk",
+      "category:AuthZ",
+      "control:AuthN",
+      "severity:Medium",
+      "type:MissingControl"
+    ],
+    "priority": "P3",
+    "source_finding_id": "SEC-001"
+  },
+  {
+    "title": "[Medium] Missing Authorization",
+    "description": "## Security Issue: Missing Authorization\n\n**Why this is a problem:** Application lacks authorization which is a fundamental security control\n\n**Evidence:** No authorization framework found in No relevant files found\n\n**Location:** No relevant files found\n\n**Why it should be fixed:** This is a Medium severity issue with Medium likelihood of exploitation. \nIt violates security standards: OWASP-ASVS V4.0.\n\n## LLM Fix Instruction\n\nCopy and paste this instruction to an LLM to get specific fix guidance:\n\n```\nYour task is to fix Missing Authorization in this AuthZ application.\n\n**Problem:** Application lacks authorization which is a fundamental security control\n\n**Security Control:** AuthZ\n\n**What you need to do:**\n1. Identify the specific code causing this issue\n2. Implement a secure solution following best practices\n3. Ensure the fix doesn't break existing functionality\n4. Add appropriate error handling and validation\n5. Test the implementation\n\n**Requirements:**\n- Follow OWASP security guidelines\n- Use secure coding practices\n- Provide working code examples\n- Explain the security improvement\n- Consider edge cases and error scenarios\n\nPlease provide a complete, production-ready solution with explanations.\n```\n\n## Technical Details\n\n**Type:** MissingControl\n**Control:** AuthZ\n**Category:** AuthZ\n**Confidence:** Low\n\n**Manual Fix Steps:**\n1. Implement authorization framework\n2. Configure appropriate policies\n3. Test implementation thoroughly\n\n**Secure Example:**\n```\n// Implement authorization here\n```\n\n**Notes:** Needs verification - structural analysis only",
+    "labels": [
+      "security",
+      "tekk",
+      "category:AuthZ",
+      "control:AuthZ",
+      "severity:Medium",
+      "type:MissingControl"
+    ],
+    "priority": "P3",
+    "source_finding_id": "SEC-001"
+  },
+  {
+    "title": "[Medium] Missing Rate Limiting",
+    "description": "## Security Issue: Missing Rate Limiting\n\n**Why this is a problem:** Application lacks rate limiting which is a fundamental security control\n\n**Evidence:** No rate limiting implementation found in No relevant files found\n\n**Location:** No relevant files found\n\n**Why it should be fixed:** This is a Medium severity issue with Medium likelihood of exploitation. \nIt violates security standards: OWASP-ASVS V4.0.\n\n## LLM Fix Instruction\n\nCopy and paste this instruction to an LLM to get specific fix guidance:\n\n```\nYour task is to fix Missing Rate Limiting in this Other application.\n\n**Problem:** Application lacks rate limiting which is a fundamental security control\n\n**Security Control:** RateLimiting\n\n**What you need to do:**\n1. Identify the specific code causing this issue\n2. Implement a secure solution following best practices\n3. Ensure the fix doesn't break existing functionality\n4. Add appropriate error handling and validation\n5. Test the implementation\n\n**Requirements:**\n- Follow OWASP security guidelines\n- Use secure coding practices\n- Provide working code examples\n- Explain the security improvement\n- Consider edge cases and error scenarios\n\nPlease provide a complete, production-ready solution with explanations.\n```\n\n## Technical Details\n\n**Type:** MissingControl\n**Control:** RateLimiting\n**Category:** Other\n**Confidence:** Low\n\n**Manual Fix Steps:**\n1. Implement rate limiting framework\n2. Configure appropriate policies\n3. Test implementation thoroughly\n\n**Secure Example:**\n```\n// Implement rate limiting here\n```\n\n**Notes:** Needs verification - structural analysis only",
+    "labels": [
+      "security",
+      "tekk",
+      "category:Other",
+      "control:RateLimiting",
+      "severity:Medium",
+      "type:MissingControl"
+    ],
+    "priority": "P3",
+    "source_finding_id": "SEC-001"
+  },
+  {
+    "title": "[Medium] Missing Security Headers",
+    "description": "## Security Issue: Missing Security Headers\n\n**Why this is a problem:** Application lacks security headers which is a fundamental security control\n\n**Evidence:** No security headers configuration found in tsconfig.node.json, tsconfig.app.json, tailwind.config.ts\n\n**Location:** tsconfig.node.json, tsconfig.app.json, tailwind.config.ts\n\n**Why it should be fixed:** This is a Medium severity issue with Medium likelihood of exploitation. \nIt violates security standards: OWASP-ASVS V4.0.\n\n## LLM Fix Instruction\n\nCopy and paste this instruction to an LLM to get specific fix guidance:\n\n```\nYour task is to fix Missing Security Headers in this Headers application.\n\n**Problem:** Application lacks security headers which is a fundamental security control\n\n**Security Control:** Headers\n\n**What you need to do:**\n1. Identify the specific code causing this issue\n2. Implement a secure solution following best practices\n3. Ensure the fix doesn't break existing functionality\n4. Add appropriate error handling and validation\n5. Test the implementation\n\n**Requirements:**\n- Follow OWASP security guidelines\n- Use secure coding practices\n- Provide working code examples\n- Explain the security improvement\n- Consider edge cases and error scenarios\n\nPlease provide a complete, production-ready solution with explanations.\n```\n\n## Technical Details\n\n**Type:** MissingControl\n**Control:** Headers\n**Category:** Headers\n**Confidence:** Low\n\n**Manual Fix Steps:**\n1. Implement security headers framework\n2. Configure appropriate policies\n3. Test implementation thoroughly\n\n**Secure Example:**\n```\n// Implement security headers here\n```\n\n**Notes:** Needs verification - structural analysis only",
+    "labels": [
+      "security",
+      "tekk",
+      "category:Headers",
+      "control:Headers",
+      "severity:Medium",
+      "type:MissingControl"
+    ],
+    "priority": "P3",
+    "source_finding_id": "SEC-012"
+  },
+  {
+    "title": "[Medium] Missing Audit Logging",
+    "description": "## Security Issue: Missing Audit Logging\n\n**Why this is a problem:** Application lacks audit logging which is a fundamental security control\n\n**Evidence:** No audit logging implementation found in src/components/WorldSeedingDialog.tsx, src/components/ui/alert-dialog.tsx, src/components/ui/dialog.tsx\n\n**Location:** src/components/WorldSeedingDialog.tsx, src/components/ui/alert-dialog.tsx, src/components/ui/dialog.tsx\n\n**Why it should be fixed:** This is a Medium severity issue with Medium likelihood of exploitation. \nIt violates security standards: OWASP-ASVS V4.0.\n\n## LLM Fix Instruction\n\nCopy and paste this instruction to an LLM to get specific fix guidance:\n\n```\nYour task is to fix Missing Audit Logging in this Logging application.\n\n**Problem:** Application lacks audit logging which is a fundamental security control\n\n**Security Control:** Logging\n\n**What you need to do:**\n1. Identify the specific code causing this issue\n2. Implement a secure solution following best practices\n3. Ensure the fix doesn't break existing functionality\n4. Add appropriate error handling and validation\n5. Test the implementation\n\n**Requirements:**\n- Follow OWASP security guidelines\n- Use secure coding practices\n- Provide working code examples\n- Explain the security improvement\n- Consider edge cases and error scenarios\n\nPlease provide a complete, production-ready solution with explanations.\n```\n\n## Technical Details\n\n**Type:** MissingControl\n**Control:** Logging\n**Category:** Logging\n**Confidence:** Low\n\n**Manual Fix Steps:**\n1. Implement audit logging framework\n2. Configure appropriate policies\n3. Test implementation thoroughly\n\n**Secure Example:**\n```\n// Implement audit logging here\n```\n\n**Notes:** Needs verification - structural analysis only",
+    "labels": [
+      "security",
+      "tekk",
+      "category:Logging",
+      "control:Logging",
+      "severity:Medium",
+      "type:MissingControl"
+    ],
+    "priority": "P3",
+    "source_finding_id": "SEC-004"
+  }
+]

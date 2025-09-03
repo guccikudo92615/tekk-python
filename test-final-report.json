@@ -1,0 +1,350 @@
+{
+  "summary": {
+    "risk_overview": "The repository lacks several fundamental security controls and contains vulnerabilities that could lead to unauthorized access and data exposure. Immediate attention is required to address these issues.",
+    "findings_total_count": 10,
+    "missing_controls_count": 8,
+    "severity_breakdown": {
+      "Critical": 1,
+      "High": 2,
+      "Medium": 6,
+      "Low": 1
+    },
+    "quick_wins_minutes": 0
+  },
+  "findings": [
+    {
+      "id": "SEC-001",
+      "title": "Hardcoded API Key",
+      "type": "Issue",
+      "control": "Secrets",
+      "category": "Secrets",
+      "location": [
+        "/Users/guccikudo/tekk3-python/test-repo/src/config.ts:10"
+      ],
+      "evidence": "const apiKey = '***MASKED***';",
+      "impact": "Exposure of API keys can lead to unauthorized access to services.",
+      "likelihood": "High",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A2",
+        "CWE-798"
+      ],
+      "fix": {
+        "steps": [
+          "Remove hardcoded keys from source code.",
+          "Use environment variables to manage secrets."
+        ],
+        "secure_example": "const apiKey = process.env.API_KEY;",
+        "owner_hint": "Backend",
+        "eta": "≤30m"
+      },
+      "notes": "Ensure all secrets are rotated after removal from the codebase."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Authentication Mechanism",
+      "type": "MissingControl",
+      "control": "AuthN",
+      "category": "AuthZ",
+      "location": [
+        "src/auth/"
+      ],
+      "evidence": "No authentication implementation found in src/auth/",
+      "impact": "Without authentication, unauthorized users can access the application.",
+      "likelihood": "High",
+      "severity": "Critical",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.1",
+        "OWASP Top 10 A5",
+        "CWE-306"
+      ],
+      "fix": {
+        "steps": [
+          "Implement an authentication mechanism using OAuth or JWT."
+        ],
+        "secure_example": "Implement OAuth2.0 with a library like Passport.js.",
+        "owner_hint": "Backend",
+        "eta": "≤1d"
+      },
+      "notes": "Needs verification after implementation."
+    },
+    {
+      "id": "SEC-003",
+      "title": "No Rate Limiting Implemented",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "src/server/"
+      ],
+      "evidence": "No rate limiting found in server configurations.",
+      "impact": "Lack of rate limiting can lead to denial of service attacks.",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.2",
+        "OWASP Top 10 A10",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting using middleware like express-rate-limit."
+        ],
+        "secure_example": "app.use(rateLimit({ windowMs: 15*60*1000, max: 100 }));",
+        "owner_hint": "Backend",
+        "eta": "≤1h"
+      },
+      "notes": "Consider different limits for different endpoints."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/server/"
+      ],
+      "evidence": "No security headers set in HTTP responses.",
+      "impact": "Absence of security headers increases the risk of attacks like XSS and clickjacking.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.5",
+        "OWASP Top 10 A6",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Add security headers using helmet middleware."
+        ],
+        "secure_example": "app.use(helmet());",
+        "owner_hint": "Backend",
+        "eta": "≤30m"
+      },
+      "notes": "Ensure CSP, HSTS, and X-Frame-Options are configured."
+    },
+    {
+      "id": "SEC-005",
+      "title": "Outdated Dependencies",
+      "type": "Issue",
+      "control": "Dependencies",
+      "category": "Dependencies",
+      "location": [
+        "package.json"
+      ],
+      "evidence": "Vulnerable package 'react' version 16.8.0 detected.",
+      "impact": "Outdated dependencies may contain known vulnerabilities.",
+      "likelihood": "Low",
+      "severity": "Low",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.9",
+        "OWASP Top 10 A9",
+        "CWE-1104"
+      ],
+      "fix": {
+        "steps": [
+          "Update 'react' to the latest stable version."
+        ],
+        "secure_example": "\"react\": \"^17.0.2\"",
+        "owner_hint": "Frontend",
+        "eta": "≤1h"
+      },
+      "notes": "Regularly check for updates using npm audit."
+    },
+    {
+      "id": "SEC-001",
+      "title": "Missing Authentication",
+      "type": "MissingControl",
+      "control": "AuthN",
+      "category": "AuthZ",
+      "location": [
+        "No relevant files found"
+      ],
+      "evidence": "No authentication implementation found in No relevant files found",
+      "impact": "Application lacks authentication which is a fundamental security control",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Low",
+      "standards": [
+        "OWASP-ASVS V4.0"
+      ],
+      "fix": {
+        "steps": [
+          "Implement authentication framework",
+          "Configure appropriate policies",
+          "Test implementation thoroughly"
+        ],
+        "secure_example": "// Implement authentication here",
+        "owner_hint": "Security",
+        "eta": "≤1d"
+      },
+      "notes": "Needs verification - structural analysis only"
+    },
+    {
+      "id": "SEC-001",
+      "title": "Missing Authorization",
+      "type": "MissingControl",
+      "control": "AuthZ",
+      "category": "AuthZ",
+      "location": [
+        "No relevant files found"
+      ],
+      "evidence": "No authorization framework found in No relevant files found",
+      "impact": "Application lacks authorization which is a fundamental security control",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Low",
+      "standards": [
+        "OWASP-ASVS V4.0"
+      ],
+      "fix": {
+        "steps": [
+          "Implement authorization framework",
+          "Configure appropriate policies",
+          "Test implementation thoroughly"
+        ],
+        "secure_example": "// Implement authorization here",
+        "owner_hint": "Security",
+        "eta": "≤1d"
+      },
+      "notes": "Needs verification - structural analysis only"
+    },
+    {
+      "id": "SEC-001",
+      "title": "Missing Rate Limiting",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "No relevant files found"
+      ],
+      "evidence": "No rate limiting implementation found in No relevant files found",
+      "impact": "Application lacks rate limiting which is a fundamental security control",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Low",
+      "standards": [
+        "OWASP-ASVS V4.0"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting framework",
+          "Configure appropriate policies",
+          "Test implementation thoroughly"
+        ],
+        "secure_example": "// Implement rate limiting here",
+        "owner_hint": "Security",
+        "eta": "≤1d"
+      },
+      "notes": "Needs verification - structural analysis only"
+    },
+    {
+      "id": "SEC-012",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "tsconfig.node.json",
+        "tsconfig.app.json",
+        "tailwind.config.ts"
+      ],
+      "evidence": "No security headers configuration found in tsconfig.node.json, tsconfig.app.json, tailwind.config.ts",
+      "impact": "Application lacks security headers which is a fundamental security control",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Low",
+      "standards": [
+        "OWASP-ASVS V4.0"
+      ],
+      "fix": {
+        "steps": [
+          "Implement security headers framework",
+          "Configure appropriate policies",
+          "Test implementation thoroughly"
+        ],
+        "secure_example": "// Implement security headers here",
+        "owner_hint": "Security",
+        "eta": "≤1d"
+      },
+      "notes": "Needs verification - structural analysis only"
+    },
+    {
+      "id": "SEC-004",
+      "title": "Missing Audit Logging",
+      "type": "MissingControl",
+      "control": "Logging",
+      "category": "Logging",
+      "location": [
+        "src/components/WorldSeedingDialog.tsx",
+        "src/components/ui/alert-dialog.tsx",
+        "src/components/ui/dialog.tsx"
+      ],
+      "evidence": "No audit logging implementation found in src/components/WorldSeedingDialog.tsx, src/components/ui/alert-dialog.tsx, src/components/ui/dialog.tsx",
+      "impact": "Application lacks audit logging which is a fundamental security control",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Low",
+      "standards": [
+        "OWASP-ASVS V4.0"
+      ],
+      "fix": {
+        "steps": [
+          "Implement audit logging framework",
+          "Configure appropriate policies",
+          "Test implementation thoroughly"
+        ],
+        "secure_example": "// Implement audit logging here",
+        "owner_hint": "Security",
+        "eta": "≤1d"
+      },
+      "notes": "Needs verification - structural analysis only"
+    }
+  ],
+  "baseline_checklist": [
+    {
+      "control": "Authentication",
+      "status": "Missing",
+      "justification": "No authentication mechanism found in the codebase."
+    },
+    {
+      "control": "Rate Limiting",
+      "status": "Missing",
+      "justification": "No rate limiting implemented in server configurations."
+    },
+    {
+      "control": "Security Headers",
+      "status": "Missing",
+      "justification": "No security headers set in HTTP responses."
+    },
+    {
+      "control": "Audit Logging",
+      "status": "Missing",
+      "justification": "No audit logging mechanism found in the application."
+    }
+  ],
+  "prioritized_actions": [
+    {
+      "id": "SEC-002",
+      "eta": "≤1d"
+    },
+    {
+      "id": "SEC-001",
+      "eta": "≤30m"
+    },
+    {
+      "id": "SEC-003",
+      "eta": "≤1h"
+    }
+  ],
+  "checks_omitted": [
+    "Full code review for business logic vulnerabilities due to time constraints."
+  ]
+}

@@ -6,7 +6,7 @@ import json
 import os
 import sys
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, List
 from dotenv import load_dotenv
 import openai
 sys.path.append(str(Path(__file__).parent.parent))
@@ -30,6 +30,86 @@ class LLMScanner:
             raise ValueError("OPENAI_API_KEY environment variable is required")
         
         return openai.OpenAI(api_key=api_key)
+    
+    def _get_relevant_files(self, repo_path: str) -> List[Dict[str, str]]:
+        """
+        Get relevant files from the repository for analysis.
+        
+        Args:
+            repo_path: Path to the repository
+            
+        Returns:
+            List of file information dictionaries
+        """
+        repo_path = Path(repo_path)
+        relevant_files = []
+        
+        # File extensions to analyze
+        code_extensions = {'.js', '.ts', '.tsx', '.jsx', '.py', '.java', '.go', '.rs', '.php', '.rb', '.cs', '.cpp', '.c', '.h', '.hpp'}
+        config_extensions = {'.json', '.yaml', '.yml', '.toml', '.ini', '.conf', '.config', '.env', '.properties'}
+        
+        # Directories to skip
+        skip_dirs = {'.git', 'node_modules', '.next', 'dist', 'build', 'target', '__pycache__', '.pytest_cache', 'venv', 'env'}
+        
+        for file_path in repo_path.rglob('*'):
+            if file_path.is_file():
+                # Skip files in ignored directories
+                if any(skip_dir in file_path.parts for skip_dir in skip_dirs):
+                    continue
+                
+                # Check if file is relevant
+                if (file_path.suffix.lower() in code_extensions or 
+                    file_path.suffix.lower() in config_extensions or
+                    file_path.name in {'package.json', 'requirements.txt', 'Dockerfile', 'docker-compose.yml', 'README.md'}):
+                    
+                    try:
+                        # Read file content (limit size to avoid context window issues)
+                        content = file_path.read_text(encoding='utf-8', errors='ignore')
+                        
+                        # Limit file size to 10KB to manage context window
+                        if len(content) > 10000:
+                            content = content[:10000] + "\n... [FILE TRUNCATED - TOO LARGE]"
+                        
+                        relevant_files.append({
+                            'path': str(file_path.relative_to(repo_path)),
+                            'content': content,
+                            'size': len(content)
+                        })
+                    except Exception as e:
+                        print(f"Warning: Could not read file {file_path}: {e}", file=sys.stderr)
+        
+        return relevant_files
+    
+    def _create_code_analysis_prompt(self, repo_context: RepoContext, files: List[Dict[str, str]]) -> str:
+        """
+        Create a comprehensive prompt with actual repository code.
+        
+        Args:
+            repo_context: Repository context
+            files: List of relevant files
+            
+        Returns:
+            Formatted prompt with code content
+        """
+        base_prompt = self.prompt_template.replace("{repo}", repo_context.root_path)
+        base_prompt = base_prompt.replace("{stack}", repo_context.stack)
+        base_prompt = base_prompt.replace("{cloud}", repo_context.cloud)
+        
+        # Add code analysis section
+        code_section = "\n\n## Repository Code Analysis\n\n"
+        code_section += f"Analyze the following {len(files)} files from the repository:\n\n"
+        
+        for i, file_info in enumerate(files[:20]):  # Limit to first 20 files to manage context
+            code_section += f"### File {i+1}: {file_info['path']}\n"
+            code_section += f"```\n{file_info['content']}\n```\n\n"
+        
+        if len(files) > 20:
+            code_section += f"... and {len(files) - 20} more files (truncated for context window)\n\n"
+        
+        code_section += "Based on the actual code above, identify specific security issues and missing controls.\n"
+        code_section += "Provide exact file paths and line numbers where possible.\n"
+        
+        return base_prompt + code_section
     
     def _load_prompt_template(self) -> str:
         """Load the security analysis prompt template."""
@@ -89,7 +169,7 @@ class LLMScanner:
                     }
                 ],
                 temperature=temperature,
-                max_tokens=4000
+                max_tokens=6000  # Increased for more detailed analysis
             )
             
             return response.choices[0].message.content.strip()
@@ -126,8 +206,17 @@ class LLMScanner:
         Returns:
             Dictionary containing the security analysis results
         """
-        # Format the prompt with repository context
-        formatted_prompt = self._format_prompt(repo_context)
+        print("🔍 Scanning repository files...", file=sys.stderr)
+        
+        # Get relevant files from the repository
+        relevant_files = self._get_relevant_files(repo_context.root_path)
+        print(f"📁 Found {len(relevant_files)} relevant files to analyze", file=sys.stderr)
+        
+        # Create comprehensive prompt with actual code
+        formatted_prompt = self._create_code_analysis_prompt(repo_context, relevant_files)
+        
+        print(f"📝 Created prompt with {len(formatted_prompt)} characters", file=sys.stderr)
+        print(f"📊 Analyzing {min(len(relevant_files), 20)} files in detail", file=sys.stderr)
         
         # Run the LLM analysis
         llm_response = self.run_llm(formatted_prompt)
