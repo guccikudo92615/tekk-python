@@ -1,0 +1,3023 @@
+{
+  "nodes": [
+    {
+      "id": "tailwind.config.ts",
+      "group": "config_settings",
+      "size": 2387,
+      "type": "config_settings"
+    },
+    {
+      "id": "tailwindcss",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "tailwindcss-animate",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "vite.config.ts",
+      "group": "config_settings",
+      "size": 471,
+      "type": "config_settings"
+    },
+    {
+      "id": "vite",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "@vitejs/plugin-react-swc",
+      "group": "unknown",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "id": "path",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "lovable-tagger",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "src/vite-env.d.ts",
+      "group": "frontend_component",
+      "size": 38,
+      "type": "frontend_component"
+    },
+    {
+      "id": "supabase/functions/world-seeding/index.ts",
+      "group": "unknown",
+      "size": 4848,
+      "type": "unknown"
+    },
+    {
+      "id": "supabase/functions/chat-completion/index.ts",
+      "group": "unknown",
+      "size": 3877,
+      "type": "unknown"
+    },
+    {
+      "id": "supabase/functions/world-chat/index.ts",
+      "group": "unknown",
+      "size": 5764,
+      "type": "unknown"
+    },
+    {
+      "id": "supabase/functions/realtime-chat/index.ts",
+      "group": "unknown",
+      "size": 8103,
+      "type": "unknown"
+    },
+    {
+      "id": "supabase/functions/generate-image/index.ts",
+      "group": "unknown",
+      "size": 1503,
+      "type": "unknown"
+    },
+    {
+      "id": "src/utils/RealtimeAudio.ts",
+      "group": "unknown",
+      "size": 9269,
+      "type": "unknown"
+    },
+    {
+      "id": "src/hooks/useAutoSave.ts",
+      "group": "frontend_hook",
+      "size": 1935,
+      "type": "frontend_hook"
+    },
+    {
+      "id": "react",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "@/hooks/use-toast",
+      "group": "frontend_hook",
+      "size": 0,
+      "type": "frontend_hook"
+    },
+    {
+      "id": "src/hooks/useFolders.ts",
+      "group": "frontend_hook",
+      "size": 2948,
+      "type": "frontend_hook"
+    },
+    {
+      "id": "@/integrations/supabase/client",
+      "group": "unknown",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "id": "src/hooks/use-toast.ts",
+      "group": "frontend_hook",
+      "size": 3895,
+      "type": "frontend_hook"
+    },
+    {
+      "id": "src/hooks/use-auto-scroll.ts",
+      "group": "frontend_hook",
+      "size": 3595,
+      "type": "frontend_hook"
+    },
+    {
+      "id": "src/hooks/useTagsAndLinks.ts",
+      "group": "frontend_hook",
+      "size": 2549,
+      "type": "frontend_hook"
+    },
+    {
+      "id": "./useArticles",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "src/hooks/useArticles.ts",
+      "group": "frontend_hook",
+      "size": 4311,
+      "type": "frontend_hook"
+    },
+    {
+      "id": "src/lib/utils.ts",
+      "group": "frontend_hook",
+      "size": 166,
+      "type": "frontend_hook"
+    },
+    {
+      "id": "clsx",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "tailwind-merge",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "src/lib/openai.ts",
+      "group": "frontend_hook",
+      "size": 4669,
+      "type": "frontend_hook"
+    },
+    {
+      "id": "src/integrations/supabase/types.ts",
+      "group": "backend_model",
+      "size": 7743,
+      "type": "backend_model"
+    },
+    {
+      "id": "src/integrations/supabase/client.ts",
+      "group": "backend_model",
+      "size": 764,
+      "type": "backend_model"
+    },
+    {
+      "id": "@supabase/supabase-js",
+      "group": "unknown",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "id": "./types",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "src/components/ui/use-toast.ts",
+      "group": "frontend_component",
+      "size": 82,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/App.tsx",
+      "group": "frontend_component",
+      "size": 1038,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/toaster",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/sonner",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/tooltip",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@tanstack/react-query",
+      "group": "unknown",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "id": "react-router-dom",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "./pages/Index",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "./pages/NotFound",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/main.tsx",
+      "group": "frontend_component",
+      "size": 340,
+      "type": "frontend_component"
+    },
+    {
+      "id": "react-dom/client",
+      "group": "unknown",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "id": "./App.tsx",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "./index.css",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "src/components/WorldChat.tsx",
+      "group": "frontend_component",
+      "size": 18947,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/button",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/badge",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "lucide-react",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "@/components/ui/chat-message-list",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/chat-bubble",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/chat-input",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/utils/RealtimeAudio",
+      "group": "unknown",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "id": "@/hooks/useArticles",
+      "group": "frontend_hook",
+      "size": 0,
+      "type": "frontend_hook"
+    },
+    {
+      "id": "src/components/BacklinksSection.tsx",
+      "group": "frontend_component",
+      "size": 1776,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/card",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/hooks/useTagsAndLinks",
+      "group": "frontend_hook",
+      "size": 0,
+      "type": "frontend_hook"
+    },
+    {
+      "id": "src/components/FolderManager.tsx",
+      "group": "frontend_component",
+      "size": 11363,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/input",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/dialog",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/collapsible",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/dropdown-menu",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/hooks/useFolders",
+      "group": "frontend_hook",
+      "size": 0,
+      "type": "frontend_hook"
+    },
+    {
+      "id": "src/components/WorldInterface.tsx",
+      "group": "frontend_component",
+      "size": 13229,
+      "type": "frontend_component"
+    },
+    {
+      "id": "./WikiSidebar",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "./ArticleView",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "./ui/secret-form",
+      "group": "unknown",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "id": "./ArticleTemplateSelector",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "./FolderManager",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "./WorldChat",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "sonner",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "src/components/WikiSidebar.tsx",
+      "group": "frontend_component",
+      "size": 6776,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/tabs",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "./TagExplorer",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "src/components/ArticleView.tsx",
+      "group": "frontend_component",
+      "size": 17277,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/lib/openai",
+      "group": "utility_helper",
+      "size": 0,
+      "type": "utility_helper"
+    },
+    {
+      "id": "react-simplemde-editor",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "@/components/ui/resizable",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/hooks/useAutoSave",
+      "group": "frontend_hook",
+      "size": 0,
+      "type": "frontend_hook"
+    },
+    {
+      "id": "./BacklinksSection",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "react-markdown",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "remark-gfm",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "easymde/dist/easymde.min.css",
+      "group": "unknown",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "id": "src/components/TagExplorer.tsx",
+      "group": "frontend_component",
+      "size": 2860,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/WorldDashboard.tsx",
+      "group": "frontend_component",
+      "size": 6515,
+      "type": "frontend_component"
+    },
+    {
+      "id": "./WorldCard",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "src/components/WorldSeedingDialog.tsx",
+      "group": "frontend_component",
+      "size": 5870,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/textarea",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/WorldCard.tsx",
+      "group": "frontend_component",
+      "size": 2302,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ArticleTemplateSelector.tsx",
+      "group": "frontend_component",
+      "size": 21041,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/scroll-area",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/hooks/use-mobile.tsx",
+      "group": "frontend_hook",
+      "size": 565,
+      "type": "frontend_hook"
+    },
+    {
+      "id": "src/pages/Index.tsx",
+      "group": "frontend_component",
+      "size": 2046,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/WorldDashboard",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/WorldInterface",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/WorldSeedingDialog",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/pages/NotFound.tsx",
+      "group": "frontend_component",
+      "size": 739,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/aspect-ratio.tsx",
+      "group": "frontend_component",
+      "size": 140,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-aspect-ratio",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/alert-dialog.tsx",
+      "group": "frontend_component",
+      "size": 4420,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-alert-dialog",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/lib/utils",
+      "group": "utility_helper",
+      "size": 0,
+      "type": "utility_helper"
+    },
+    {
+      "id": "src/components/ui/pagination.tsx",
+      "group": "frontend_component",
+      "size": 2751,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/tabs.tsx",
+      "group": "frontend_component",
+      "size": 1883,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-tabs",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/card.tsx",
+      "group": "frontend_component",
+      "size": 1877,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/slider.tsx",
+      "group": "frontend_component",
+      "size": 1077,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-slider",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/popover.tsx",
+      "group": "frontend_component",
+      "size": 1230,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-popover",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/progress.tsx",
+      "group": "frontend_component",
+      "size": 777,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-progress",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/toaster.tsx",
+      "group": "frontend_component",
+      "size": 772,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/input-otp.tsx",
+      "group": "frontend_component",
+      "size": 2154,
+      "type": "frontend_component"
+    },
+    {
+      "id": "input-otp",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "src/components/ui/chart.tsx",
+      "group": "frontend_component",
+      "size": 10466,
+      "type": "frontend_component"
+    },
+    {
+      "id": "recharts",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "src/components/ui/hover-card.tsx",
+      "group": "frontend_component",
+      "size": 1184,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-hover-card",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/sheet.tsx",
+      "group": "frontend_component",
+      "size": 4250,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-dialog",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "class-variance-authority",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "src/components/ui/scroll-area.tsx",
+      "group": "frontend_component",
+      "size": 1642,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-scroll-area",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/resizable.tsx",
+      "group": "frontend_component",
+      "size": 1709,
+      "type": "frontend_component"
+    },
+    {
+      "id": "react-resizable-panels",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "src/components/ui/label.tsx",
+      "group": "frontend_component",
+      "size": 710,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-label",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/sonner.tsx",
+      "group": "frontend_component",
+      "size": 894,
+      "type": "frontend_component"
+    },
+    {
+      "id": "next-themes",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "src/components/ui/navigation-menu.tsx",
+      "group": "frontend_component",
+      "size": 5046,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-navigation-menu",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/chat-bubble.tsx",
+      "group": "frontend_component",
+      "size": 2332,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/avatar",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/message-loading",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/accordion.tsx",
+      "group": "frontend_component",
+      "size": 1977,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-accordion",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/drawer.tsx",
+      "group": "frontend_component",
+      "size": 3007,
+      "type": "frontend_component"
+    },
+    {
+      "id": "vaul",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "src/components/ui/message-loading.tsx",
+      "group": "frontend_component",
+      "size": 1188,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/tooltip.tsx",
+      "group": "frontend_component",
+      "size": 1145,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-tooltip",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/alert.tsx",
+      "group": "frontend_component",
+      "size": 1584,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/secret-form.tsx",
+      "group": "frontend_component",
+      "size": 2717,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/label",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/switch.tsx",
+      "group": "frontend_component",
+      "size": 1139,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-switch",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/calendar.tsx",
+      "group": "frontend_component",
+      "size": 2620,
+      "type": "frontend_component"
+    },
+    {
+      "id": "react-day-picker",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "src/components/ui/breadcrumb.tsx",
+      "group": "frontend_component",
+      "size": 2701,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-slot",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/radio-group.tsx",
+      "group": "frontend_component",
+      "size": 1467,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-radio-group",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/command.tsx",
+      "group": "frontend_component",
+      "size": 4879,
+      "type": "frontend_component"
+    },
+    {
+      "id": "cmdk",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "src/components/ui/toggle-group.tsx",
+      "group": "frontend_component",
+      "size": 1739,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-toggle-group",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/toggle",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/avatar.tsx",
+      "group": "frontend_component",
+      "size": 1405,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-avatar",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/menubar.tsx",
+      "group": "frontend_component",
+      "size": 7974,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-menubar",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/dialog.tsx",
+      "group": "frontend_component",
+      "size": 3810,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/badge.tsx",
+      "group": "frontend_component",
+      "size": 1128,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/sidebar.tsx",
+      "group": "frontend_component",
+      "size": 23367,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/hooks/use-mobile",
+      "group": "frontend_hook",
+      "size": 0,
+      "type": "frontend_hook"
+    },
+    {
+      "id": "@/components/ui/separator",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/sheet",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/components/ui/skeleton",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/table.tsx",
+      "group": "frontend_component",
+      "size": 2765,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/separator.tsx",
+      "group": "frontend_component",
+      "size": 756,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-separator",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/button.tsx",
+      "group": "frontend_component",
+      "size": 1901,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/toggle.tsx",
+      "group": "frontend_component",
+      "size": 1435,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-toggle",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/toast.tsx",
+      "group": "frontend_component",
+      "size": 4845,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-toast",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/checkbox.tsx",
+      "group": "frontend_component",
+      "size": 1056,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-checkbox",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/chat-input.tsx",
+      "group": "frontend_component",
+      "size": 771,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/collapsible.tsx",
+      "group": "frontend_component",
+      "size": 315,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-collapsible",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/dropdown-menu.tsx",
+      "group": "frontend_component",
+      "size": 7295,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-dropdown-menu",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/select.tsx",
+      "group": "frontend_component",
+      "size": 5615,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-select",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/textarea.tsx",
+      "group": "frontend_component",
+      "size": 772,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/input.tsx",
+      "group": "frontend_component",
+      "size": 791,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/skeleton.tsx",
+      "group": "frontend_component",
+      "size": 261,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/context-menu.tsx",
+      "group": "frontend_component",
+      "size": 7246,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@radix-ui/react-context-menu",
+      "group": "frontend_component",
+      "size": 0,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/form.tsx",
+      "group": "frontend_component",
+      "size": 4085,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/carousel.tsx",
+      "group": "frontend_component",
+      "size": 6210,
+      "type": "frontend_component"
+    },
+    {
+      "id": "src/components/ui/chat-message-list.tsx",
+      "group": "frontend_component",
+      "size": 1516,
+      "type": "frontend_component"
+    },
+    {
+      "id": "@/hooks/use-auto-scroll",
+      "group": "frontend_hook",
+      "size": 0,
+      "type": "frontend_hook"
+    },
+    {
+      "id": "eslint.config.js",
+      "group": "config_settings",
+      "size": 789,
+      "type": "config_settings"
+    },
+    {
+      "id": "@eslint/js",
+      "group": "unknown",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "id": "globals",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "eslint-plugin-react-hooks",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "eslint-plugin-react-refresh",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "typescript-eslint",
+      "group": "config_settings",
+      "size": 0,
+      "type": "config_settings"
+    },
+    {
+      "id": "postcss.config.js",
+      "group": "config_settings",
+      "size": 80,
+      "type": "config_settings"
+    }
+  ],
+  "links": [
+    {
+      "source": "tailwind.config.ts",
+      "target": "tailwindcss"
+    },
+    {
+      "source": "tailwind.config.ts",
+      "target": "tailwindcss-animate"
+    },
+    {
+      "source": "vite.config.ts",
+      "target": "vite"
+    },
+    {
+      "source": "vite.config.ts",
+      "target": "@vitejs/plugin-react-swc"
+    },
+    {
+      "source": "vite.config.ts",
+      "target": "path"
+    },
+    {
+      "source": "vite.config.ts",
+      "target": "lovable-tagger"
+    },
+    {
+      "source": "src/hooks/useAutoSave.ts",
+      "target": "react"
+    },
+    {
+      "source": "src/hooks/useAutoSave.ts",
+      "target": "@/hooks/use-toast"
+    },
+    {
+      "source": "src/hooks/useFolders.ts",
+      "target": "react"
+    },
+    {
+      "source": "src/hooks/useFolders.ts",
+      "target": "@/integrations/supabase/client"
+    },
+    {
+      "source": "src/hooks/use-toast.ts",
+      "target": "react"
+    },
+    {
+      "source": "src/hooks/use-auto-scroll.ts",
+      "target": "react"
+    },
+    {
+      "source": "src/hooks/useTagsAndLinks.ts",
+      "target": "react"
+    },
+    {
+      "source": "src/hooks/useTagsAndLinks.ts",
+      "target": "./useArticles"
+    },
+    {
+      "source": "src/hooks/useArticles.ts",
+      "target": "react"
+    },
+    {
+      "source": "src/hooks/useArticles.ts",
+      "target": "@/integrations/supabase/client"
+    },
+    {
+      "source": "src/lib/utils.ts",
+      "target": "clsx"
+    },
+    {
+      "source": "src/lib/utils.ts",
+      "target": "tailwind-merge"
+    },
+    {
+      "source": "src/integrations/supabase/client.ts",
+      "target": "@supabase/supabase-js"
+    },
+    {
+      "source": "src/integrations/supabase/client.ts",
+      "target": "./types"
+    },
+    {
+      "source": "src/integrations/supabase/client.ts",
+      "target": "@/integrations/supabase/client"
+    },
+    {
+      "source": "src/components/ui/use-toast.ts",
+      "target": "@/hooks/use-toast"
+    },
+    {
+      "source": "src/App.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/App.tsx",
+      "target": "@/components/ui/toaster"
+    },
+    {
+      "source": "src/App.tsx",
+      "target": "@/components/ui/sonner"
+    },
+    {
+      "source": "src/App.tsx",
+      "target": "@/components/ui/tooltip"
+    },
+    {
+      "source": "src/App.tsx",
+      "target": "@tanstack/react-query"
+    },
+    {
+      "source": "src/App.tsx",
+      "target": "react-router-dom"
+    },
+    {
+      "source": "src/App.tsx",
+      "target": "./pages/Index"
+    },
+    {
+      "source": "src/App.tsx",
+      "target": "./pages/NotFound"
+    },
+    {
+      "source": "src/main.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/main.tsx",
+      "target": "react-dom/client"
+    },
+    {
+      "source": "src/main.tsx",
+      "target": "./App.tsx"
+    },
+    {
+      "source": "src/main.tsx",
+      "target": "./index.css"
+    },
+    {
+      "source": "src/components/WorldChat.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/WorldChat.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/WorldChat.tsx",
+      "target": "@/components/ui/badge"
+    },
+    {
+      "source": "src/components/WorldChat.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/WorldChat.tsx",
+      "target": "@/components/ui/chat-message-list"
+    },
+    {
+      "source": "src/components/WorldChat.tsx",
+      "target": "@/components/ui/chat-bubble"
+    },
+    {
+      "source": "src/components/WorldChat.tsx",
+      "target": "@/components/ui/chat-input"
+    },
+    {
+      "source": "src/components/WorldChat.tsx",
+      "target": "@/hooks/use-toast"
+    },
+    {
+      "source": "src/components/WorldChat.tsx",
+      "target": "@/integrations/supabase/client"
+    },
+    {
+      "source": "src/components/WorldChat.tsx",
+      "target": "@/utils/RealtimeAudio"
+    },
+    {
+      "source": "src/components/WorldChat.tsx",
+      "target": "@/hooks/useArticles"
+    },
+    {
+      "source": "src/components/BacklinksSection.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/BacklinksSection.tsx",
+      "target": "@/components/ui/card"
+    },
+    {
+      "source": "src/components/BacklinksSection.tsx",
+      "target": "@/components/ui/badge"
+    },
+    {
+      "source": "src/components/BacklinksSection.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/BacklinksSection.tsx",
+      "target": "@/hooks/useTagsAndLinks"
+    },
+    {
+      "source": "src/components/FolderManager.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/FolderManager.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/FolderManager.tsx",
+      "target": "@/components/ui/input"
+    },
+    {
+      "source": "src/components/FolderManager.tsx",
+      "target": "@/components/ui/card"
+    },
+    {
+      "source": "src/components/FolderManager.tsx",
+      "target": "@/components/ui/dialog"
+    },
+    {
+      "source": "src/components/FolderManager.tsx",
+      "target": "@/components/ui/collapsible"
+    },
+    {
+      "source": "src/components/FolderManager.tsx",
+      "target": "@/components/ui/dropdown-menu"
+    },
+    {
+      "source": "src/components/FolderManager.tsx",
+      "target": "@/hooks/useFolders"
+    },
+    {
+      "source": "src/components/FolderManager.tsx",
+      "target": "@/hooks/useArticles"
+    },
+    {
+      "source": "src/components/WorldInterface.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/WorldInterface.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/WorldInterface.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/WorldInterface.tsx",
+      "target": "./WikiSidebar"
+    },
+    {
+      "source": "src/components/WorldInterface.tsx",
+      "target": "./ArticleView"
+    },
+    {
+      "source": "src/components/WorldInterface.tsx",
+      "target": "./ui/secret-form"
+    },
+    {
+      "source": "src/components/WorldInterface.tsx",
+      "target": "@/components/ui/dialog"
+    },
+    {
+      "source": "src/components/WorldInterface.tsx",
+      "target": "@/components/ui/input"
+    },
+    {
+      "source": "src/components/WorldInterface.tsx",
+      "target": "./ArticleTemplateSelector"
+    },
+    {
+      "source": "src/components/WorldInterface.tsx",
+      "target": "@/hooks/useArticles"
+    },
+    {
+      "source": "src/components/WorldInterface.tsx",
+      "target": "@/hooks/useTagsAndLinks"
+    },
+    {
+      "source": "src/components/WorldInterface.tsx",
+      "target": "@/hooks/useFolders"
+    },
+    {
+      "source": "src/components/WorldInterface.tsx",
+      "target": "./FolderManager"
+    },
+    {
+      "source": "src/components/WorldInterface.tsx",
+      "target": "./WorldChat"
+    },
+    {
+      "source": "src/components/WorldInterface.tsx",
+      "target": "sonner"
+    },
+    {
+      "source": "src/components/WikiSidebar.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/WikiSidebar.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/WikiSidebar.tsx",
+      "target": "@/components/ui/input"
+    },
+    {
+      "source": "src/components/WikiSidebar.tsx",
+      "target": "@/components/ui/badge"
+    },
+    {
+      "source": "src/components/WikiSidebar.tsx",
+      "target": "@/components/ui/card"
+    },
+    {
+      "source": "src/components/WikiSidebar.tsx",
+      "target": "@/components/ui/tabs"
+    },
+    {
+      "source": "src/components/WikiSidebar.tsx",
+      "target": "./TagExplorer"
+    },
+    {
+      "source": "src/components/WikiSidebar.tsx",
+      "target": "@/hooks/useArticles"
+    },
+    {
+      "source": "src/components/WikiSidebar.tsx",
+      "target": "@/hooks/useTagsAndLinks"
+    },
+    {
+      "source": "src/components/ArticleView.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ArticleView.tsx",
+      "target": "@/lib/openai"
+    },
+    {
+      "source": "src/components/ArticleView.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/ArticleView.tsx",
+      "target": "@/components/ui/input"
+    },
+    {
+      "source": "src/components/ArticleView.tsx",
+      "target": "react-simplemde-editor"
+    },
+    {
+      "source": "src/components/ArticleView.tsx",
+      "target": "@/components/ui/badge"
+    },
+    {
+      "source": "src/components/ArticleView.tsx",
+      "target": "@/components/ui/card"
+    },
+    {
+      "source": "src/components/ArticleView.tsx",
+      "target": "@/components/ui/resizable"
+    },
+    {
+      "source": "src/components/ArticleView.tsx",
+      "target": "@/hooks/useAutoSave"
+    },
+    {
+      "source": "src/components/ArticleView.tsx",
+      "target": "./BacklinksSection"
+    },
+    {
+      "source": "src/components/ArticleView.tsx",
+      "target": "@/hooks/useArticles"
+    },
+    {
+      "source": "src/components/ArticleView.tsx",
+      "target": "@/hooks/useTagsAndLinks"
+    },
+    {
+      "source": "src/components/ArticleView.tsx",
+      "target": "react-markdown"
+    },
+    {
+      "source": "src/components/ArticleView.tsx",
+      "target": "remark-gfm"
+    },
+    {
+      "source": "src/components/ArticleView.tsx",
+      "target": "@/hooks/use-toast"
+    },
+    {
+      "source": "src/components/ArticleView.tsx",
+      "target": "easymde/dist/easymde.min.css"
+    },
+    {
+      "source": "src/components/TagExplorer.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/TagExplorer.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/TagExplorer.tsx",
+      "target": "@/components/ui/input"
+    },
+    {
+      "source": "src/components/TagExplorer.tsx",
+      "target": "@/components/ui/badge"
+    },
+    {
+      "source": "src/components/TagExplorer.tsx",
+      "target": "@/components/ui/card"
+    },
+    {
+      "source": "src/components/TagExplorer.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/TagExplorer.tsx",
+      "target": "@/hooks/useTagsAndLinks"
+    },
+    {
+      "source": "src/components/WorldDashboard.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/WorldDashboard.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/WorldDashboard.tsx",
+      "target": "@/components/ui/input"
+    },
+    {
+      "source": "src/components/WorldDashboard.tsx",
+      "target": "@/components/ui/dialog"
+    },
+    {
+      "source": "src/components/WorldDashboard.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/WorldDashboard.tsx",
+      "target": "./WorldCard"
+    },
+    {
+      "source": "src/components/WorldDashboard.tsx",
+      "target": "@/hooks/useArticles"
+    },
+    {
+      "source": "src/components/WorldSeedingDialog.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/WorldSeedingDialog.tsx",
+      "target": "@/components/ui/dialog"
+    },
+    {
+      "source": "src/components/WorldSeedingDialog.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/WorldSeedingDialog.tsx",
+      "target": "@/components/ui/textarea"
+    },
+    {
+      "source": "src/components/WorldSeedingDialog.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/WorldSeedingDialog.tsx",
+      "target": "@/integrations/supabase/client"
+    },
+    {
+      "source": "src/components/WorldSeedingDialog.tsx",
+      "target": "@/hooks/use-toast"
+    },
+    {
+      "source": "src/components/WorldCard.tsx",
+      "target": "@/components/ui/card"
+    },
+    {
+      "source": "src/components/WorldCard.tsx",
+      "target": "@/components/ui/badge"
+    },
+    {
+      "source": "src/components/WorldCard.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ArticleTemplateSelector.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ArticleTemplateSelector.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/ArticleTemplateSelector.tsx",
+      "target": "@/components/ui/input"
+    },
+    {
+      "source": "src/components/ArticleTemplateSelector.tsx",
+      "target": "@/components/ui/badge"
+    },
+    {
+      "source": "src/components/ArticleTemplateSelector.tsx",
+      "target": "@/components/ui/dialog"
+    },
+    {
+      "source": "src/components/ArticleTemplateSelector.tsx",
+      "target": "@/components/ui/scroll-area"
+    },
+    {
+      "source": "src/components/ArticleTemplateSelector.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/hooks/use-mobile.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/pages/Index.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/pages/Index.tsx",
+      "target": "@/components/WorldDashboard"
+    },
+    {
+      "source": "src/pages/Index.tsx",
+      "target": "@/components/WorldInterface"
+    },
+    {
+      "source": "src/pages/Index.tsx",
+      "target": "@/components/WorldSeedingDialog"
+    },
+    {
+      "source": "src/pages/NotFound.tsx",
+      "target": "react-router-dom"
+    },
+    {
+      "source": "src/pages/NotFound.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/aspect-ratio.tsx",
+      "target": "@radix-ui/react-aspect-ratio"
+    },
+    {
+      "source": "src/components/ui/alert-dialog.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/alert-dialog.tsx",
+      "target": "@radix-ui/react-alert-dialog"
+    },
+    {
+      "source": "src/components/ui/alert-dialog.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/alert-dialog.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/ui/pagination.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/pagination.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/pagination.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/pagination.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/ui/tabs.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/tabs.tsx",
+      "target": "@radix-ui/react-tabs"
+    },
+    {
+      "source": "src/components/ui/tabs.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/card.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/card.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/slider.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/slider.tsx",
+      "target": "@radix-ui/react-slider"
+    },
+    {
+      "source": "src/components/ui/slider.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/popover.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/popover.tsx",
+      "target": "@radix-ui/react-popover"
+    },
+    {
+      "source": "src/components/ui/popover.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/progress.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/progress.tsx",
+      "target": "@radix-ui/react-progress"
+    },
+    {
+      "source": "src/components/ui/progress.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/toaster.tsx",
+      "target": "@/hooks/use-toast"
+    },
+    {
+      "source": "src/components/ui/input-otp.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/input-otp.tsx",
+      "target": "input-otp"
+    },
+    {
+      "source": "src/components/ui/input-otp.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/input-otp.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/chart.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/chart.tsx",
+      "target": "recharts"
+    },
+    {
+      "source": "src/components/ui/chart.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/hover-card.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/hover-card.tsx",
+      "target": "@radix-ui/react-hover-card"
+    },
+    {
+      "source": "src/components/ui/hover-card.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/sheet.tsx",
+      "target": "@radix-ui/react-dialog"
+    },
+    {
+      "source": "src/components/ui/sheet.tsx",
+      "target": "class-variance-authority"
+    },
+    {
+      "source": "src/components/ui/sheet.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/sheet.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/sheet.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/scroll-area.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/scroll-area.tsx",
+      "target": "@radix-ui/react-scroll-area"
+    },
+    {
+      "source": "src/components/ui/scroll-area.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/resizable.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/resizable.tsx",
+      "target": "react-resizable-panels"
+    },
+    {
+      "source": "src/components/ui/resizable.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/label.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/label.tsx",
+      "target": "@radix-ui/react-label"
+    },
+    {
+      "source": "src/components/ui/label.tsx",
+      "target": "class-variance-authority"
+    },
+    {
+      "source": "src/components/ui/label.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/sonner.tsx",
+      "target": "next-themes"
+    },
+    {
+      "source": "src/components/ui/sonner.tsx",
+      "target": "sonner"
+    },
+    {
+      "source": "src/components/ui/navigation-menu.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/navigation-menu.tsx",
+      "target": "@radix-ui/react-navigation-menu"
+    },
+    {
+      "source": "src/components/ui/navigation-menu.tsx",
+      "target": "class-variance-authority"
+    },
+    {
+      "source": "src/components/ui/navigation-menu.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/navigation-menu.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/chat-bubble.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/chat-bubble.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/chat-bubble.tsx",
+      "target": "@/components/ui/avatar"
+    },
+    {
+      "source": "src/components/ui/chat-bubble.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/ui/chat-bubble.tsx",
+      "target": "@/components/ui/message-loading"
+    },
+    {
+      "source": "src/components/ui/accordion.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/accordion.tsx",
+      "target": "@radix-ui/react-accordion"
+    },
+    {
+      "source": "src/components/ui/accordion.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/accordion.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/drawer.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/drawer.tsx",
+      "target": "vaul"
+    },
+    {
+      "source": "src/components/ui/drawer.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/tooltip.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/tooltip.tsx",
+      "target": "@radix-ui/react-tooltip"
+    },
+    {
+      "source": "src/components/ui/tooltip.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/alert.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/alert.tsx",
+      "target": "class-variance-authority"
+    },
+    {
+      "source": "src/components/ui/alert.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/secret-form.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/secret-form.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/ui/secret-form.tsx",
+      "target": "@/components/ui/input"
+    },
+    {
+      "source": "src/components/ui/secret-form.tsx",
+      "target": "@/components/ui/label"
+    },
+    {
+      "source": "src/components/ui/secret-form.tsx",
+      "target": "@/components/ui/card"
+    },
+    {
+      "source": "src/components/ui/secret-form.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/secret-form.tsx",
+      "target": "sonner"
+    },
+    {
+      "source": "src/components/ui/switch.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/switch.tsx",
+      "target": "@radix-ui/react-switch"
+    },
+    {
+      "source": "src/components/ui/switch.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/calendar.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/calendar.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/calendar.tsx",
+      "target": "react-day-picker"
+    },
+    {
+      "source": "src/components/ui/calendar.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/calendar.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/ui/breadcrumb.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/breadcrumb.tsx",
+      "target": "@radix-ui/react-slot"
+    },
+    {
+      "source": "src/components/ui/breadcrumb.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/breadcrumb.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/radio-group.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/radio-group.tsx",
+      "target": "@radix-ui/react-radio-group"
+    },
+    {
+      "source": "src/components/ui/radio-group.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/radio-group.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/command.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/command.tsx",
+      "target": "@radix-ui/react-dialog"
+    },
+    {
+      "source": "src/components/ui/command.tsx",
+      "target": "cmdk"
+    },
+    {
+      "source": "src/components/ui/command.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/command.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/command.tsx",
+      "target": "@/components/ui/dialog"
+    },
+    {
+      "source": "src/components/ui/toggle-group.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/toggle-group.tsx",
+      "target": "@radix-ui/react-toggle-group"
+    },
+    {
+      "source": "src/components/ui/toggle-group.tsx",
+      "target": "class-variance-authority"
+    },
+    {
+      "source": "src/components/ui/toggle-group.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/toggle-group.tsx",
+      "target": "@/components/ui/toggle"
+    },
+    {
+      "source": "src/components/ui/avatar.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/avatar.tsx",
+      "target": "@radix-ui/react-avatar"
+    },
+    {
+      "source": "src/components/ui/avatar.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/menubar.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/menubar.tsx",
+      "target": "@radix-ui/react-menubar"
+    },
+    {
+      "source": "src/components/ui/menubar.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/menubar.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/dialog.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/dialog.tsx",
+      "target": "@radix-ui/react-dialog"
+    },
+    {
+      "source": "src/components/ui/dialog.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/dialog.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/badge.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/badge.tsx",
+      "target": "class-variance-authority"
+    },
+    {
+      "source": "src/components/ui/badge.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/sidebar.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/sidebar.tsx",
+      "target": "@radix-ui/react-slot"
+    },
+    {
+      "source": "src/components/ui/sidebar.tsx",
+      "target": "class-variance-authority"
+    },
+    {
+      "source": "src/components/ui/sidebar.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/sidebar.tsx",
+      "target": "@/hooks/use-mobile"
+    },
+    {
+      "source": "src/components/ui/sidebar.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/sidebar.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/ui/sidebar.tsx",
+      "target": "@/components/ui/input"
+    },
+    {
+      "source": "src/components/ui/sidebar.tsx",
+      "target": "@/components/ui/separator"
+    },
+    {
+      "source": "src/components/ui/sidebar.tsx",
+      "target": "@/components/ui/sheet"
+    },
+    {
+      "source": "src/components/ui/sidebar.tsx",
+      "target": "@/components/ui/skeleton"
+    },
+    {
+      "source": "src/components/ui/table.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/table.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/separator.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/separator.tsx",
+      "target": "@radix-ui/react-separator"
+    },
+    {
+      "source": "src/components/ui/separator.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/button.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/button.tsx",
+      "target": "@radix-ui/react-slot"
+    },
+    {
+      "source": "src/components/ui/button.tsx",
+      "target": "class-variance-authority"
+    },
+    {
+      "source": "src/components/ui/button.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/toggle.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/toggle.tsx",
+      "target": "@radix-ui/react-toggle"
+    },
+    {
+      "source": "src/components/ui/toggle.tsx",
+      "target": "class-variance-authority"
+    },
+    {
+      "source": "src/components/ui/toggle.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/toast.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/toast.tsx",
+      "target": "@radix-ui/react-toast"
+    },
+    {
+      "source": "src/components/ui/toast.tsx",
+      "target": "class-variance-authority"
+    },
+    {
+      "source": "src/components/ui/toast.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/toast.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/checkbox.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/checkbox.tsx",
+      "target": "@radix-ui/react-checkbox"
+    },
+    {
+      "source": "src/components/ui/checkbox.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/checkbox.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/chat-input.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/chat-input.tsx",
+      "target": "@/components/ui/textarea"
+    },
+    {
+      "source": "src/components/ui/chat-input.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/collapsible.tsx",
+      "target": "@radix-ui/react-collapsible"
+    },
+    {
+      "source": "src/components/ui/dropdown-menu.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/dropdown-menu.tsx",
+      "target": "@radix-ui/react-dropdown-menu"
+    },
+    {
+      "source": "src/components/ui/dropdown-menu.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/dropdown-menu.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/select.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/select.tsx",
+      "target": "@radix-ui/react-select"
+    },
+    {
+      "source": "src/components/ui/select.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/select.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/textarea.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/textarea.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/input.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/input.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/skeleton.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/context-menu.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/context-menu.tsx",
+      "target": "@radix-ui/react-context-menu"
+    },
+    {
+      "source": "src/components/ui/context-menu.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/context-menu.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/form.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/form.tsx",
+      "target": "@radix-ui/react-label"
+    },
+    {
+      "source": "src/components/ui/form.tsx",
+      "target": "@radix-ui/react-slot"
+    },
+    {
+      "source": "src/components/ui/form.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/form.tsx",
+      "target": "@/components/ui/label"
+    },
+    {
+      "source": "src/components/ui/carousel.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/carousel.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/carousel.tsx",
+      "target": "@/lib/utils"
+    },
+    {
+      "source": "src/components/ui/carousel.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/ui/chat-message-list.tsx",
+      "target": "react"
+    },
+    {
+      "source": "src/components/ui/chat-message-list.tsx",
+      "target": "lucide-react"
+    },
+    {
+      "source": "src/components/ui/chat-message-list.tsx",
+      "target": "@/components/ui/button"
+    },
+    {
+      "source": "src/components/ui/chat-message-list.tsx",
+      "target": "@/hooks/use-auto-scroll"
+    },
+    {
+      "source": "eslint.config.js",
+      "target": "@eslint/js"
+    },
+    {
+      "source": "eslint.config.js",
+      "target": "globals"
+    },
+    {
+      "source": "eslint.config.js",
+      "target": "eslint-plugin-react-hooks"
+    },
+    {
+      "source": "eslint.config.js",
+      "target": "eslint-plugin-react-refresh"
+    },
+    {
+      "source": "eslint.config.js",
+      "target": "typescript-eslint"
+    }
+  ],
+  "modules": [
+    {
+      "name": "dir_@radix-ui",
+      "type": "frontend_component",
+      "confidence": 0.3,
+      "files": [
+        "@radix-ui/react-separator",
+        "@radix-ui/react-hover-card",
+        "@radix-ui/react-navigation-menu",
+        "@radix-ui/react-dialog",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-aspect-ratio",
+        "@radix-ui/react-alert-dialog",
+        "@radix-ui/react-select",
+        "@radix-ui/react-toggle",
+        "@radix-ui/react-tooltip",
+        "@radix-ui/react-slider",
+        "@radix-ui/react-switch",
+        "@radix-ui/react-tabs",
+        "@radix-ui/react-toggle-group",
+        "@radix-ui/react-toast",
+        "@radix-ui/react-accordion",
+        "@radix-ui/react-dropdown-menu",
+        "@radix-ui/react-context-menu",
+        "@radix-ui/react-label",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-menubar",
+        "@radix-ui/react-checkbox",
+        "@radix-ui/react-progress",
+        "@radix-ui/react-avatar",
+        "@radix-ui/react-radio-group",
+        "@radix-ui/react-collapsible",
+        "@radix-ui/react-popover"
+      ],
+      "size": 0,
+      "description": "Directory-based module: @radix-ui",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_src_components_ui_part_1",
+      "type": "frontend_component",
+      "confidence": 0.9814814814814815,
+      "files": [
+        "src/components/ui/use-toast.ts",
+        "src/components/ui/form.tsx",
+        "src/components/ui/toggle-group.tsx",
+        "src/components/ui/alert.tsx",
+        "src/components/ui/chart.tsx",
+        "src/components/ui/resizable.tsx",
+        "src/components/ui/toaster.tsx",
+        "src/components/ui/carousel.tsx",
+        "src/components/ui/slider.tsx",
+        "src/components/ui/select.tsx",
+        "src/components/ui/popover.tsx",
+        "src/components/ui/scroll-area.tsx",
+        "src/components/ui/sonner.tsx",
+        "src/components/ui/badge.tsx",
+        "src/components/ui/chat-bubble.tsx",
+        "src/components/ui/navigation-menu.tsx",
+        "src/components/ui/skeleton.tsx",
+        "src/components/ui/checkbox.tsx",
+        "src/components/ui/chat-message-list.tsx",
+        "src/components/ui/tooltip.tsx",
+        "src/components/ui/aspect-ratio.tsx"
+      ],
+      "size": 49729,
+      "description": "Directory-based module: src/components/ui (part 1)",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_src_components_ui_part_2",
+      "type": "frontend_component",
+      "confidence": 0.9814814814814815,
+      "files": [
+        "src/components/ui/breadcrumb.tsx",
+        "src/components/ui/context-menu.tsx",
+        "src/components/ui/input-otp.tsx",
+        "src/components/ui/toggle.tsx",
+        "src/components/ui/avatar.tsx",
+        "src/components/ui/sidebar.tsx",
+        "src/components/ui/progress.tsx",
+        "src/components/ui/dialog.tsx",
+        "src/components/ui/radio-group.tsx",
+        "src/components/ui/collapsible.tsx",
+        "src/components/ui/input.tsx",
+        "src/components/ui/textarea.tsx"
+      ],
+      "size": 46240,
+      "description": "Directory-based module: src/components/ui (part 2)",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_src_components_ui_part_3",
+      "type": "frontend_component",
+      "confidence": 0.9814814814814815,
+      "files": [
+        "src/components/ui/alert-dialog.tsx",
+        "src/components/ui/drawer.tsx",
+        "src/components/ui/calendar.tsx",
+        "src/components/ui/button.tsx",
+        "src/components/ui/hover-card.tsx",
+        "src/components/ui/command.tsx",
+        "src/components/ui/secret-form.tsx",
+        "src/components/ui/switch.tsx",
+        "src/components/ui/separator.tsx",
+        "src/components/ui/pagination.tsx",
+        "src/components/ui/sheet.tsx",
+        "src/components/ui/chat-input.tsx",
+        "src/components/ui/dropdown-menu.tsx",
+        "src/components/ui/label.tsx",
+        "src/components/ui/table.tsx",
+        "src/components/ui/menubar.tsx"
+      ],
+      "size": 49139,
+      "description": "Directory-based module: src/components/ui (part 3)",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_src_components_ui_part_4",
+      "type": "frontend_component",
+      "confidence": 0.9814814814814815,
+      "files": [
+        "src/components/ui/card.tsx",
+        "src/components/ui/tabs.tsx",
+        "src/components/ui/toast.tsx",
+        "src/components/ui/accordion.tsx",
+        "src/components/ui/message-loading.tsx"
+      ],
+      "size": 11770,
+      "description": "Directory-based module: src/components/ui (part 4)",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir__",
+      "type": "config_settings",
+      "confidence": 0.08809523809523809,
+      "files": [
+        "./WikiSidebar",
+        "./FolderManager",
+        "clsx",
+        "tailwindcss-animate",
+        "react-resizable-panels",
+        "./index.css",
+        "vaul",
+        "./useArticles",
+        "class-variance-authority",
+        "react-markdown",
+        "next-themes",
+        "react-simplemde-editor",
+        "postcss.config.js",
+        "./BacklinksSection",
+        "eslint-plugin-react-hooks",
+        "./ArticleTemplateSelector",
+        "eslint.config.js",
+        "sonner",
+        "tailwind.config.ts",
+        "cmdk",
+        "globals",
+        "remark-gfm",
+        "react-day-picker",
+        "typescript-eslint",
+        "path",
+        "./TagExplorer",
+        "./WorldCard",
+        "lucide-react",
+        "tailwind-merge",
+        "lovable-tagger",
+        "./ArticleView",
+        "vite",
+        "tailwindcss",
+        "react",
+        "input-otp",
+        "vite.config.ts",
+        "./App.tsx",
+        "./WorldChat",
+        "eslint-plugin-react-refresh",
+        "./types",
+        "recharts",
+        "react-router-dom"
+      ],
+      "size": 3727,
+      "description": "Directory-based module: .",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_@_components",
+      "type": "frontend_component",
+      "confidence": 0.3,
+      "files": [
+        "@/components/WorldDashboard",
+        "@/components/WorldSeedingDialog",
+        "@/components/WorldInterface"
+      ],
+      "size": 0,
+      "description": "Directory-based module: @/components",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_@_components_ui",
+      "type": "frontend_component",
+      "confidence": 0.3,
+      "files": [
+        "@/components/ui/button",
+        "@/components/ui/card",
+        "@/components/ui/avatar",
+        "@/components/ui/sonner",
+        "@/components/ui/dropdown-menu",
+        "@/components/ui/textarea",
+        "@/components/ui/scroll-area",
+        "@/components/ui/label",
+        "@/components/ui/skeleton",
+        "@/components/ui/tooltip",
+        "@/components/ui/chat-message-list",
+        "@/components/ui/sheet",
+        "@/components/ui/toaster",
+        "@/components/ui/badge",
+        "@/components/ui/collapsible",
+        "@/components/ui/chat-bubble",
+        "@/components/ui/chat-input",
+        "@/components/ui/separator",
+        "@/components/ui/toggle",
+        "@/components/ui/resizable",
+        "@/components/ui/message-loading",
+        "@/components/ui/dialog",
+        "@/components/ui/tabs",
+        "@/components/ui/input"
+      ],
+      "size": 0,
+      "description": "Directory-based module: @/components/ui",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_src",
+      "type": "frontend_component",
+      "confidence": 0.4666666666666667,
+      "files": [
+        "src/App.tsx",
+        "src/vite-env.d.ts",
+        "src/main.tsx"
+      ],
+      "size": 1416,
+      "description": "Directory-based module: src",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_src_components_part_1",
+      "type": "frontend_component",
+      "confidence": 1.0,
+      "files": [
+        "src/components/BacklinksSection.tsx",
+        "src/components/ArticleTemplateSelector.tsx",
+        "src/components/WorldChat.tsx",
+        "src/components/WorldSeedingDialog.tsx"
+      ],
+      "size": 47634,
+      "description": "Directory-based module: src/components (part 1)",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_src_components_part_2",
+      "type": "frontend_component",
+      "confidence": 1.0,
+      "files": [
+        "src/components/TagExplorer.tsx",
+        "src/components/WikiSidebar.tsx",
+        "src/components/WorldInterface.tsx",
+        "src/components/FolderManager.tsx",
+        "src/components/WorldCard.tsx"
+      ],
+      "size": 36530,
+      "description": "Directory-based module: src/components (part 2)",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_src_components_part_3",
+      "type": "frontend_component",
+      "confidence": 1.0,
+      "files": [
+        "src/components/ArticleView.tsx",
+        "src/components/WorldDashboard.tsx"
+      ],
+      "size": 23792,
+      "description": "Directory-based module: src/components (part 3)",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_pages",
+      "type": "frontend_component",
+      "confidence": 0.3,
+      "files": [
+        "./pages/Index",
+        "./pages/NotFound"
+      ],
+      "size": 0,
+      "description": "Directory-based module: pages",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_@_hooks",
+      "type": "frontend_hook",
+      "confidence": 0.3,
+      "files": [
+        "@/hooks/useTagsAndLinks",
+        "@/hooks/use-auto-scroll",
+        "@/hooks/useFolders",
+        "@/hooks/use-mobile",
+        "@/hooks/use-toast",
+        "@/hooks/useArticles",
+        "@/hooks/useAutoSave"
+      ],
+      "size": 0,
+      "description": "Directory-based module: @/hooks",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_src_hooks",
+      "type": "frontend_hook",
+      "confidence": 0.9428571428571428,
+      "files": [
+        "src/hooks/useTagsAndLinks.ts",
+        "src/hooks/useAutoSave.ts",
+        "src/hooks/use-toast.ts",
+        "src/hooks/useFolders.ts",
+        "src/hooks/useArticles.ts",
+        "src/hooks/use-mobile.tsx",
+        "src/hooks/use-auto-scroll.ts"
+      ],
+      "size": 19798,
+      "description": "Directory-based module: src/hooks",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_src_integrations_supabase",
+      "type": "backend_model",
+      "confidence": 0.8500000000000001,
+      "files": [
+        "src/integrations/supabase/types.ts",
+        "src/integrations/supabase/client.ts"
+      ],
+      "size": 8507,
+      "description": "Directory-based module: src/integrations/supabase",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_src_lib",
+      "type": "frontend_hook",
+      "confidence": 0.7000000000000001,
+      "files": [
+        "src/lib/utils.ts",
+        "src/lib/openai.ts"
+      ],
+      "size": 4835,
+      "description": "Directory-based module: src/lib",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_@_lib",
+      "type": "utility_helper",
+      "confidence": 0.3,
+      "files": [
+        "@/lib/utils",
+        "@/lib/openai"
+      ],
+      "size": 0,
+      "description": "Directory-based module: @/lib",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    },
+    {
+      "name": "dir_src_pages",
+      "type": "frontend_component",
+      "confidence": 1.0,
+      "files": [
+        "src/pages/Index.tsx",
+        "src/pages/NotFound.tsx"
+      ],
+      "size": 2785,
+      "description": "Directory-based module: src/pages",
+      "functions": [],
+      "classes": [],
+      "variables": [],
+      "function_count": 0,
+      "class_count": 0,
+      "variable_count": 0
+    }
+  ]
+}

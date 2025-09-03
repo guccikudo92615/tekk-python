@@ -1,0 +1,3462 @@
+{
+  "name": "test-repo",
+  "packages": [
+    {
+      "name": "root",
+      "files": [
+        {
+          "path": "tailwind.config.ts",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "tailwindcss",
+            "tailwindcss-animate"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "tailwindcss",
+              "type": "import"
+            },
+            {
+              "name": "tailwindcss-animate",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "eslint.config.js",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "@eslint/js",
+            "globals",
+            "eslint-plugin-react-hooks",
+            "eslint-plugin-react-refresh",
+            "typescript-eslint"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "@eslint/js",
+              "type": "import"
+            },
+            {
+              "name": "globals",
+              "type": "import"
+            },
+            {
+              "name": "eslint-plugin-react-hooks",
+              "type": "import"
+            },
+            {
+              "name": "eslint-plugin-react-refresh",
+              "type": "import"
+            },
+            {
+              "name": "typescript-eslint",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "vite.config.ts",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "vite",
+            "@vitejs/plugin-react-swc",
+            "path",
+            "lovable-tagger"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "vite",
+              "type": "import"
+            },
+            {
+              "name": "@vitejs/plugin-react-swc",
+              "type": "import"
+            },
+            {
+              "name": "path",
+              "type": "import"
+            },
+            {
+              "name": "lovable-tagger",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "postcss.config.js",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [],
+          "exports": [],
+          "detailed_dependencies": []
+        }
+      ],
+      "dependencies": [
+        "lovable-tagger",
+        "globals",
+        "eslint-plugin-react-hooks",
+        "tailwindcss-animate",
+        "path",
+        "vite",
+        "@vitejs/plugin-react-swc",
+        "tailwindcss",
+        "@eslint/js",
+        "typescript-eslint",
+        "eslint-plugin-react-refresh"
+      ],
+      "exports": []
+    },
+    {
+      "name": "src",
+      "files": [
+        {
+          "path": "src/App.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/components/ui/toaster",
+            "@/components/ui/sonner",
+            "@/components/ui/tooltip",
+            "@tanstack/react-query",
+            "react-router-dom",
+            "./pages/Index",
+            "./pages/NotFound"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/toaster",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/sonner",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/tooltip",
+              "type": "import"
+            },
+            {
+              "name": "@tanstack/react-query",
+              "type": "import"
+            },
+            {
+              "name": "react-router-dom",
+              "type": "import"
+            },
+            {
+              "name": "./pages/Index",
+              "type": "import"
+            },
+            {
+              "name": "./pages/NotFound",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/main.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "react-dom/client",
+            "./App.tsx",
+            "./index.css"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "react-dom/client",
+              "type": "import"
+            },
+            {
+              "name": "./App.tsx",
+              "type": "import"
+            },
+            {
+              "name": "./index.css",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/vite-env.d.ts",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [],
+          "exports": [],
+          "detailed_dependencies": []
+        }
+      ],
+      "dependencies": [
+        "react-dom/client",
+        "./index.css",
+        "@tanstack/react-query",
+        "./pages/NotFound",
+        "@/components/ui/toaster",
+        "./pages/Index",
+        "./App.tsx",
+        "@/components/ui/sonner",
+        "@/components/ui/tooltip",
+        "react",
+        "react-router-dom"
+      ],
+      "exports": []
+    },
+    {
+      "name": "supabase.functions.world-seeding",
+      "files": [
+        {
+          "path": "supabase/functions/world-seeding/index.ts",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "https://deno.land/std@0.168.0/http/server.ts",
+            "https://esm.sh/@supabase/supabase-js@2.53.0",
+            "https://deno.land/x/xhr@0.1.0/mod.ts"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "https://deno.land/std@0.168.0/http/server.ts",
+              "type": "import"
+            },
+            {
+              "name": "https://esm.sh/@supabase/supabase-js@2.53.0",
+              "type": "import"
+            },
+            {
+              "name": "https://deno.land/x/xhr@0.1.0/mod.ts",
+              "type": "import"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "https://esm.sh/@supabase/supabase-js@2.53.0",
+        "https://deno.land/std@0.168.0/http/server.ts",
+        "https://deno.land/x/xhr@0.1.0/mod.ts"
+      ],
+      "exports": []
+    },
+    {
+      "name": "supabase.functions.chat-completion",
+      "files": [
+        {
+          "path": "supabase/functions/chat-completion/index.ts",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "https://deno.land/std@0.168.0/http/server.ts"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "https://deno.land/std@0.168.0/http/server.ts",
+              "type": "import"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "https://deno.land/std@0.168.0/http/server.ts"
+      ],
+      "exports": []
+    },
+    {
+      "name": "supabase.functions.world-chat",
+      "files": [
+        {
+          "path": "supabase/functions/world-chat/index.ts",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "https://deno.land/std@0.168.0/http/server.ts",
+            "https://deno.land/x/xhr@0.1.0/mod.ts"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "https://deno.land/std@0.168.0/http/server.ts",
+              "type": "import"
+            },
+            {
+              "name": "https://deno.land/x/xhr@0.1.0/mod.ts",
+              "type": "import"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "https://deno.land/std@0.168.0/http/server.ts",
+        "https://deno.land/x/xhr@0.1.0/mod.ts"
+      ],
+      "exports": []
+    },
+    {
+      "name": "supabase.functions.realtime-chat",
+      "files": [
+        {
+          "path": "supabase/functions/realtime-chat/index.ts",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "https://deno.land/std@0.168.0/http/server.ts",
+            "https://deno.land/x/xhr@0.1.0/mod.ts"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "https://deno.land/std@0.168.0/http/server.ts",
+              "type": "import"
+            },
+            {
+              "name": "https://deno.land/x/xhr@0.1.0/mod.ts",
+              "type": "import"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "https://deno.land/std@0.168.0/http/server.ts",
+        "https://deno.land/x/xhr@0.1.0/mod.ts"
+      ],
+      "exports": []
+    },
+    {
+      "name": "supabase.functions.generate-image",
+      "files": [
+        {
+          "path": "supabase/functions/generate-image/index.ts",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "https://deno.land/std@0.168.0/http/server.ts"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "https://deno.land/std@0.168.0/http/server.ts",
+              "type": "import"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "https://deno.land/std@0.168.0/http/server.ts"
+      ],
+      "exports": []
+    },
+    {
+      "name": "src.utils",
+      "files": [
+        {
+          "path": "src/utils/RealtimeAudio.ts",
+          "types": [
+            {
+              "name": "AudioRecorder",
+              "referenced_in": [
+                "src/utils/RealtimeAudio.ts"
+              ],
+              "file_name": "RealtimeAudio.ts",
+              "start_line": 1,
+              "length": 1,
+              "dependencies": [],
+              "methods": [],
+              "attributes": [],
+              "base_classes": null,
+              "docstring": null
+            },
+            {
+              "name": "AudioQueue",
+              "referenced_in": [
+                "src/utils/RealtimeAudio.ts"
+              ],
+              "file_name": "RealtimeAudio.ts",
+              "start_line": 125,
+              "length": 1,
+              "dependencies": [],
+              "methods": [],
+              "attributes": [],
+              "base_classes": null,
+              "docstring": null
+            },
+            {
+              "name": "RealtimeChat",
+              "referenced_in": [
+                "src/utils/RealtimeAudio.ts"
+              ],
+              "file_name": "RealtimeAudio.ts",
+              "start_line": 178,
+              "length": 1,
+              "dependencies": [],
+              "methods": [],
+              "attributes": [],
+              "base_classes": null,
+              "docstring": null
+            }
+          ],
+          "variables": [],
+          "functions": [],
+          "dependencies": [],
+          "exports": [
+            "AudioRecorder",
+            "AudioQueue",
+            "RealtimeChat"
+          ],
+          "detailed_dependencies": []
+        }
+      ],
+      "dependencies": [],
+      "exports": [
+        "AudioRecorder",
+        "RealtimeChat",
+        "AudioQueue"
+      ]
+    },
+    {
+      "name": "src.components",
+      "files": [
+        {
+          "path": "src/components/WorldChat.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/components/ui/button",
+            "@/components/ui/badge",
+            "lucide-react",
+            "@/components/ui/chat-message-list",
+            "@/components/ui/chat-bubble",
+            "@/components/ui/chat-input",
+            "@/hooks/use-toast",
+            "@/integrations/supabase/client",
+            "@/utils/RealtimeAudio",
+            "@/hooks/useArticles"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/badge",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/chat-message-list",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/chat-bubble",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/chat-input",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/use-toast",
+              "type": "import"
+            },
+            {
+              "name": "@/integrations/supabase/client",
+              "type": "import"
+            },
+            {
+              "name": "@/utils/RealtimeAudio",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/useArticles",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/BacklinksSection.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "@/components/ui/button",
+            "@/components/ui/card",
+            "@/components/ui/badge",
+            "lucide-react",
+            "@/hooks/useTagsAndLinks"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/card",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/badge",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/useTagsAndLinks",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/FolderManager.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/components/ui/button",
+            "@/components/ui/input",
+            "@/components/ui/card",
+            "@/components/ui/dialog",
+            "@/components/ui/collapsible",
+            "@/components/ui/dropdown-menu",
+            "@/hooks/useFolders",
+            "@/hooks/useArticles"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/input",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/card",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/dialog",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/collapsible",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/dropdown-menu",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/useFolders",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/useArticles",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/WorldInterface.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/components/ui/button",
+            "lucide-react",
+            "./WikiSidebar",
+            "./ArticleView",
+            "./ui/secret-form",
+            "@/components/ui/dialog",
+            "@/components/ui/input",
+            "./ArticleTemplateSelector",
+            "@/hooks/useArticles",
+            "@/hooks/useTagsAndLinks",
+            "@/hooks/useFolders",
+            "./FolderManager",
+            "./WorldChat",
+            "lucide-react",
+            "sonner"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "./WikiSidebar",
+              "type": "import"
+            },
+            {
+              "name": "./ArticleView",
+              "type": "import"
+            },
+            {
+              "name": "./ui/secret-form",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/dialog",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/input",
+              "type": "import"
+            },
+            {
+              "name": "./ArticleTemplateSelector",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/useArticles",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/useTagsAndLinks",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/useFolders",
+              "type": "import"
+            },
+            {
+              "name": "./FolderManager",
+              "type": "import"
+            },
+            {
+              "name": "./WorldChat",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "sonner",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/WikiSidebar.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/components/ui/button",
+            "@/components/ui/input",
+            "@/components/ui/badge",
+            "@/components/ui/card",
+            "@/components/ui/tabs",
+            "./TagExplorer",
+            "@/hooks/useArticles",
+            "@/hooks/useTagsAndLinks"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/input",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/badge",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/card",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/tabs",
+              "type": "import"
+            },
+            {
+              "name": "./TagExplorer",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/useArticles",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/useTagsAndLinks",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ArticleView.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/lib/openai",
+            "@/components/ui/button",
+            "@/components/ui/input",
+            "react-simplemde-editor",
+            "@/components/ui/badge",
+            "@/components/ui/card",
+            "@/components/ui/resizable",
+            "@/hooks/useAutoSave",
+            "./BacklinksSection",
+            "@/hooks/useArticles",
+            "@/hooks/useTagsAndLinks",
+            "react-markdown",
+            "remark-gfm",
+            "@/hooks/use-toast",
+            "easymde/dist/easymde.min.css"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/openai",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/input",
+              "type": "import"
+            },
+            {
+              "name": "react-simplemde-editor",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/badge",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/card",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/resizable",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/useAutoSave",
+              "type": "import"
+            },
+            {
+              "name": "./BacklinksSection",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/useArticles",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/useTagsAndLinks",
+              "type": "import"
+            },
+            {
+              "name": "react-markdown",
+              "type": "import"
+            },
+            {
+              "name": "remark-gfm",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/use-toast",
+              "type": "import"
+            },
+            {
+              "name": "easymde/dist/easymde.min.css",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/TagExplorer.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/components/ui/button",
+            "@/components/ui/input",
+            "@/components/ui/badge",
+            "@/components/ui/card",
+            "lucide-react",
+            "@/hooks/useTagsAndLinks"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/input",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/badge",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/card",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/useTagsAndLinks",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/WorldDashboard.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/components/ui/button",
+            "@/components/ui/input",
+            "@/components/ui/dialog",
+            "lucide-react",
+            "./WorldCard",
+            "@/hooks/useArticles"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/input",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/dialog",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "./WorldCard",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/useArticles",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/WorldSeedingDialog.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/components/ui/dialog",
+            "@/components/ui/button",
+            "@/components/ui/textarea",
+            "lucide-react",
+            "@/integrations/supabase/client",
+            "@/hooks/use-toast"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/dialog",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/textarea",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/integrations/supabase/client",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/use-toast",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/WorldCard.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "@/components/ui/card",
+            "@/components/ui/badge",
+            "lucide-react"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "@/components/ui/card",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/badge",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ArticleTemplateSelector.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [
+            {
+              "name": "ArticleTemplateSelector",
+              "referenced_in": [
+                "src/components/ArticleTemplateSelector.tsx"
+              ],
+              "file_name": "ArticleTemplateSelector.tsx",
+              "start_line": 164,
+              "length": 6,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            }
+          ],
+          "dependencies": [
+            "react",
+            "@/components/ui/button",
+            "@/components/ui/input",
+            "@/components/ui/badge",
+            "@/components/ui/dialog",
+            "@/components/ui/scroll-area",
+            "lucide-react"
+          ],
+          "exports": [
+            "ArticleTemplateSelector"
+          ],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/input",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/badge",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/dialog",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/scroll-area",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "./WorldCard",
+        "react-simplemde-editor",
+        "@/components/ui/chat-input",
+        "@/components/ui/dropdown-menu",
+        "./WorldChat",
+        "remark-gfm",
+        "@/components/ui/textarea",
+        "@/hooks/use-toast",
+        "@/hooks/useAutoSave",
+        "./FolderManager",
+        "./BacklinksSection",
+        "./ui/secret-form",
+        "react-markdown",
+        "@/components/ui/card",
+        "@/components/ui/collapsible",
+        "@/hooks/useTagsAndLinks",
+        "@/hooks/useArticles",
+        "@/components/ui/button",
+        "@/hooks/useFolders",
+        "@/components/ui/tabs",
+        "./ArticleView",
+        "easymde/dist/easymde.min.css",
+        "@/lib/openai",
+        "react",
+        "@/components/ui/resizable",
+        "@/components/ui/chat-message-list",
+        "@/components/ui/chat-bubble",
+        "sonner",
+        "lucide-react",
+        "./WikiSidebar",
+        "@/components/ui/dialog",
+        "@/utils/RealtimeAudio",
+        "./TagExplorer",
+        "@/components/ui/badge",
+        "@/integrations/supabase/client",
+        "@/components/ui/scroll-area",
+        "@/components/ui/input",
+        "./ArticleTemplateSelector"
+      ],
+      "exports": [
+        "ArticleTemplateSelector"
+      ]
+    },
+    {
+      "name": "src.hooks",
+      "files": [
+        {
+          "path": "src/hooks/use-mobile.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [
+            {
+              "name": "useIsMobile",
+              "referenced_in": [
+                "src/hooks/use-mobile.tsx"
+              ],
+              "file_name": "use-mobile.tsx",
+              "start_line": 5,
+              "length": 15,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            }
+          ],
+          "dependencies": [
+            "react"
+          ],
+          "exports": [
+            "useIsMobile"
+          ],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/hooks/useAutoSave.ts",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/hooks/use-toast"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/use-toast",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/hooks/useFolders.ts",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/integrations/supabase/client"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/integrations/supabase/client",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/hooks/use-toast.ts",
+          "types": [],
+          "variables": [],
+          "functions": [
+            {
+              "name": "genId",
+              "referenced_in": [
+                "src/hooks/use-toast.ts"
+              ],
+              "file_name": "use-toast.ts",
+              "start_line": 27,
+              "length": 4,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            },
+            {
+              "name": "dispatch",
+              "referenced_in": [
+                "src/hooks/use-toast.ts"
+              ],
+              "file_name": "use-toast.ts",
+              "start_line": 133,
+              "length": 6,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            },
+            {
+              "name": "toast",
+              "referenced_in": [
+                "src/hooks/use-toast.ts"
+              ],
+              "file_name": "use-toast.ts",
+              "start_line": 142,
+              "length": 1,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            },
+            {
+              "name": "useToast",
+              "referenced_in": [
+                "src/hooks/use-toast.ts"
+              ],
+              "file_name": "use-toast.ts",
+              "start_line": 171,
+              "length": 19,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            }
+          ],
+          "dependencies": [
+            "react"
+          ],
+          "exports": [
+            "genId",
+            "dispatch",
+            "toast",
+            "useToast"
+          ],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/hooks/use-auto-scroll.ts",
+          "types": [],
+          "variables": [],
+          "functions": [
+            {
+              "name": "useAutoScroll",
+              "referenced_in": [
+                "src/hooks/use-auto-scroll.ts"
+              ],
+              "file_name": "use-auto-scroll.ts",
+              "start_line": 14,
+              "length": 1,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            }
+          ],
+          "dependencies": [
+            "react"
+          ],
+          "exports": [
+            "useAutoScroll"
+          ],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/hooks/useTagsAndLinks.ts",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "./useArticles"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "./useArticles",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/hooks/useArticles.ts",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/integrations/supabase/client"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/integrations/supabase/client",
+              "type": "import"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "@/integrations/supabase/client",
+        "./useArticles",
+        "react",
+        "@/hooks/use-toast"
+      ],
+      "exports": [
+        "toast",
+        "useToast",
+        "genId",
+        "useAutoScroll",
+        "dispatch",
+        "useIsMobile"
+      ]
+    },
+    {
+      "name": "src.lib",
+      "files": [
+        {
+          "path": "src/lib/utils.ts",
+          "types": [],
+          "variables": [],
+          "functions": [
+            {
+              "name": "cn",
+              "referenced_in": [
+                "src/lib/utils.ts"
+              ],
+              "file_name": "utils.ts",
+              "start_line": 4,
+              "length": 3,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            }
+          ],
+          "dependencies": [
+            "clsx",
+            "tailwind-merge"
+          ],
+          "exports": [
+            "cn"
+          ],
+          "detailed_dependencies": [
+            {
+              "name": "clsx",
+              "type": "import"
+            },
+            {
+              "name": "tailwind-merge",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/lib/openai.ts",
+          "types": [],
+          "variables": [],
+          "functions": [
+            {
+              "name": "getApiKey",
+              "referenced_in": [
+                "src/lib/openai.ts"
+              ],
+              "file_name": "openai.ts",
+              "start_line": 6,
+              "length": 7,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            },
+            {
+              "name": "sendChatMessage",
+              "referenced_in": [
+                "src/lib/openai.ts"
+              ],
+              "file_name": "openai.ts",
+              "start_line": 14,
+              "length": 102,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            },
+            {
+              "name": "generateImage",
+              "referenced_in": [
+                "src/lib/openai.ts"
+              ],
+              "file_name": "openai.ts",
+              "start_line": 117,
+              "length": 26,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            }
+          ],
+          "dependencies": [],
+          "exports": [
+            "getApiKey",
+            "sendChatMessage",
+            "generateImage"
+          ],
+          "detailed_dependencies": []
+        }
+      ],
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "exports": [
+        "getApiKey",
+        "cn",
+        "generateImage",
+        "sendChatMessage"
+      ]
+    },
+    {
+      "name": "src.pages",
+      "files": [
+        {
+          "path": "src/pages/Index.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/components/WorldDashboard",
+            "@/components/WorldInterface",
+            "@/components/WorldSeedingDialog"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/components/WorldDashboard",
+              "type": "import"
+            },
+            {
+              "name": "@/components/WorldInterface",
+              "type": "import"
+            },
+            {
+              "name": "@/components/WorldSeedingDialog",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/pages/NotFound.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react-router-dom",
+            "react"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react-router-dom",
+              "type": "import"
+            },
+            {
+              "name": "react",
+              "type": "import"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "@/components/WorldDashboard",
+        "@/components/WorldSeedingDialog",
+        "react",
+        "@/components/WorldInterface",
+        "react-router-dom"
+      ],
+      "exports": []
+    },
+    {
+      "name": "src.integrations.supabase",
+      "files": [
+        {
+          "path": "src/integrations/supabase/types.ts",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [],
+          "exports": [],
+          "detailed_dependencies": []
+        },
+        {
+          "path": "src/integrations/supabase/client.ts",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "@supabase/supabase-js",
+            "./types",
+            "@/integrations/supabase/client"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "@supabase/supabase-js",
+              "type": "import"
+            },
+            {
+              "name": "./types",
+              "type": "import"
+            },
+            {
+              "name": "@/integrations/supabase/client",
+              "type": "import"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "@/integrations/supabase/client",
+        "@supabase/supabase-js",
+        "./types"
+      ],
+      "exports": []
+    },
+    {
+      "name": "src.components.ui",
+      "files": [
+        {
+          "path": "src/components/ui/aspect-ratio.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "@radix-ui/react-aspect-ratio"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "@radix-ui/react-aspect-ratio",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/alert-dialog.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-alert-dialog",
+            "@/lib/utils",
+            "@/components/ui/button"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-alert-dialog",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/pagination.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "lucide-react",
+            "@/lib/utils",
+            "@/components/ui/button"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/tabs.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-tabs",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-tabs",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/card.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/slider.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-slider",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-slider",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/popover.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-popover",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-popover",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/progress.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-progress",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-progress",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/toaster.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [
+            {
+              "name": "Toaster",
+              "referenced_in": [
+                "src/components/ui/toaster.tsx"
+              ],
+              "file_name": "toaster.tsx",
+              "start_line": 11,
+              "length": 23,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            }
+          ],
+          "dependencies": [
+            "@/hooks/use-toast"
+          ],
+          "exports": [
+            "Toaster"
+          ],
+          "detailed_dependencies": [
+            {
+              "name": "@/hooks/use-toast",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/input-otp.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "input-otp",
+            "lucide-react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "input-otp",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/chart.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [
+            {
+              "name": "useChart",
+              "referenced_in": [
+                "src/components/ui/chart.tsx"
+              ],
+              "file_name": "chart.tsx",
+              "start_line": 25,
+              "length": 9,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            },
+            {
+              "name": "getPayloadConfigFromPayload",
+              "referenced_in": [
+                "src/components/ui/chart.tsx"
+              ],
+              "file_name": "chart.tsx",
+              "start_line": 318,
+              "length": 37,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            }
+          ],
+          "dependencies": [
+            "react",
+            "recharts",
+            "@/lib/utils"
+          ],
+          "exports": [
+            "useChart",
+            "getPayloadConfigFromPayload"
+          ],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "recharts",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/hover-card.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-hover-card",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-hover-card",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/sheet.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "@radix-ui/react-dialog",
+            "class-variance-authority",
+            "lucide-react",
+            "react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "@radix-ui/react-dialog",
+              "type": "import"
+            },
+            {
+              "name": "class-variance-authority",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/scroll-area.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-scroll-area",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-scroll-area",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/resizable.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "lucide-react",
+            "react-resizable-panels",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "react-resizable-panels",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/label.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-label",
+            "class-variance-authority",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-label",
+              "type": "import"
+            },
+            {
+              "name": "class-variance-authority",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/sonner.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "next-themes",
+            "sonner"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "next-themes",
+              "type": "import"
+            },
+            {
+              "name": "sonner",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/navigation-menu.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-navigation-menu",
+            "class-variance-authority",
+            "lucide-react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-navigation-menu",
+              "type": "import"
+            },
+            {
+              "name": "class-variance-authority",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/chat-bubble.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [
+            {
+              "name": "ChatBubble",
+              "referenced_in": [
+                "src/components/ui/chat-bubble.tsx"
+              ],
+              "file_name": "chat-bubble.tsx",
+              "start_line": 16,
+              "length": 6,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            },
+            {
+              "name": "ChatBubbleMessage",
+              "referenced_in": [
+                "src/components/ui/chat-bubble.tsx"
+              ],
+              "file_name": "chat-bubble.tsx",
+              "start_line": 42,
+              "length": 6,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            },
+            {
+              "name": "ChatBubbleAvatar",
+              "referenced_in": [
+                "src/components/ui/chat-bubble.tsx"
+              ],
+              "file_name": "chat-bubble.tsx",
+              "start_line": 73,
+              "length": 5,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            },
+            {
+              "name": "ChatBubbleAction",
+              "referenced_in": [
+                "src/components/ui/chat-bubble.tsx"
+              ],
+              "file_name": "chat-bubble.tsx",
+              "start_line": 92,
+              "length": 5,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            },
+            {
+              "name": "ChatBubbleActionWrapper",
+              "referenced_in": [
+                "src/components/ui/chat-bubble.tsx"
+              ],
+              "file_name": "chat-bubble.tsx",
+              "start_line": 109,
+              "length": 4,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            }
+          ],
+          "dependencies": [
+            "react",
+            "@/lib/utils",
+            "@/components/ui/avatar",
+            "@/components/ui/button",
+            "@/components/ui/message-loading"
+          ],
+          "exports": [
+            "ChatBubble",
+            "ChatBubbleMessage",
+            "ChatBubbleAvatar",
+            "ChatBubbleAction",
+            "ChatBubbleActionWrapper"
+          ],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/avatar",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/message-loading",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/accordion.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-accordion",
+            "lucide-react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-accordion",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/drawer.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "vaul",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "vaul",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/message-loading.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [
+            {
+              "name": "MessageLoading",
+              "referenced_in": [
+                "src/components/ui/message-loading.tsx"
+              ],
+              "file_name": "message-loading.tsx",
+              "start_line": 1,
+              "length": 44,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            }
+          ],
+          "dependencies": [],
+          "exports": [
+            "MessageLoading"
+          ],
+          "detailed_dependencies": []
+        },
+        {
+          "path": "src/components/ui/tooltip.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-tooltip",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-tooltip",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/alert.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "class-variance-authority",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "class-variance-authority",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/use-toast.ts",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "@/hooks/use-toast"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "@/hooks/use-toast",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/secret-form.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/components/ui/button",
+            "@/components/ui/input",
+            "@/components/ui/label",
+            "@/components/ui/card",
+            "lucide-react",
+            "sonner"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/input",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/label",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/card",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "sonner",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/switch.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-switch",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-switch",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/calendar.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [
+            {
+              "name": "Calendar",
+              "referenced_in": [
+                "src/components/ui/calendar.tsx"
+              ],
+              "file_name": "calendar.tsx",
+              "start_line": 10,
+              "length": 6,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            }
+          ],
+          "dependencies": [
+            "react",
+            "lucide-react",
+            "react-day-picker",
+            "@/lib/utils",
+            "@/components/ui/button"
+          ],
+          "exports": [
+            "Calendar"
+          ],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "react-day-picker",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/breadcrumb.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-slot",
+            "lucide-react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-slot",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/radio-group.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-radio-group",
+            "lucide-react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-radio-group",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/command.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-dialog",
+            "cmdk",
+            "lucide-react",
+            "@/lib/utils",
+            "@/components/ui/dialog"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-dialog",
+              "type": "import"
+            },
+            {
+              "name": "cmdk",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/dialog",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/toggle-group.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-toggle-group",
+            "class-variance-authority",
+            "@/lib/utils",
+            "@/components/ui/toggle"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-toggle-group",
+              "type": "import"
+            },
+            {
+              "name": "class-variance-authority",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/toggle",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/avatar.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-avatar",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-avatar",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/menubar.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-menubar",
+            "lucide-react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-menubar",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/dialog.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-dialog",
+            "lucide-react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-dialog",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/badge.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [
+            {
+              "name": "Badge",
+              "referenced_in": [
+                "src/components/ui/badge.tsx"
+              ],
+              "file_name": "badge.tsx",
+              "start_line": 30,
+              "length": 1,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            }
+          ],
+          "dependencies": [
+            "react",
+            "class-variance-authority",
+            "@/lib/utils"
+          ],
+          "exports": [
+            "Badge"
+          ],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "class-variance-authority",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/sidebar.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [
+            {
+              "name": "useSidebar",
+              "referenced_in": [
+                "src/components/ui/sidebar.tsx"
+              ],
+              "file_name": "sidebar.tsx",
+              "start_line": 39,
+              "length": 8,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            }
+          ],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-slot",
+            "class-variance-authority",
+            "lucide-react",
+            "@/hooks/use-mobile",
+            "@/lib/utils",
+            "@/components/ui/button",
+            "@/components/ui/input",
+            "@/components/ui/separator",
+            "@/components/ui/sheet",
+            "@/components/ui/skeleton"
+          ],
+          "exports": [
+            "useSidebar"
+          ],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-slot",
+              "type": "import"
+            },
+            {
+              "name": "class-variance-authority",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/use-mobile",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/input",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/separator",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/sheet",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/skeleton",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/table.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/separator.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-separator",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-separator",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/button.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-slot",
+            "class-variance-authority",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-slot",
+              "type": "import"
+            },
+            {
+              "name": "class-variance-authority",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/toggle.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-toggle",
+            "class-variance-authority",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-toggle",
+              "type": "import"
+            },
+            {
+              "name": "class-variance-authority",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/toast.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-toast",
+            "class-variance-authority",
+            "lucide-react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-toast",
+              "type": "import"
+            },
+            {
+              "name": "class-variance-authority",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/checkbox.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-checkbox",
+            "lucide-react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-checkbox",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/chat-input.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/components/ui/textarea",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/textarea",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/collapsible.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "@radix-ui/react-collapsible"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "@radix-ui/react-collapsible",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/dropdown-menu.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-dropdown-menu",
+            "lucide-react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-dropdown-menu",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/select.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-select",
+            "lucide-react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-select",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/textarea.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/input.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/skeleton.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [
+            {
+              "name": "Skeleton",
+              "referenced_in": [
+                "src/components/ui/skeleton.tsx"
+              ],
+              "file_name": "skeleton.tsx",
+              "start_line": 3,
+              "length": 4,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            }
+          ],
+          "dependencies": [
+            "@/lib/utils"
+          ],
+          "exports": [
+            "Skeleton"
+          ],
+          "detailed_dependencies": [
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/context-menu.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-context-menu",
+            "lucide-react",
+            "@/lib/utils"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-context-menu",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/form.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "@radix-ui/react-label",
+            "@radix-ui/react-slot",
+            "@/lib/utils",
+            "@/components/ui/label"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-label",
+              "type": "import"
+            },
+            {
+              "name": "@radix-ui/react-slot",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/label",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/carousel.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [
+            {
+              "name": "useCarousel",
+              "referenced_in": [
+                "src/components/ui/carousel.tsx"
+              ],
+              "file_name": "carousel.tsx",
+              "start_line": 33,
+              "length": 9,
+              "dependencies": [],
+              "types": [],
+              "calls_to": [],
+              "parameters": null,
+              "return_type": null,
+              "docstring": null
+            }
+          ],
+          "dependencies": [
+            "react",
+            "lucide-react",
+            "@/lib/utils",
+            "@/components/ui/button"
+          ],
+          "exports": [
+            "useCarousel"
+          ],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/lib/utils",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            }
+          ]
+        },
+        {
+          "path": "src/components/ui/chat-message-list.tsx",
+          "types": [],
+          "variables": [],
+          "functions": [],
+          "dependencies": [
+            "react",
+            "lucide-react",
+            "@/components/ui/button",
+            "@/hooks/use-auto-scroll"
+          ],
+          "exports": [],
+          "detailed_dependencies": [
+            {
+              "name": "react",
+              "type": "import"
+            },
+            {
+              "name": "lucide-react",
+              "type": "import"
+            },
+            {
+              "name": "@/components/ui/button",
+              "type": "import"
+            },
+            {
+              "name": "@/hooks/use-auto-scroll",
+              "type": "import"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "@radix-ui/react-slider",
+        "@/components/ui/separator",
+        "@radix-ui/react-tooltip",
+        "@/components/ui/sheet",
+        "@radix-ui/react-dropdown-menu",
+        "@/hooks/use-auto-scroll",
+        "@radix-ui/react-separator",
+        "@/components/ui/textarea",
+        "@/hooks/use-toast",
+        "@radix-ui/react-toggle",
+        "@radix-ui/react-menubar",
+        "@radix-ui/react-dialog",
+        "react-resizable-panels",
+        "vaul",
+        "@/components/ui/card",
+        "class-variance-authority",
+        "@radix-ui/react-popover",
+        "next-themes",
+        "@radix-ui/react-toast",
+        "@/components/ui/button",
+        "@radix-ui/react-label",
+        "@radix-ui/react-navigation-menu",
+        "@radix-ui/react-context-menu",
+        "@radix-ui/react-aspect-ratio",
+        "@radix-ui/react-accordion",
+        "@radix-ui/react-alert-dialog",
+        "@radix-ui/react-collapsible",
+        "@radix-ui/react-tabs",
+        "recharts",
+        "react",
+        "@radix-ui/react-radio-group",
+        "sonner",
+        "lucide-react",
+        "@radix-ui/react-hover-card",
+        "@/components/ui/avatar",
+        "input-otp",
+        "cmdk",
+        "@radix-ui/react-switch",
+        "@/components/ui/dialog",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-slot",
+        "@/components/ui/toggle",
+        "@radix-ui/react-progress",
+        "@radix-ui/react-checkbox",
+        "@radix-ui/react-avatar",
+        "@radix-ui/react-toggle-group",
+        "@/components/ui/skeleton",
+        "react-day-picker",
+        "@/lib/utils",
+        "@/components/ui/input",
+        "@/components/ui/message-loading",
+        "@/hooks/use-mobile",
+        "@/components/ui/label",
+        "@radix-ui/react-select"
+      ],
+      "exports": [
+        "ChatBubbleAction",
+        "useChart",
+        "Calendar",
+        "Skeleton",
+        "Toaster",
+        "MessageLoading",
+        "ChatBubbleActionWrapper",
+        "Badge",
+        "useSidebar",
+        "useCarousel",
+        "ChatBubble",
+        "ChatBubbleAvatar",
+        "ChatBubbleMessage",
+        "getPayloadConfigFromPayload"
+      ]
+    }
+  ],
+  "language": "typescript",
+  "total_files": 91,
+  "total_functions": 25,
+  "total_classes": 3,
+  "total_variables": 0
+}

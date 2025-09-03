@@ -107,7 +107,11 @@ class LLMScanner:
             code_section += f"... and {len(files) - 20} more files (truncated for context window)\n\n"
         
         code_section += "Based on the actual code above, identify specific security issues and missing controls.\n"
-        code_section += "Provide exact file paths and line numbers where possible.\n"
+        code_section += "For each finding, provide:\n"
+        code_section += "- Exact file paths and line numbers (e.g., 'file.tsx:45-67')\n"
+        code_section += "- Function names, component names, or method names where issues exist\n"
+        code_section += "- Specific code context and evidence\n"
+        code_section += "- API endpoint names, configuration setting names, etc.\n"
         
         return base_prompt + code_section
     
@@ -161,7 +165,7 @@ class LLMScanner:
                 messages=[
                     {
                         "role": "system",
-                        "content": "You are a senior security engineer conducting comprehensive security analysis. Return ONLY valid JSON matching the specified schema. No additional text or explanations."
+                        "content": "You are a senior security engineer conducting comprehensive security analysis. For each finding, provide detailed context including function names, component names, exact line numbers, and code snippets. Return ONLY valid JSON matching the specified schema. No additional text or explanations."
                     },
                     {
                         "role": "user",

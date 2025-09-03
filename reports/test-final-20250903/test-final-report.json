@@ -19,10 +19,10 @@
       "control": "Secrets",
       "category": "Secrets",
       "location": [
-        "/Users/guccikudo/tekk3-python/test-repo/src/config.ts:10"
+        "test-repo/src/integrations/supabase/client.ts:5-6"
       ],
-      "evidence": "const apiKey = '***MASKED***';",
-      "impact": "Exposure of API keys can lead to unauthorized access to services.",
+      "evidence": "const SUPABASE_URL = \"https://eolslxsdorozndzkxjcu.supabase.co\"; const SUPABASE_PUBLISHABLE_KEY = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\";",
+      "impact": "Exposure of API keys can lead to unauthorized access to services. The Supabase credentials are hardcoded in client-side code, making them visible to all users in the browser.",
       "likelihood": "High",
       "severity": "High",
       "confidence": "High",
@@ -34,13 +34,14 @@
       "fix": {
         "steps": [
           "Remove hardcoded keys from source code.",
-          "Use environment variables to manage secrets."
+          "Use environment variables to manage secrets.",
+          "Move sensitive operations to server-side."
         ],
-        "secure_example": "const apiKey = process.env.API_KEY;",
+        "secure_example": "const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;",
         "owner_hint": "Backend",
         "eta": "≤30m"
       },
-      "notes": "Ensure all secrets are rotated after removal from the codebase."
+      "notes": "Function: createClient() - Supabase client initialization with exposed credentials. Ensure all secrets are rotated after removal from the codebase."
     },
     {
       "id": "SEC-002",
@@ -49,13 +50,14 @@
       "control": "AuthN",
       "category": "AuthZ",
       "location": [
-        "src/auth/"
+        "test-repo/src/components/WorldSeedingDialog.tsx:57-62",
+        "test-repo/src/components/WorldChat.tsx:169-175"
       ],
-      "evidence": "No authentication implementation found in src/auth/",
-      "impact": "Without authentication, unauthorized users can access the application.",
+      "evidence": "Direct API calls to Supabase functions without authentication checks. Functions like handleGenerate() and handleSendMessage() make unauthenticated requests to world-seeding and world-chat endpoints.",
+      "impact": "Without authentication, unauthorized users can access the application and perform actions like generating world content and accessing chat functionality.",
       "likelihood": "High",
       "severity": "Critical",
-      "confidence": "Medium",
+      "confidence": "High",
       "standards": [
         "OWASP-ASVS V4.0.1",
         "OWASP Top 10 A5",
@@ -63,13 +65,15 @@
       ],
       "fix": {
         "steps": [
-          "Implement an authentication mechanism using OAuth or JWT."
+          "Implement an authentication mechanism using OAuth or JWT.",
+          "Add authentication checks before API calls.",
+          "Implement user session management."
         ],
-        "secure_example": "Implement OAuth2.0 with a library like Passport.js.",
+        "secure_example": "const { data: { user } } = await supabase.auth.getUser(); if (!user) throw new Error('Unauthorized');",
         "owner_hint": "Backend",
         "eta": "≤1d"
       },
-      "notes": "Needs verification after implementation."
+      "notes": "Functions: handleGenerate() in WorldSeedingDialog, handleSendMessage() in WorldChat - both make unauthenticated API calls. Needs verification after implementation."
     },
     {
       "id": "SEC-003",
@@ -78,13 +82,14 @@
       "control": "RateLimiting",
       "category": "Other",
       "location": [
-        "src/server/"
+        "test-repo/src/components/WorldSeedingDialog.tsx:34-100",
+        "test-repo/src/components/WorldChat.tsx:149-217"
       ],
-      "evidence": "No rate limiting found in server configurations.",
-      "impact": "Lack of rate limiting can lead to denial of service attacks.",
+      "evidence": "No rate limiting found in client-side API calls. Functions like handleGenerate() and handleSendMessage() can be called repeatedly without restrictions, potentially causing API abuse.",
+      "impact": "Lack of rate limiting can lead to denial of service attacks and abuse of external APIs (OpenAI, Supabase functions).",
       "likelihood": "Medium",
       "severity": "High",
-      "confidence": "Medium",
+      "confidence": "High",
       "standards": [
         "OWASP-ASVS V4.0.2",
         "OWASP Top 10 A10",
@@ -92,13 +97,15 @@
       ],
       "fix": {
         "steps": [
-          "Implement rate limiting using middleware like express-rate-limit."
+          "Implement client-side rate limiting for API calls.",
+          "Add debouncing to prevent rapid successive calls.",
+          "Implement server-side rate limiting on Supabase functions."
         ],
-        "secure_example": "app.use(rateLimit({ windowMs: 15*60*1000, max: 100 }));",
-        "owner_hint": "Backend",
+        "secure_example": "const [isRateLimited, setIsRateLimited] = useState(false); if (isRateLimited) return;",
+        "owner_hint": "Frontend",
         "eta": "≤1h"
       },
-      "notes": "Consider different limits for different endpoints."
+      "notes": "Functions: handleGenerate() and handleSendMessage() lack rate limiting. Consider different limits for different endpoints."
     },
     {
       "id": "SEC-004",
@@ -107,10 +114,11 @@
       "control": "Headers",
       "category": "Headers",
       "location": [
-        "src/server/"
+        "test-repo/vite.config.ts",
+        "test-repo/index.html"
       ],
-      "evidence": "No security headers set in HTTP responses.",
-      "impact": "Absence of security headers increases the risk of attacks like XSS and clickjacking.",
+      "evidence": "No security headers configuration found in Vite build configuration or HTML meta tags. The application lacks Content Security Policy, X-Frame-Options, and other security headers.",
+      "impact": "Absence of security headers increases the risk of attacks like XSS, clickjacking, and data injection through iframe embedding.",
       "likelihood": "Medium",
       "severity": "Medium",
       "confidence": "High",
@@ -121,13 +129,15 @@
       ],
       "fix": {
         "steps": [
-          "Add security headers using helmet middleware."
+          "Add security headers in Vite configuration.",
+          "Configure Content Security Policy in index.html.",
+          "Add X-Frame-Options and other security meta tags."
         ],
-        "secure_example": "app.use(helmet());",
-        "owner_hint": "Backend",
+        "secure_example": "<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self'\">",
+        "owner_hint": "Frontend",
         "eta": "≤30m"
       },
-      "notes": "Ensure CSP, HSTS, and X-Frame-Options are configured."
+      "notes": "Configuration files: vite.config.ts and index.html lack security headers. Ensure CSP, HSTS, and X-Frame-Options are configured."
     },
     {
       "id": "SEC-005",
@@ -136,10 +146,11 @@
       "control": "Dependencies",
       "category": "Dependencies",
       "location": [
-        "package.json"
+        "test-repo/package.json",
+        "test-repo/package-lock.json"
       ],
-      "evidence": "Vulnerable package 'react' version 16.8.0 detected.",
-      "impact": "Outdated dependencies may contain known vulnerabilities.",
+      "evidence": "Dependencies in package.json may contain known vulnerabilities. No automated dependency scanning or update mechanism detected.",
+      "impact": "Outdated dependencies may contain known vulnerabilities that could be exploited by attackers.",
       "likelihood": "Low",
       "severity": "Low",
       "confidence": "High",
@@ -150,13 +161,15 @@
       ],
       "fix": {
         "steps": [
-          "Update 'react' to the latest stable version."
+          "Run npm audit to identify vulnerable packages.",
+          "Update dependencies to latest stable versions.",
+          "Implement automated dependency scanning in CI/CD."
         ],
-        "secure_example": "\"react\": \"^17.0.2\"",
+        "secure_example": "npm audit fix",
         "owner_hint": "Frontend",
         "eta": "≤1h"
       },
-      "notes": "Regularly check for updates using npm audit."
+      "notes": "Configuration files: package.json and package-lock.json. Regularly check for updates using npm audit."
     },
     {
       "id": "SEC-001",
@@ -332,6 +345,10 @@
   ],
   "prioritized_actions": [
     {
+      "id": "SEC-014",
+      "eta": "≤1h"
+    },
+    {
       "id": "SEC-002",
       "eta": "≤1d"
     },
@@ -342,6 +359,10 @@
     {
       "id": "SEC-003",
       "eta": "≤1h"
+    },
+    {
+      "id": "SEC-013",
+      "eta": "≤2h"
     }
   ],
   "checks_omitted": [

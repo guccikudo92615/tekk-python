@@ -56,8 +56,8 @@ Return ONLY a valid JSON object matching this exact schema:
       "control": "AuthN|AuthZ|TenantIsolation|RateLimiting|InputValidation|Secrets|Headers|Uploads|Dependencies|Cloud|CI/CD|Logging|Monitoring|Backups|Privacy|Other",
       "category": "Secrets|AuthZ|CORS|Crypto|Headers|Uploads|Dependencies|Cloud|CI/CD|Logging|Privacy|Other",
       "location": ["path/to/file:line-range"],
-      "evidence": "Exact snippet or evidence-of-absence (masked)",
-      "impact": "Clear impact description",
+      "evidence": "Exact snippet or evidence-of-absence (masked). Include function names and code context.",
+      "impact": "Clear impact description with specific context about affected functions/components.",
       "likelihood": "Low|Medium|High",
       "severity": "Low|Medium|High|Critical",
       "confidence": "Low|Medium|High",
@@ -68,7 +68,7 @@ Return ONLY a valid JSON object matching this exact schema:
         "owner_hint": "Backend|Frontend|DevOps|Security",
         "eta": "≤30m|≤1h|≤1d"
       },
-      "notes": "Additional context or 'Needs verification' when applicable"
+      "notes": "Additional context including function names, component context, or 'Needs verification' when applicable"
     }
   ],
   "baseline_checklist": [
@@ -97,6 +97,8 @@ Return ONLY a valid JSON object matching this exact schema:
 5. **Risk-Focused**: Prioritize findings by business impact and exploitability
 6. **Actionable**: Provide clear, implementable fix steps
 7. **Standards-Aligned**: Reference relevant security standards (OWASP, CWE, etc.)
+8. **Context-Rich**: Include function names, component names, and specific code context
+9. **Detailed Locations**: Use format "filepath:line-range" and include function/component context
 
 ## Severity Guidelines
 
@@ -112,6 +114,18 @@ For missing controls, use:
 - **evidence**: "No [control] implementation found in [specific files/directories]"
 - **confidence**: "Low" for structural absence, "Medium" for confirmed absence
 - **impact**: Describe the risk of not having this control
+
+## Context and Function Analysis
+
+When analyzing code, always include:
+- **Function Names**: Identify specific functions, methods, or components where issues exist
+- **Line Numbers**: Provide exact line ranges (e.g., "file.tsx:45-67")
+- **Code Context**: Include relevant code snippets or function signatures
+- **Component Context**: For React/Vue components, include component names
+- **API Context**: For API calls, include endpoint names and request/response handling
+- **Configuration Context**: For config files, include specific setting names and values
+
+Example location format: "src/components/UserAuth.tsx:23-45" with evidence like "handleLogin() function lacks input validation"
 
 ## Output Format
 
