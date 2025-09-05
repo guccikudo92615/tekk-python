@@ -1,0 +1,73 @@
+================================================================================
+REPOSITORY SCANNING COVERAGE ANALYSIS
+================================================================================
+Repository: test-repo
+Report: reports/coverage-test/security-analysis-report.json
+
+COVERAGE SUMMARY
+----------------------------------------
+Total Repository Files: 113
+Files Scanned: 87
+Coverage: 76.99%
+Unscanned Files: 31
+
+FILE TYPE COVERAGE
+----------------------------------------
+Type            Total    Scanned  Coverage  
+--------------------------------------------------
+no_extension    1        5        500.0%
+.css            2        2        100.0%
+.ico            1        0        0.0%
+.html           1        1        100.0%
+.tsx            69       57       82.6%
+.svg            1        0        0.0%
+.sql            6        2        33.3%
+.md             1        1        100.0%
+.toml           1        1        100.0%
+.js             2        0        0.0%
+.lockb          1        0        0.0%
+.ts             20       14       70.0%
+.json           6        3        50.0%
+.txt            1        1        100.0%
+
+FINDINGS ANALYSIS
+----------------------------------------
+Total Findings: 102
+Files with Findings: 75
+
+TOP FILES BY FINDINGS
+----------------------------------------
+supabase/functions/world-seeding/index.ts: 3 findings
+src/components/ui/resizable.tsx: 3 findings
+src/components/ui/menubar.tsx: 3 findings
+src/components/ui/dialog.tsx: 3 findings
+vite.config.ts: 2 findings
+
+UNSCANNED FILES ANALYSIS
+----------------------------------------
+By Type:
+  .tsx: 12 files
+  .lockb: 1 files
+  .json: 3 files
+  .ts: 6 files
+  .sql: 4 files
+  no_extension: 1 files
+  .svg: 1 files
+  .js: 2 files
+  .ico: 1 files
+
+By Size:
+  small: 13 files
+  medium: 15 files
+  large: 3 files
+
+RECOMMENDATIONS
+----------------------------------------
+⚠️  31 files were not scanned
+   Consider reviewing unscanned files for potential security issues
+🔍 102 security findings detected
+   Review and prioritize findings by severity
+
+================================================================================
+END OF COVERAGE ANALYSIS
+================================================================================

@@ -1,0 +1,3094 @@
+{
+  "summary": {
+    "risk_overview": "Comprehensive security analysis of test-repo using 37 analysis agents",
+    "findings_total_count": 102,
+    "files_analyzed": 0,
+    "agents_used": 37,
+    "severity_breakdown": {
+      "Critical": 6,
+      "High": 30,
+      "Medium": 47,
+      "Low": 19
+    }
+  },
+  "findings": [
+    {
+      "id": "SEC-001",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "index.html:1-30"
+      ],
+      "evidence": "No Content-Security-Policy, X-Frame-Options, or HSTS headers found in index.html.",
+      "impact": "Lack of security headers can lead to vulnerabilities such as XSS, clickjacking, and man-in-the-middle attacks.",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A6",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Add Content-Security-Policy header",
+          "Add X-Frame-Options header",
+          "Add HSTS header"
+        ],
+        "secure_example": "<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self';\">",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "Ensure headers are set in the server configuration or via meta tags in HTML."
+    },
+    {
+      "id": "SEC-002",
+      "title": "TypeScript Strict Mode Disabled",
+      "type": "Issue",
+      "control": "Other",
+      "category": "Other",
+      "location": [
+        "tsconfig.app.json:12-14"
+      ],
+      "evidence": "\"strict\": false, \"noImplicitAny\": false",
+      "impact": "Disabling strict mode can lead to runtime errors and potential security vulnerabilities due to type mismatches.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "High",
+      "standards": [
+        "CWE-704"
+      ],
+      "fix": {
+        "steps": [
+          "Enable strict mode in tsconfig.app.json",
+          "Set noImplicitAny to true"
+        ],
+        "secure_example": "\"strict\": true, \"noImplicitAny\": true",
+        "owner_hint": "Frontend",
+        "eta": "\u226430m"
+      },
+      "notes": "Consider enabling all strict type-checking options to improve code safety."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Missing Authentication and Authorization Controls",
+      "type": "MissingControl",
+      "control": "AuthN|AuthZ",
+      "category": "AuthZ",
+      "location": [
+        "src/"
+      ],
+      "evidence": "No authentication or authorization mechanisms found in the source directory.",
+      "impact": "Without authentication and authorization, unauthorized users may access sensitive data or perform actions they shouldn't.",
+      "likelihood": "High",
+      "severity": "High",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A5",
+        "CWE-287"
+      ],
+      "fix": {
+        "steps": [
+          "Implement authentication using OAuth2 or JWT",
+          "Set up role-based access control"
+        ],
+        "secure_example": "Use Passport.js for authentication in Node.js applications.",
+        "owner_hint": "Backend",
+        "eta": "\u22641d"
+      },
+      "notes": "Needs verification if any external authentication service is used."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Rate Limiting",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "README.md"
+      ],
+      "evidence": "No rate limiting implementation found in README.md or related configuration files.",
+      "impact": "Without rate limiting, the application is vulnerable to denial-of-service attacks and brute force attacks.",
+      "likelihood": "High",
+      "severity": "High",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A4",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting using middleware or API gateway.",
+          "Configure limits based on expected traffic patterns."
+        ],
+        "secure_example": "Example: Use express-rate-limit in Node.js applications.",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "Needs verification in the actual server-side codebase."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Outdated Dependencies",
+      "type": "Issue",
+      "control": "Dependencies",
+      "category": "Dependencies",
+      "location": [
+        "package.json"
+      ],
+      "evidence": "Several dependencies are outdated, such as 'react' and 'react-dom'.",
+      "impact": "Outdated dependencies may contain known vulnerabilities that could be exploited.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A9",
+        "CWE-937"
+      ],
+      "fix": {
+        "steps": [
+          "Update dependencies to the latest stable versions.",
+          "Run tests to ensure compatibility."
+        ],
+        "secure_example": "Use npm-check-updates to identify and update outdated packages.",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "Check for breaking changes in major version updates."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "README.md"
+      ],
+      "evidence": "No mention of security headers like CSP, HSTS, or X-Frame-Options in README.md or related configuration files.",
+      "impact": "Lack of security headers can lead to vulnerabilities such as clickjacking and man-in-the-middle attacks.",
+      "likelihood": "Medium",
+      "severity": "Low",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A6",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Add security headers in server configuration or middleware.",
+          "Test headers using security tools like securityheaders.com."
+        ],
+        "secure_example": "Example: Use Helmet.js in Express to set security headers.",
+        "owner_hint": "Backend",
+        "eta": "\u226430m"
+      },
+      "notes": "Verify implementation in server-side code."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Hardcoded Supabase Publishable Key",
+      "type": "Issue",
+      "control": "Secrets",
+      "category": "Secrets",
+      "location": [
+        ".env:2"
+      ],
+      "evidence": "VITE_SUPABASE_PUBLISHABLE_KEY=\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVvbHNseHNkb3Jvem5kemt4amN1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ0NjMzMTksImV4cCI6MjA3MDAzOTMxOX0.ajZAnskcVvWV3Jf6P0nskszQtn-JLFkcMx_3KN6jTb0\"",
+      "impact": "Hardcoded secrets can be easily exposed, leading to unauthorized access to the Supabase backend.",
+      "likelihood": "High",
+      "severity": "Critical",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A2",
+        "CWE-798"
+      ],
+      "fix": {
+        "steps": [
+          "Remove hardcoded secrets from .env file.",
+          "Use a secure secrets management service to store and access secrets."
+        ],
+        "secure_example": "Use environment variables or a secrets manager to inject the key at runtime.",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "The presence of a hardcoded publishable key in the .env file poses a significant security risk."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Lack of Strict TypeScript Configuration",
+      "type": "Issue",
+      "control": "Other",
+      "category": "Other",
+      "location": [
+        "tsconfig.json:5-17"
+      ],
+      "evidence": "\"noImplicitAny\": false, \"strictNullChecks\": false",
+      "impact": "Loose TypeScript settings can lead to runtime errors and potential security vulnerabilities due to type mismatches.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "CWE-704"
+      ],
+      "fix": {
+        "steps": [
+          "Enable 'noImplicitAny' and 'strictNullChecks' in tsconfig.json."
+        ],
+        "secure_example": "\"noImplicitAny\": true, \"strictNullChecks\": true",
+        "owner_hint": "Frontend",
+        "eta": "\u226430m"
+      },
+      "notes": "Improving TypeScript strictness can prevent type-related vulnerabilities."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Missing Audit Logging",
+      "type": "MissingControl",
+      "control": "Logging",
+      "category": "Logging",
+      "location": [
+        "N/A"
+      ],
+      "evidence": "No audit logging implementation found in the repository.",
+      "impact": "Without audit logging, it is difficult to track and respond to security incidents effectively.",
+      "likelihood": "High",
+      "severity": "High",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A10",
+        "CWE-778"
+      ],
+      "fix": {
+        "steps": [
+          "Implement audit logging for critical actions and access events."
+        ],
+        "secure_example": "Use a logging library to capture and store audit logs securely.",
+        "owner_hint": "Backend",
+        "eta": "\u22641d"
+      },
+      "notes": "Audit logging is essential for monitoring and responding to security events."
+    },
+    {
+      "id": "SEC-010",
+      "title": "Missing Security Headers in Vite Configuration",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "vite.config.ts:5-20"
+      ],
+      "evidence": "No security headers configuration found in vite.config.ts",
+      "impact": "Lack of security headers such as CSP, HSTS, and X-Frame-Options can lead to vulnerabilities like clickjacking and XSS.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A6",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Add security headers configuration in Vite server setup.",
+          "Ensure headers are applied in production mode."
+        ],
+        "secure_example": "server: { headers: { 'Content-Security-Policy': 'default-src https:', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains' } }",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "Ensure headers are configured in the Vite server setup for production environments."
+    },
+    {
+      "id": "SEC-011",
+      "title": "No Rate Limiting in Vite Server Configuration",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "vite.config.ts:5-20"
+      ],
+      "evidence": "No rate limiting configuration found in vite.config.ts",
+      "impact": "Absence of rate limiting can lead to denial of service attacks by allowing unlimited requests to the server.",
+      "likelihood": "Low",
+      "severity": "Low",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A10",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting middleware in the Vite server configuration.",
+          "Configure limits based on expected traffic patterns."
+        ],
+        "secure_example": "server: { middleware: [rateLimit({ windowMs: 15 * 60 * 1000, max: 100 })] }",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "Consider using a middleware like express-rate-limit for implementing rate limiting."
+    },
+    {
+      "id": "SEC-012",
+      "title": "JWT Verification Disabled for Functions",
+      "type": "Issue",
+      "control": "AuthZ",
+      "category": "AuthZ",
+      "location": [
+        "supabase/config.toml:27-35"
+      ],
+      "evidence": "[functions.world-seeding]\nverify_jwt = false\n\n[functions.world-chat]\nverify_jwt = false\n\n[functions.realtime-chat]\nverify_jwt = false",
+      "impact": "Disabling JWT verification for functions can lead to unauthorized access to sensitive operations, potentially allowing privilege escalation or data manipulation.",
+      "likelihood": "High",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A5:2017",
+        "CWE-284"
+      ],
+      "fix": {
+        "steps": [
+          "Enable JWT verification for all functions in the configuration file.",
+          "Review and test all functions to ensure they handle JWTs correctly."
+        ],
+        "secure_example": "[functions.world-seeding]\nverify_jwt = true",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "The functions 'world-seeding', 'world-chat', and 'realtime-chat' have JWT verification disabled, which is a critical security risk."
+    },
+    {
+      "id": "SEC-013",
+      "title": "Sensitive Information Exposure in Configuration",
+      "type": "Issue",
+      "control": "Secrets",
+      "category": "Secrets",
+      "location": [
+        "supabase/config.toml:1"
+      ],
+      "evidence": "project_id = \"eolslxsdorozndzkxjcu\"",
+      "impact": "Exposing project identifiers can lead to unauthorized access or information disclosure, especially if combined with other misconfigurations.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "CWE-200"
+      ],
+      "fix": {
+        "steps": [
+          "Remove or mask sensitive identifiers from configuration files.",
+          "Use environment variables or a secure vault for sensitive information."
+        ],
+        "secure_example": "project_id = \"***MASKED***\"",
+        "owner_hint": "DevOps",
+        "eta": "\u226430m"
+      },
+      "notes": "The project ID is exposed in the configuration file, which could be leveraged in an attack if other vulnerabilities are present."
+    },
+    {
+      "id": "SEC-014",
+      "title": "Lack of Security Headers in robots.txt",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "public/robots.txt:1-10"
+      ],
+      "evidence": "No security headers implementation found in public/robots.txt",
+      "impact": "Absence of security headers can lead to increased risk of attacks such as clickjacking, XSS, and data injection.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A6:2017"
+      ],
+      "fix": {
+        "steps": [
+          "Implement security headers such as Content-Security-Policy, X-Frame-Options, and X-Content-Type-Options in the web server configuration."
+        ],
+        "secure_example": "AddHeader Content-Security-Policy \"default-src 'self'\"",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "The robots.txt file does not directly require headers, but the absence indicates a potential oversight in overall security header implementation."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Authentication Mechanism",
+      "type": "MissingControl",
+      "control": "AuthN",
+      "category": "AuthZ",
+      "location": [
+        "src/App.tsx:1-30"
+      ],
+      "evidence": "No authentication mechanism found in the application entry point or routing logic.",
+      "impact": "Without authentication, unauthorized users can access the application, leading to potential data exposure and misuse.",
+      "likelihood": "High",
+      "severity": "Medium",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A2",
+        "CWE-306"
+      ],
+      "fix": {
+        "steps": [
+          "Implement an authentication mechanism using OAuth or JWT.",
+          "Integrate authentication checks in the routing logic."
+        ],
+        "secure_example": "Use a library like Passport.js for authentication.",
+        "owner_hint": "Backend",
+        "eta": "\u22641d"
+      },
+      "notes": "The App component does not include any authentication logic, which is critical for securing the application."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/main.tsx:1-20"
+      ],
+      "evidence": "No security headers such as Content Security Policy (CSP) or Strict-Transport-Security (HSTS) are set in the application.",
+      "impact": "Lack of security headers can lead to vulnerabilities such as XSS and man-in-the-middle attacks.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A6",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Configure the server to include security headers.",
+          "Use a library like Helmet.js to set headers in Express applications."
+        ],
+        "secure_example": "app.use(helmet());",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "The main entry point does not include any middleware or configuration for setting security headers."
+    },
+    {
+      "id": "SEC-017",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/App.css",
+        "src/index.css"
+      ],
+      "evidence": "No security headers implementation found in CSS files.",
+      "impact": "Lack of security headers can lead to vulnerabilities such as XSS, clickjacking, and other attacks.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A6",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Implement security headers in the server configuration.",
+          "Ensure headers like CSP, HSTS, and X-Frame-Options are set."
+        ],
+        "secure_example": "Content-Security-Policy: default-src 'self';",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "Security headers should be configured at the server level, not directly in CSS files."
+    },
+    {
+      "id": "SEC-018",
+      "title": "Missing Authentication System",
+      "type": "MissingControl",
+      "control": "AuthN",
+      "category": "AuthZ",
+      "location": [
+        "src/vite-env.d.ts"
+      ],
+      "evidence": "No authentication mechanism found in TypeScript declaration files.",
+      "impact": "Without authentication, unauthorized users may access sensitive parts of the application.",
+      "likelihood": "High",
+      "severity": "High",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A2",
+        "CWE-287"
+      ],
+      "fix": {
+        "steps": [
+          "Implement an authentication system using a library like OAuth or JWT.",
+          "Ensure all routes are protected by authentication checks."
+        ],
+        "secure_example": "Use Passport.js for authentication in Node.js applications.",
+        "owner_hint": "Backend",
+        "eta": "\u22641d"
+      },
+      "notes": "Authentication should be implemented in the backend logic, not in TypeScript declaration files."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Overly Permissive Row Level Security Policies",
+      "type": "Issue",
+      "control": "AuthZ",
+      "category": "AuthZ",
+      "location": [
+        "supabase/migrations/20250806112644_8eafccf8-995e-4112-8ad1-183cbb0d11fd.sql:10-30"
+      ],
+      "evidence": "CREATE POLICY \"Anyone can view folders\" ON public.folders FOR SELECT USING (true);",
+      "impact": "Allows any user to view, create, update, and delete folders without restriction, leading to potential unauthorized data access and manipulation.",
+      "likelihood": "High",
+      "severity": "Critical",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A5:2017",
+        "CWE-284"
+      ],
+      "fix": {
+        "steps": [
+          "Review and restrict RLS policies to enforce user-specific access.",
+          "Implement user-based access controls."
+        ],
+        "secure_example": "CREATE POLICY \"Users can view their own folders\" ON public.folders FOR SELECT USING (auth.uid() = user_id);",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "The policies allow unrestricted access to all users, which is a critical security flaw."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Missing Rate Limiting Controls",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "supabase/migrations/"
+      ],
+      "evidence": "No rate limiting implementation found in SQL migrations or related configurations.",
+      "impact": "Absence of rate limiting can lead to denial of service attacks and abuse of resources.",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A10:2017",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting at the application or database level.",
+          "Use middleware or database triggers to enforce limits."
+        ],
+        "secure_example": "Implement rate limiting using a middleware like express-rate-limit in Node.js.",
+        "owner_hint": "Backend",
+        "eta": "\u22641d"
+      },
+      "notes": "Rate limiting is crucial to prevent abuse and ensure service availability."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Lack of Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "supabase/migrations/"
+      ],
+      "evidence": "No security headers configuration found in SQL migrations or related configurations.",
+      "impact": "Missing security headers can lead to vulnerabilities such as XSS, clickjacking, and data exposure.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A6:2017",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Configure security headers in the web server or application framework.",
+          "Ensure headers like CSP, HSTS, and X-Frame-Options are set."
+        ],
+        "secure_example": "Set security headers using Helmet middleware in Express.js.",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "Security headers are essential for protecting web applications from common vulnerabilities."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Public Access Policies Without Authentication",
+      "type": "Issue",
+      "control": "AuthN",
+      "category": "AuthZ",
+      "location": [
+        "supabase/migrations/20250806091656_b65c3dfc-34bd-47a6-9488-8d7790564354.sql:20-60"
+      ],
+      "evidence": "CREATE POLICY \"Anyone can view worlds\" ON public.worlds FOR SELECT USING (true);",
+      "impact": "Allows any user to view, create, update, and delete records in the 'worlds' and 'articles' tables without authentication, leading to potential unauthorized data access and modification.",
+      "likelihood": "High",
+      "severity": "Critical",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A5:2017",
+        "CWE-284"
+      ],
+      "fix": {
+        "steps": [
+          "Implement authentication mechanisms to restrict access.",
+          "Update policies to check user roles and permissions."
+        ],
+        "secure_example": "CREATE POLICY \"Authenticated users can view worlds\" ON public.worlds FOR SELECT USING (auth.uid() IS NOT NULL);",
+        "owner_hint": "Backend",
+        "eta": "\u22641d"
+      },
+      "notes": "The current policy setup allows unrestricted access to sensitive data tables, which is a critical security flaw."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Missing Rate Limiting Controls",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "supabase/migrations/"
+      ],
+      "evidence": "No rate limiting implementation found in SQL policies or application logic.",
+      "impact": "Absence of rate limiting can lead to denial of service through resource exhaustion or brute force attacks.",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A10:2017",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting at the application level.",
+          "Use middleware or database triggers to enforce limits."
+        ],
+        "secure_example": "Implement middleware to limit requests per user/IP.",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "Rate limiting is essential to prevent abuse and ensure service availability."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Lack of Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "supabase/migrations/"
+      ],
+      "evidence": "No security headers such as CSP, HSTS, or X-Frame-Options found in application configuration.",
+      "impact": "Missing security headers can lead to vulnerabilities such as clickjacking, man-in-the-middle attacks, and XSS.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A6:2017",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Configure web server to include security headers.",
+          "Ensure headers are set for all responses."
+        ],
+        "secure_example": "Add headers like Content-Security-Policy, Strict-Transport-Security.",
+        "owner_hint": "DevOps",
+        "eta": "\u226430m"
+      },
+      "notes": "Security headers are a simple yet effective way to enhance application security."
+    },
+    {
+      "id": "SEC-002",
+      "title": "CORS Misconfiguration Allows Any Origin",
+      "type": "Issue",
+      "control": "Headers",
+      "category": "CORS",
+      "location": [
+        "supabase/functions/world-seeding/index.ts:7-9",
+        "supabase/functions/chat-completion/index.ts:4-6",
+        "supabase/functions/world-chat/index.ts:4-6"
+      ],
+      "evidence": "const corsHeaders = { 'Access-Control-Allow-Origin': '*', ... };",
+      "impact": "Allows any origin to access the API, potentially exposing sensitive data to unauthorized domains.",
+      "likelihood": "High",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A05:2021",
+        "CWE-942"
+      ],
+      "fix": {
+        "steps": [
+          "Restrict 'Access-Control-Allow-Origin' to specific trusted domains.",
+          "Implement dynamic CORS policies based on request origin."
+        ],
+        "secure_example": "const corsHeaders = { 'Access-Control-Allow-Origin': 'https://trusted.domain.com', ... };",
+        "owner_hint": "Backend",
+        "eta": "\u226430m"
+      },
+      "notes": "CORS headers are set to allow any origin, which is a common misconfiguration leading to security risks."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Hardcoded Supabase Anon Key",
+      "type": "Issue",
+      "control": "Secrets",
+      "category": "Secrets",
+      "location": [
+        "supabase/functions/world-seeding/index.ts:30"
+      ],
+      "evidence": "const supabaseKey = Deno.env.get('SUPABASE_ANON_KEY')!;",
+      "impact": "Hardcoded keys can be extracted and misused by attackers to access the database.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A02:2021",
+        "CWE-798"
+      ],
+      "fix": {
+        "steps": [
+          "Store keys in a secure vault or environment variables.",
+          "Ensure keys are not exposed in the codebase."
+        ],
+        "secure_example": "const supabaseKey = Deno.env.get('SUPABASE_ANON_KEY');",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "The Supabase anon key is retrieved from environment variables but should be managed securely to prevent exposure."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Missing Rate Limiting on API Endpoints",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "supabase/functions/world-seeding/index.ts",
+        "supabase/functions/chat-completion/index.ts",
+        "supabase/functions/world-chat/index.ts"
+      ],
+      "evidence": "No rate limiting implementation found in API functions.",
+      "impact": "Lack of rate limiting can lead to denial of service attacks and abuse of API resources.",
+      "likelihood": "High",
+      "severity": "High",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A10:2021",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting middleware to restrict the number of requests per user/IP.",
+          "Configure rate limits based on API usage patterns."
+        ],
+        "secure_example": "Use a library like express-rate-limit to set up rate limiting.",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "Rate limiting is a critical control to prevent abuse and ensure service availability."
+    },
+    {
+      "id": "SEC-005",
+      "title": "Insufficient Input Validation on JSON Parsing",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "Other",
+      "location": [
+        "supabase/functions/world-seeding/index.ts:14-16",
+        "supabase/functions/chat-completion/index.ts:10-12",
+        "supabase/functions/world-chat/index.ts:10-12"
+      ],
+      "evidence": "const { worldId, worldDescription } = await req.json();",
+      "impact": "Lack of input validation can lead to injection attacks and data corruption.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A01:2021",
+        "CWE-20"
+      ],
+      "fix": {
+        "steps": [
+          "Validate input data types and constraints before processing.",
+          "Use a validation library to enforce input schemas."
+        ],
+        "secure_example": "Use a library like Joi to validate incoming JSON data.",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "Input validation is crucial to prevent malicious data from being processed by the application."
+    },
+    {
+      "id": "SEC-006",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "supabase/functions/world-seeding/index.ts",
+        "supabase/functions/chat-completion/index.ts",
+        "supabase/functions/world-chat/index.ts"
+      ],
+      "evidence": "No security headers like CSP, HSTS, or X-Frame-Options found in response headers.",
+      "impact": "Missing security headers can lead to vulnerabilities such as clickjacking, XSS, and data exposure.",
+      "likelihood": "Low",
+      "severity": "Low",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A06:2021",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Add security headers to HTTP responses.",
+          "Configure CSP, HSTS, and X-Frame-Options appropriately."
+        ],
+        "secure_example": "Use helmet.js to set security headers in Node.js applications.",
+        "owner_hint": "Backend",
+        "eta": "\u226430m"
+      },
+      "notes": "Security headers are a simple yet effective way to enhance the security posture of web applications."
+    },
+    {
+      "id": "SEC-002",
+      "title": "CORS Misconfiguration Allows Any Origin",
+      "type": "Issue",
+      "control": "Headers",
+      "category": "CORS",
+      "location": [
+        "supabase/functions/realtime-chat/index.ts:5-7",
+        "supabase/functions/generate-image/index.ts:3-5"
+      ],
+      "evidence": "const corsHeaders = { 'Access-Control-Allow-Origin': '*', ... };",
+      "impact": "Allowing any origin to access the API can lead to unauthorized access and data leakage.",
+      "likelihood": "High",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A05:2021",
+        "CWE-942"
+      ],
+      "fix": {
+        "steps": [
+          "Restrict 'Access-Control-Allow-Origin' to specific trusted domains."
+        ],
+        "secure_example": "const corsHeaders = { 'Access-Control-Allow-Origin': 'https://trusted.domain', ... };",
+        "owner_hint": "Backend",
+        "eta": "\u226430m"
+      },
+      "notes": "The CORS configuration in both functions allows any origin, which is a security risk."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "supabase/functions/realtime-chat/index.ts",
+        "supabase/functions/generate-image/index.ts"
+      ],
+      "evidence": "No security headers like CSP, HSTS, or X-Frame-Options found in HTTP responses.",
+      "impact": "Lack of security headers increases the risk of XSS, clickjacking, and other attacks.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A06:2021",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Add security headers such as Content-Security-Policy, Strict-Transport-Security, and X-Frame-Options."
+        ],
+        "secure_example": "headers: { 'Content-Security-Policy': \"default-src 'self'\", 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains', 'X-Frame-Options': 'DENY' }",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "Security headers are essential for protecting against common web vulnerabilities."
+    },
+    {
+      "id": "SEC-004",
+      "title": "No Rate Limiting Implemented",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "supabase/functions/realtime-chat/index.ts",
+        "supabase/functions/generate-image/index.ts"
+      ],
+      "evidence": "No rate limiting logic found in the server functions.",
+      "impact": "Absence of rate limiting can lead to denial of service through resource exhaustion.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A10:2021",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting using middleware or API gateway settings."
+        ],
+        "secure_example": "Use a library like express-rate-limit to set request limits.",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "Rate limiting is crucial for preventing abuse and ensuring service availability."
+    },
+    {
+      "id": "SEC-005",
+      "title": "Lack of Audit Logging",
+      "type": "MissingControl",
+      "control": "Logging",
+      "category": "Logging",
+      "location": [
+        "supabase/functions/realtime-chat/index.ts",
+        "supabase/functions/generate-image/index.ts"
+      ],
+      "evidence": "No audit logging mechanism found for tracking security events.",
+      "impact": "Without audit logs, it is difficult to detect and investigate security incidents.",
+      "likelihood": "High",
+      "severity": "High",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A09:2021",
+        "CWE-778"
+      ],
+      "fix": {
+        "steps": [
+          "Implement audit logging to capture security-relevant events."
+        ],
+        "secure_example": "Use a logging framework to log authentication attempts, data access, and errors.",
+        "owner_hint": "Backend",
+        "eta": "\u22641d"
+      },
+      "notes": "Audit logs are essential for compliance and forensic analysis."
+    },
+    {
+      "id": "SEC-006",
+      "title": "WebSocket Connection Without Authentication",
+      "type": "Issue",
+      "control": "AuthN",
+      "category": "AuthZ",
+      "location": [
+        "src/utils/RealtimeAudio.ts:200-250"
+      ],
+      "evidence": "WebSocket connection established without any authentication mechanism.",
+      "impact": "Unauthenticated WebSocket connections can be exploited for unauthorized data access.",
+      "likelihood": "Medium",
+      "severity": "Low",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A02:2021",
+        "CWE-306"
+      ],
+      "fix": {
+        "steps": [
+          "Implement authentication for WebSocket connections using tokens or session IDs."
+        ],
+        "secure_example": "Use JWT tokens to authenticate WebSocket connections.",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "WebSocket connections should be authenticated to prevent unauthorized access."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Lack of Input Validation in handleSendMessage",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/WorldChat.tsx:200-250"
+      ],
+      "evidence": "The handleSendMessage function does not validate the 'message' input before processing.",
+      "impact": "Without input validation, the application is vulnerable to injection attacks, potentially allowing attackers to execute arbitrary code.",
+      "likelihood": "High",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A01",
+        "CWE-20"
+      ],
+      "fix": {
+        "steps": [
+          "Implement input validation to sanitize user inputs.",
+          "Use a library like validator.js to ensure inputs are safe."
+        ],
+        "secure_example": "if (!validator.isAlphanumeric(message)) { throw new Error('Invalid input'); }",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "The function handleSendMessage is responsible for processing user messages and should include input validation to prevent malicious inputs."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Error Handling Disclosure in handleSendMessage",
+      "type": "Issue",
+      "control": "ErrorHandling",
+      "category": "Other",
+      "location": [
+        "src/components/WorldChat.tsx:270-300"
+      ],
+      "evidence": "Error messages are directly sent to the user, potentially revealing sensitive information.",
+      "impact": "Detailed error messages can provide attackers with information about the application's structure and vulnerabilities.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A06",
+        "CWE-209"
+      ],
+      "fix": {
+        "steps": [
+          "Replace detailed error messages with generic user-friendly messages.",
+          "Log detailed errors server-side for debugging."
+        ],
+        "secure_example": "console.error('World chat error:', error); return 'An error occurred, please try again later.';",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "The function handleSendMessage should not expose internal error details to the user."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Missing Rate Limiting on Chat Functionality",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "src/components/WorldChat.tsx"
+      ],
+      "evidence": "No rate limiting implementation found in WorldChat component.",
+      "impact": "Without rate limiting, the application is susceptible to denial-of-service attacks through excessive requests.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A10",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting using a middleware or service like express-rate-limit."
+        ],
+        "secure_example": "app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }));",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "The WorldChat component should implement rate limiting to prevent abuse."
+    },
+    {
+      "id": "SEC-038",
+      "title": "Hardcoded API Key in Local Storage",
+      "type": "Issue",
+      "control": "Secrets",
+      "category": "Secrets",
+      "location": [
+        "src/components/WorldInterface.tsx:45-47"
+      ],
+      "evidence": "useEffect(() => { const storedKey = localStorage.getItem('openai_api_key'); setHasApiKey(!!storedKey); }, []);",
+      "impact": "Storing API keys in local storage can lead to unauthorized access if the storage is compromised.",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A3",
+        "CWE-798"
+      ],
+      "fix": {
+        "steps": [
+          "Use a secure vault for storing API keys.",
+          "Fetch API keys securely at runtime."
+        ],
+        "secure_example": "Use environment variables or a secure vault service.",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "The function useEffect in WorldInterface component retrieves an API key from local storage, which is insecure."
+    },
+    {
+      "id": "SEC-039",
+      "title": "Lack of Input Validation in Article Creation",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/WorldInterface.tsx:145-147"
+      ],
+      "evidence": "if (!title.trim()) { return; }",
+      "impact": "Insufficient input validation can lead to injection attacks or malformed data being processed.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A1",
+        "CWE-20"
+      ],
+      "fix": {
+        "steps": [
+          "Implement comprehensive input validation for article titles.",
+          "Sanitize inputs before processing."
+        ],
+        "secure_example": "Use a validation library to enforce input constraints.",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "The handleCreateFromTemplate function lacks comprehensive input validation for the title parameter."
+    },
+    {
+      "id": "SEC-040",
+      "title": "Missing Rate Limiting on Chat Assistant",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "API Security",
+      "location": [
+        "src/components/ArticleView.tsx:200-300"
+      ],
+      "evidence": "No rate limiting implementation found in ArticleView component for chat messages.",
+      "impact": "Absence of rate limiting can lead to abuse of the chat assistant, potentially causing denial of service.",
+      "likelihood": "High",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A4",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting on the chat assistant API.",
+          "Use middleware to enforce request limits."
+        ],
+        "secure_example": "Use a library like express-rate-limit for Node.js applications.",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "The sendAIMessage function in ArticleView component does not implement any rate limiting mechanism."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Input Validation in World Creation",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/WorldDashboard.tsx:45-55"
+      ],
+      "evidence": "The handleCreateWorld function does not validate the newWorldName input beyond trimming whitespace.",
+      "impact": "Lack of input validation could allow malicious input to be processed, potentially leading to injection attacks.",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A01",
+        "CWE-20"
+      ],
+      "fix": {
+        "steps": [
+          "Implement input validation to ensure newWorldName meets expected format and length.",
+          "Sanitize input to prevent injection attacks."
+        ],
+        "secure_example": "if (!/^[a-zA-Z0-9 ]+$/.test(newWorldName)) { throw new Error('Invalid world name'); }",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "The function handleCreateWorld in WorldDashboard component lacks comprehensive input validation."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Error Handling with Potential Information Disclosure",
+      "type": "Issue",
+      "control": "ErrorHandling",
+      "category": "Other",
+      "location": [
+        "src/components/WorldSeedingDialog.tsx:70-110"
+      ],
+      "evidence": "The handleGenerate function logs errors to the console, which could disclose sensitive information in production.",
+      "impact": "Logging errors to the console can expose sensitive information, aiding attackers in exploiting vulnerabilities.",
+      "likelihood": "Low",
+      "severity": "Medium",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A06",
+        "CWE-209"
+      ],
+      "fix": {
+        "steps": [
+          "Remove console.error statements from production code.",
+          "Implement a secure logging mechanism that obfuscates sensitive information."
+        ],
+        "secure_example": "Use a logging library that supports different log levels and obfuscates sensitive data.",
+        "owner_hint": "Frontend",
+        "eta": "\u226430m"
+      },
+      "notes": "The function handleGenerate in WorldSeedingDialog component logs errors directly to the console."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Missing Rate Limiting on World Creation",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "src/components/WorldDashboard.tsx"
+      ],
+      "evidence": "No rate limiting implementation found in WorldDashboard component for world creation requests.",
+      "impact": "Absence of rate limiting could allow abuse through excessive requests, leading to denial of service or resource exhaustion.",
+      "likelihood": "Medium",
+      "severity": "Low",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A10",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting on the server-side for world creation requests.",
+          "Use middleware or API gateway to enforce rate limits."
+        ],
+        "secure_example": "Use a library like express-rate-limit to limit requests.",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "The WorldDashboard component lacks rate limiting controls for the createWorld function."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Input Validation for Image URLs",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "Other",
+      "location": [
+        "src/components/WorldCard.tsx:28-38"
+      ],
+      "evidence": "The 'WorldCard' component directly uses 'world.coverImage' in an <img> tag without validation or sanitization.",
+      "impact": "This could lead to XSS attacks if an attacker can control the 'coverImage' property.",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A7",
+        "CWE-79"
+      ],
+      "fix": {
+        "steps": [
+          "Validate and sanitize the 'coverImage' URL before rendering.",
+          "Use a library like DOMPurify to sanitize inputs."
+        ],
+        "secure_example": "<img src={sanitizeUrl(world.coverImage)} />",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "The 'WorldCard' component is part of the UI layer and should ensure all inputs are sanitized."
+    },
+    {
+      "id": "SEC-003",
+      "title": "No Authentication Mechanism Detected",
+      "type": "MissingControl",
+      "control": "AuthN",
+      "category": "AuthZ",
+      "location": [
+        "src/components/ArticleTemplateSelector.tsx"
+      ],
+      "evidence": "No authentication mechanism found in the 'ArticleTemplateSelector' component or related files.",
+      "impact": "Without authentication, unauthorized users may access or manipulate sensitive data.",
+      "likelihood": "High",
+      "severity": "Critical",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A2",
+        "CWE-287"
+      ],
+      "fix": {
+        "steps": [
+          "Implement an authentication system using OAuth or JWT.",
+          "Ensure all API endpoints require authentication."
+        ],
+        "secure_example": "Use Passport.js for authentication in Node.js applications.",
+        "owner_hint": "Backend",
+        "eta": "\u22641d"
+      },
+      "notes": "Authentication is a critical control that should be implemented across all components handling user data."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Lack of Rate Limiting",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "src/hooks/use-mobile.tsx"
+      ],
+      "evidence": "No rate limiting mechanism found in the 'useIsMobile' hook or related components.",
+      "impact": "Absence of rate limiting can lead to denial of service through excessive requests.",
+      "likelihood": "Low",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A10",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting using middleware like express-rate-limit.",
+          "Configure rate limits based on user roles and endpoints."
+        ],
+        "secure_example": "app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }))",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "Rate limiting should be applied to all API endpoints to prevent abuse."
+    },
+    {
+      "id": "SEC-047",
+      "title": "Lack of Input Validation in Supabase Queries",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "AuthZ",
+      "location": [
+        "src/hooks/useFolders.ts:16-56"
+      ],
+      "evidence": "The fetchFolders function does not validate the worldId parameter before using it in a database query.",
+      "impact": "This could lead to unauthorized data access or SQL injection if worldId is manipulated.",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A01",
+        "CWE-89"
+      ],
+      "fix": {
+        "steps": [
+          "Validate worldId before using it in queries.",
+          "Use parameterized queries."
+        ],
+        "secure_example": "const validatedWorldId = validate(worldId);",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "The fetchFolders function in useFolders.ts lacks input validation for the worldId parameter."
+    },
+    {
+      "id": "SEC-048",
+      "title": "Excessive Toast Removal Delay",
+      "type": "Issue",
+      "control": "Other",
+      "category": "Other",
+      "location": [
+        "src/hooks/use-toast.ts:8-12"
+      ],
+      "evidence": "TOAST_REMOVE_DELAY is set to 1000000, which is excessively long and could lead to memory issues.",
+      "impact": "This could cause memory leaks or performance degradation over time.",
+      "likelihood": "Low",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "CWE-400"
+      ],
+      "fix": {
+        "steps": [
+          "Reduce the TOAST_REMOVE_DELAY to a reasonable value."
+        ],
+        "secure_example": "const TOAST_REMOVE_DELAY = 5000;",
+        "owner_hint": "Frontend",
+        "eta": "\u226430m"
+      },
+      "notes": "The excessive delay in toast removal could lead to memory issues."
+    },
+    {
+      "id": "SEC-049",
+      "title": "Missing Rate Limiting",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "src/hooks/useFolders.ts"
+      ],
+      "evidence": "No rate limiting implementation found in useFolders.ts or related API calls.",
+      "impact": "Lack of rate limiting could lead to denial of service through excessive requests.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A10"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting on API endpoints accessed by useFolders."
+        ],
+        "secure_example": "Use a middleware to limit requests per IP.",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "Rate limiting is not implemented, which could lead to potential abuse."
+    },
+    {
+      "id": "SEC-050",
+      "title": "Regex Injection in Tag Extraction",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/hooks/useTagsAndLinks.ts:16-30"
+      ],
+      "evidence": "const tagMatches = article.content.match(/#([A-Za-z0-9\\-_]+)/g);",
+      "impact": "Improper input validation could allow regex injection, leading to potential denial of service or unexpected behavior.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A1",
+        "CWE-1333"
+      ],
+      "fix": {
+        "steps": [
+          "Sanitize input before using it in regex operations.",
+          "Implement input validation to ensure only expected characters are processed."
+        ],
+        "secure_example": "const sanitizedContent = sanitize(article.content); const tagMatches = sanitizedContent.match(/#([A-Za-z0-9\\-_]+)/g);",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "The function useTagsAndLinks processes article content without sanitization, which could lead to regex injection."
+    },
+    {
+      "id": "SEC-051",
+      "title": "Error Handling with Information Disclosure",
+      "type": "Issue",
+      "control": "ErrorHandling",
+      "category": "Logging",
+      "location": [
+        "src/hooks/useArticles.ts:54-56"
+      ],
+      "evidence": "setError(err instanceof Error ? err.message : 'Failed to fetch articles');",
+      "impact": "Detailed error messages could disclose sensitive information about the system's internals, aiding attackers in crafting attacks.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A6",
+        "CWE-209"
+      ],
+      "fix": {
+        "steps": [
+          "Replace detailed error messages with generic ones.",
+          "Log detailed errors securely on the server side."
+        ],
+        "secure_example": "setError('An error occurred while fetching articles.');",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "The useArticles hook exposes detailed error messages to the client, which could reveal sensitive information."
+    },
+    {
+      "id": "SEC-052",
+      "title": "Missing Audit Logging",
+      "type": "MissingControl",
+      "control": "AuditLogging",
+      "category": "Logging",
+      "location": [
+        "src/hooks/useArticles.ts"
+      ],
+      "evidence": "No audit logging implementation found in src/hooks/useArticles.ts",
+      "impact": "Lack of audit logging makes it difficult to detect and respond to unauthorized access or data manipulation.",
+      "likelihood": "High",
+      "severity": "High",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A10",
+        "CWE-778"
+      ],
+      "fix": {
+        "steps": [
+          "Implement audit logging for critical operations such as create, update, and delete actions."
+        ],
+        "secure_example": "Log actions with user identifiers and timestamps to a secure logging service.",
+        "owner_hint": "DevOps",
+        "eta": "\u22641d"
+      },
+      "notes": "The useArticles hook performs critical operations without audit logging, which is essential for security monitoring."
+    },
+    {
+      "id": "SEC-053",
+      "title": "Hardcoded API Key Retrieval",
+      "type": "Issue",
+      "control": "Secrets",
+      "category": "Secrets",
+      "location": [
+        "src/lib/openai.ts:6-12"
+      ],
+      "evidence": "function getApiKey() { const apiKey = localStorage.getItem('openai_api_key') ... }",
+      "impact": "Storing API keys in localStorage can lead to unauthorized access if the storage is compromised.",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A2",
+        "CWE-798"
+      ],
+      "fix": {
+        "steps": [
+          "Use a secure vault to store API keys.",
+          "Retrieve keys securely at runtime."
+        ],
+        "secure_example": "Use environment variables or a secure vault service.",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "The getApiKey function retrieves the API key from localStorage, which is not secure."
+    },
+    {
+      "id": "SEC-054",
+      "title": "Missing Rate Limiting on API Requests",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "src/lib/openai.ts:45-95"
+      ],
+      "evidence": "No rate limiting implementation found in API request functions.",
+      "impact": "Lack of rate limiting can lead to abuse of the API, resulting in denial of service or increased costs.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A4",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting middleware.",
+          "Configure limits based on expected usage."
+        ],
+        "secure_example": "Use a library like express-rate-limit for Node.js applications.",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "The sendChatMessage and generateImage functions do not implement any rate limiting."
+    },
+    {
+      "id": "SEC-055",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/pages/Index.tsx:1-70"
+      ],
+      "evidence": "No security headers such as CSP, HSTS, or X-Frame-Options found in the application.",
+      "impact": "Absence of security headers increases the risk of attacks like XSS, clickjacking, and man-in-the-middle.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A6",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Add security headers using a middleware or server configuration.",
+          "Ensure headers are correctly configured."
+        ],
+        "secure_example": "Use helmet middleware in Express.js to set security headers.",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "The Index component does not include any security headers in its HTTP responses."
+    },
+    {
+      "id": "SEC-056",
+      "title": "Hardcoded Supabase Publishable Key",
+      "type": "Issue",
+      "control": "Secrets",
+      "category": "Secrets",
+      "location": [
+        "src/integrations/supabase/client.ts:5-7"
+      ],
+      "evidence": "const SUPABASE_PUBLISHABLE_KEY = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVvbHNseHNkb3Jvem5kemt4amN1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ0NjMzMTksImV4cCI6MjA3MDAzOTMxOX0.ajZAnskcVvWV3Jf6P0nskszQtn-JLFkcMx_3KN6jTb0\";",
+      "impact": "Hardcoded secrets can be easily extracted, leading to unauthorized access to the Supabase database.",
+      "likelihood": "High",
+      "severity": "Critical",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A2",
+        "CWE-798"
+      ],
+      "fix": {
+        "steps": [
+          "Move the key to a secure environment variable.",
+          "Use a secrets management tool to handle sensitive data."
+        ],
+        "secure_example": "const SUPABASE_PUBLISHABLE_KEY = process.env.SUPABASE_PUBLISHABLE_KEY;",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "The Supabase client in 'client.ts' uses a hardcoded publishable key, which should be replaced with a secure method of secrets management."
+    },
+    {
+      "id": "SEC-057",
+      "title": "Console Error Logging in Production",
+      "type": "Issue",
+      "control": "Logging",
+      "category": "Logging",
+      "location": [
+        "src/pages/NotFound.tsx:8-10"
+      ],
+      "evidence": "console.error(\"404 Error: User attempted to access non-existent route:\", location.pathname);",
+      "impact": "Logging errors to the console in production can lead to information disclosure and is not suitable for production environments.",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A3",
+        "CWE-209"
+      ],
+      "fix": {
+        "steps": [
+          "Remove console logging in production builds.",
+          "Implement a proper logging mechanism that respects environment settings."
+        ],
+        "secure_example": "if (process.env.NODE_ENV !== 'production') { console.error(...); }",
+        "owner_hint": "Frontend",
+        "eta": "\u226430m"
+      },
+      "notes": "The 'NotFound' component logs errors to the console, which should be avoided in production environments."
+    },
+    {
+      "id": "SEC-058",
+      "title": "Missing Environment Separation",
+      "type": "MissingControl",
+      "control": "EnvironmentSeparation",
+      "category": "Cloud",
+      "location": [
+        "src/integrations/supabase/client.ts"
+      ],
+      "evidence": "No environment-specific configuration found in 'client.ts'.",
+      "impact": "Lack of environment separation can lead to accidental exposure of sensitive data and configurations.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "CWE-657"
+      ],
+      "fix": {
+        "steps": [
+          "Implement environment-specific configurations.",
+          "Use environment variables to differentiate between dev, staging, and prod."
+        ],
+        "secure_example": "const SUPABASE_URL = process.env.SUPABASE_URL;",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "The Supabase client configuration does not differentiate between environments, which is a best practice for cloud applications."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/alert-dialog.tsx:1-100"
+      ],
+      "evidence": "No Content Security Policy (CSP) or X-Frame-Options headers found in AlertDialog component.",
+      "impact": "Lack of security headers can lead to vulnerabilities such as clickjacking and cross-site scripting (XSS).",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A5:2017",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Add CSP and X-Frame-Options headers to the HTTP response.",
+          "Ensure headers are set for all components."
+        ],
+        "secure_example": "res.setHeader('Content-Security-Policy', \"default-src 'self'\");",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "Ensure headers are configured in the server or middleware handling these components."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Lack of Input Validation in Pagination Component",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/ui/pagination.tsx:1-100"
+      ],
+      "evidence": "PaginationLink component does not validate 'isActive' prop.",
+      "impact": "Without input validation, there is a risk of injection attacks if user input is not properly sanitized.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A1:2017",
+        "CWE-20"
+      ],
+      "fix": {
+        "steps": [
+          "Implement validation for 'isActive' prop to ensure it is a boolean.",
+          "Use a validation library if necessary."
+        ],
+        "secure_example": "const isActive = typeof props.isActive === 'boolean' ? props.isActive : false;",
+        "owner_hint": "Frontend",
+        "eta": "\u226430m"
+      },
+      "notes": "Consider using a prop validation library like PropTypes or TypeScript for stricter type checking."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Missing Rate Limiting",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "src/components/ui/pagination.tsx:1-100"
+      ],
+      "evidence": "No rate limiting mechanism found in Pagination component.",
+      "impact": "Absence of rate limiting can lead to denial of service (DoS) attacks by allowing excessive requests.",
+      "likelihood": "Low",
+      "severity": "Low",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A10:2017",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting on API endpoints serving pagination data.",
+          "Use middleware to enforce limits."
+        ],
+        "secure_example": "app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }));",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "Ensure rate limiting is applied at the API level to protect against excessive requests."
+    },
+    {
+      "id": "SEC-062",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/tabs.tsx:1-50",
+        "src/components/ui/card.tsx:1-50",
+        "src/components/ui/slider.tsx:1-50"
+      ],
+      "evidence": "No security headers such as Content-Security-Policy (CSP), X-Frame-Options, or X-Content-Type-Options are implemented in the components.",
+      "impact": "The absence of security headers can lead to vulnerabilities such as clickjacking, MIME type sniffing, and cross-site scripting (XSS).",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A6:2017",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Implement security headers in the HTTP response.",
+          "Use a library or middleware to set headers like CSP, X-Frame-Options, and X-Content-Type-Options."
+        ],
+        "secure_example": "app.use(helmet());",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "Ensure that all components served by the server have appropriate security headers."
+    },
+    {
+      "id": "SEC-063",
+      "title": "Lack of Input Validation",
+      "type": "MissingControl",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/ui/tabs.tsx:1-50",
+        "src/components/ui/card.tsx:1-50",
+        "src/components/ui/slider.tsx:1-50"
+      ],
+      "evidence": "No input validation mechanisms are present in the components to sanitize user inputs.",
+      "impact": "Without input validation, the application is susceptible to injection attacks, including XSS and SQL injection.",
+      "likelihood": "Low",
+      "severity": "Low",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A1:2017",
+        "CWE-20"
+      ],
+      "fix": {
+        "steps": [
+          "Implement input validation for all user inputs.",
+          "Use libraries like Joi or express-validator for validation."
+        ],
+        "secure_example": "const schema = Joi.object({ username: Joi.string().alphanum().min(3).max(30).required() });",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "Consider using a validation library to enforce input constraints across the application."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/popover.tsx:1-30",
+        "src/components/ui/progress.tsx:1-30",
+        "src/components/ui/toaster.tsx:1-30"
+      ],
+      "evidence": "No security headers implementation found in the UI components.",
+      "impact": "The absence of security headers like CSP and X-Frame-Options increases the risk of clickjacking and XSS attacks.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A6",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Implement Content-Security-Policy header.",
+          "Add X-Frame-Options header to prevent clickjacking."
+        ],
+        "secure_example": "app.use(helmet());",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "Ensure all UI components include necessary security headers to mitigate common web vulnerabilities."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Potential XSS in Toast Component",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/ui/toaster.tsx:5-25"
+      ],
+      "evidence": "The Toaster component renders user-provided data without sanitization.",
+      "impact": "Unsanitized user input in the Toaster component could lead to XSS attacks, compromising user data and application integrity.",
+      "likelihood": "Medium",
+      "severity": "Low",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A7",
+        "CWE-79"
+      ],
+      "fix": {
+        "steps": [
+          "Sanitize user input before rendering.",
+          "Use a library like DOMPurify to clean HTML."
+        ],
+        "secure_example": "import DOMPurify from 'dompurify'; const clean = DOMPurify.sanitize(userInput);",
+        "owner_hint": "Frontend",
+        "eta": "\u226430m"
+      },
+      "notes": "Review all user input handling in UI components to ensure proper sanitization."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Input Validation in OTP Component",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/ui/input-otp.tsx:20-50"
+      ],
+      "evidence": "The InputOTPSlot component does not validate the 'char' input from OTPInputContext.",
+      "impact": "Lack of input validation can lead to injection attacks or unexpected behavior if malicious input is processed.",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A01",
+        "CWE-20"
+      ],
+      "fix": {
+        "steps": [
+          "Implement input validation for 'char' in InputOTPSlot.",
+          "Use a library or regex to ensure only valid characters are processed."
+        ],
+        "secure_example": "if (!/^[0-9]$/.test(char)) { throw new Error('Invalid input'); }",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "The InputOTPSlot component relies on external input without validation, which could be exploited."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Missing Security Headers in Chart Component",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/chart.tsx:10-100"
+      ],
+      "evidence": "No security headers are set in the ChartContainer component.",
+      "impact": "Missing security headers can lead to vulnerabilities such as clickjacking and XSS.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A06",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Add security headers such as Content-Security-Policy and X-Frame-Options to the ChartContainer component."
+        ],
+        "secure_example": "<meta http-equiv='Content-Security-Policy' content='default-src 'self';'>",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "The ChartContainer component should include security headers to protect against common web vulnerabilities."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Lack of Authentication Mechanism",
+      "type": "MissingControl",
+      "control": "AuthN",
+      "category": "AuthN",
+      "location": [
+        "src/components/ui/hover-card.tsx:10-50"
+      ],
+      "evidence": "No authentication mechanism found in the HoverCard component or related files.",
+      "impact": "Without authentication, unauthorized users may access sensitive components or data.",
+      "likelihood": "High",
+      "severity": "Low",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A02",
+        "CWE-287"
+      ],
+      "fix": {
+        "steps": [
+          "Implement an authentication mechanism to protect access to the HoverCard component."
+        ],
+        "secure_example": "Use OAuth or JWT for authentication.",
+        "owner_hint": "Frontend",
+        "eta": "\u22641d"
+      },
+      "notes": "The HoverCard component should be protected by an authentication mechanism to prevent unauthorized access."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Security Headers in UI Components",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/sheet.tsx:1-100",
+        "src/components/ui/scroll-area.tsx:1-50",
+        "src/components/ui/resizable.tsx:1-50"
+      ],
+      "evidence": "No security headers implementation found in UI components.",
+      "impact": "Lack of security headers can lead to vulnerabilities such as clickjacking and XSS.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A6",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Implement security headers such as CSP, X-Frame-Options, and X-XSS-Protection in the server configuration serving these components."
+        ],
+        "secure_example": "Add headers in server config: Content-Security-Policy, X-Frame-Options, X-XSS-Protection.",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "Ensure server configurations are updated to include necessary security headers."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Lack of Input Validation in Resizable Component",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "Other",
+      "location": [
+        "src/components/ui/resizable.tsx:1-50"
+      ],
+      "evidence": "ResizableHandle component does not validate 'withHandle' prop.",
+      "impact": "Improper input validation can lead to unexpected behavior or security vulnerabilities.",
+      "likelihood": "Low",
+      "severity": "Low",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A1",
+        "CWE-20"
+      ],
+      "fix": {
+        "steps": [
+          "Add prop type validation for 'withHandle' to ensure it is a boolean."
+        ],
+        "secure_example": "PropTypes.checkPropTypes({ withHandle: PropTypes.bool }, props, 'prop', 'ResizableHandle');",
+        "owner_hint": "Frontend",
+        "eta": "\u226430m"
+      },
+      "notes": "Consider using PropTypes or TypeScript for stricter type checking."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Missing Rate Limiting Controls",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "src/components/ui/sheet.tsx:1-100",
+        "src/components/ui/scroll-area.tsx:1-50",
+        "src/components/ui/resizable.tsx:1-50"
+      ],
+      "evidence": "No rate limiting controls found in the UI components or their interactions.",
+      "impact": "Absence of rate limiting can lead to abuse of resources and potential denial of service.",
+      "likelihood": "Low",
+      "severity": "Low",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A10",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting at the API level to control the number of requests from UI components."
+        ],
+        "secure_example": "Use middleware to enforce rate limits on API endpoints.",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "Ensure backend APIs interacting with these components have rate limiting in place."
+    },
+    {
+      "id": "SEC-072",
+      "title": "Missing Security Headers in UI Components",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/label.tsx:1-30",
+        "src/components/ui/sonner.tsx:1-20",
+        "src/components/ui/navigation-menu.tsx:1-100"
+      ],
+      "evidence": "No security headers implementation found in UI components.",
+      "impact": "Lack of security headers such as CSP, HSTS, and X-Frame-Options can lead to vulnerabilities like clickjacking and XSS.",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A6",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Implement security headers in the server configuration.",
+          "Ensure headers are applied to all UI components."
+        ],
+        "secure_example": "app.use(helmet());",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "Ensure that all UI components are served with appropriate security headers."
+    },
+    {
+      "id": "SEC-073",
+      "title": "Lack of Input Validation in Navigation Menu",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/ui/navigation-menu.tsx:10-90"
+      ],
+      "evidence": "NavigationMenu component does not validate input props, potentially allowing injection attacks.",
+      "impact": "Without input validation, the component may be vulnerable to injection attacks, leading to unauthorized actions or data exposure.",
+      "likelihood": "High",
+      "severity": "Medium",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A1",
+        "CWE-20"
+      ],
+      "fix": {
+        "steps": [
+          "Implement input validation for all props in the NavigationMenu component.",
+          "Use libraries like Joi or Yup for validation."
+        ],
+        "secure_example": "const schema = Joi.object({ className: Joi.string().required() });",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "Review all input handling in the NavigationMenu component to ensure robust validation."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Input Validation in ChatBubbleMessage Component",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/ui/chat-bubble.tsx:45-67"
+      ],
+      "evidence": "The ChatBubbleMessage component does not validate or sanitize the children prop, which could lead to XSS if user input is rendered directly.",
+      "impact": "Lack of input validation can lead to cross-site scripting (XSS) vulnerabilities, potentially allowing attackers to execute malicious scripts in the user's browser.",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A07:2021",
+        "CWE-79"
+      ],
+      "fix": {
+        "steps": [
+          "Implement input validation and sanitization for the children prop.",
+          "Use libraries like DOMPurify to sanitize HTML content."
+        ],
+        "secure_example": "children={sanitize(children)}",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "The ChatBubbleMessage component in the chat-bubble.tsx file lacks input validation for the children prop, which is critical for preventing XSS."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Missing Security Headers in Drawer Component",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/drawer.tsx"
+      ],
+      "evidence": "No security headers such as Content Security Policy (CSP) or X-Frame-Options are implemented in the Drawer component.",
+      "impact": "Missing security headers can lead to vulnerabilities such as clickjacking and content injection attacks.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A06:2021",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Implement security headers in the server configuration or middleware.",
+          "Ensure CSP and X-Frame-Options headers are set appropriately."
+        ],
+        "secure_example": "Content-Security-Policy: default-src 'self';",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "The Drawer component lacks implementation of security headers, which are essential for protecting against various web attacks."
+    },
+    {
+      "id": "SEC-004",
+      "title": "No Rate Limiting on UI Components",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "src/components/ui"
+      ],
+      "evidence": "No rate limiting mechanism is found in the UI components to prevent abuse or denial of service.",
+      "impact": "Absence of rate limiting can lead to denial of service attacks or abuse of resources by malicious users.",
+      "likelihood": "Low",
+      "severity": "Low",
+      "confidence": "Low",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A10:2021",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting at the API level to control the number of requests from a single user.",
+          "Use middleware or API gateway solutions to enforce rate limits."
+        ],
+        "secure_example": "Use express-rate-limit middleware in Node.js applications.",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "Rate limiting is not implemented in the UI components, which could lead to potential abuse."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/message-loading.tsx:1-30",
+        "src/components/ui/tooltip.tsx:1-30",
+        "src/components/ui/alert.tsx:1-30"
+      ],
+      "evidence": "No security headers implementation found in the analyzed components.",
+      "impact": "The absence of security headers like Content Security Policy (CSP) and X-Frame-Options can lead to vulnerabilities such as clickjacking and cross-site scripting (XSS).",
+      "likelihood": "Medium",
+      "severity": "Low",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A6:2017",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Implement security headers in the HTTP response.",
+          "Use a library or middleware to set headers like CSP, X-Frame-Options, etc."
+        ],
+        "secure_example": "app.use(helmet());",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "The components do not include any server-side logic where headers would typically be set, indicating a need for server configuration."
+    },
+    {
+      "id": "SEC-001",
+      "title": "Insecure Storage of API Key in localStorage",
+      "type": "Issue",
+      "control": "Secrets",
+      "category": "Secrets",
+      "location": [
+        "src/components/ui/secret-form.tsx:23-67"
+      ],
+      "evidence": "localStorage.setItem('openai_api_key', apiKey);",
+      "impact": "Storing API keys in localStorage exposes them to potential theft via XSS attacks, leading to unauthorized access to the API.",
+      "likelihood": "High",
+      "severity": "Critical",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A3",
+        "CWE-922"
+      ],
+      "fix": {
+        "steps": [
+          "Use a secure storage mechanism like HTTP-only cookies or a secure vault.",
+          "Ensure API keys are encrypted before storage."
+        ],
+        "secure_example": "Use secure cookies or environment variables for storing API keys.",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "The handleSubmit function in SecretForm component stores the API key insecurely."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Audit Logging",
+      "type": "MissingControl",
+      "control": "Logging",
+      "category": "Logging",
+      "location": [
+        "src/components/ui/secret-form.tsx"
+      ],
+      "evidence": "No logging implementation found in src/components/ui/secret-form.tsx",
+      "impact": "Without audit logging, it is difficult to track access and changes to sensitive data, hindering incident response and forensic analysis.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A10",
+        "CWE-778"
+      ],
+      "fix": {
+        "steps": [
+          "Implement audit logging for key actions such as API key configuration.",
+          "Ensure logs are stored securely and monitored."
+        ],
+        "secure_example": "Use a logging library to capture and store audit logs securely.",
+        "owner_hint": "Backend",
+        "eta": "\u22641d"
+      },
+      "notes": "The SecretForm component lacks any form of audit logging for API key configuration actions."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Security Headers in UI Components",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/calendar.tsx:1-67",
+        "src/components/ui/breadcrumb.tsx:1-95",
+        "src/components/ui/radio-group.tsx:1-56"
+      ],
+      "evidence": "No security headers implementation found in UI components.",
+      "impact": "Lack of security headers like CSP and X-Frame-Options can lead to vulnerabilities such as clickjacking and XSS.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A6:2017",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Implement security headers in the HTTP responses.",
+          "Ensure CSP and X-Frame-Options are configured correctly."
+        ],
+        "secure_example": "app.use(helmet());",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "Ensure that all UI components are served with appropriate security headers."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Lack of Input Validation in UI Components",
+      "type": "MissingControl",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/ui/calendar.tsx:1-67",
+        "src/components/ui/breadcrumb.tsx:1-95",
+        "src/components/ui/radio-group.tsx:1-56"
+      ],
+      "evidence": "No input validation mechanisms found in UI components.",
+      "impact": "Without input validation, the application is susceptible to injection attacks and XSS.",
+      "likelihood": "Low",
+      "severity": "Low",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A1:2017",
+        "CWE-20"
+      ],
+      "fix": {
+        "steps": [
+          "Implement input validation for all user inputs.",
+          "Use libraries like Joi or Yup for validation."
+        ],
+        "secure_example": "const schema = Joi.object({ name: Joi.string().min(3).required() });",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "Consider using a validation library to enforce input constraints."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Authentication Mechanism",
+      "type": "MissingControl",
+      "control": "AuthN",
+      "category": "AuthZ",
+      "location": [
+        "src/components/ui/command.tsx:1-100"
+      ],
+      "evidence": "No authentication mechanism found in src/components/ui/command.tsx",
+      "impact": "Without authentication, unauthorized users may access sensitive components.",
+      "likelihood": "High",
+      "severity": "High",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A01",
+        "CWE-306"
+      ],
+      "fix": {
+        "steps": [
+          "Implement an authentication mechanism using OAuth2 or JWT.",
+          "Ensure all components require authentication before access."
+        ],
+        "secure_example": "Use Passport.js for authentication in Node.js applications.",
+        "owner_hint": "Backend",
+        "eta": "\u22641d"
+      },
+      "notes": "The Command component should be protected by an authentication layer."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Missing Input Validation",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/ui/toggle-group.tsx:1-50"
+      ],
+      "evidence": "ToggleGroup component does not validate input props.",
+      "impact": "Lack of input validation can lead to injection attacks.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A03",
+        "CWE-20"
+      ],
+      "fix": {
+        "steps": [
+          "Add input validation for all props in ToggleGroup.",
+          "Use a library like Joi for schema validation."
+        ],
+        "secure_example": "Validate input using Joi: Joi.string().alphanum().min(3).max(30).required()",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "Ensure all input fields are validated to prevent malicious data entry."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Lack of Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/avatar.tsx:1-50"
+      ],
+      "evidence": "No security headers are set in the Avatar component.",
+      "impact": "Missing security headers can lead to vulnerabilities like XSS and clickjacking.",
+      "likelihood": "Low",
+      "severity": "Low",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A06",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Add security headers such as Content-Security-Policy and X-Frame-Options.",
+          "Ensure headers are set at the server level."
+        ],
+        "secure_example": "Content-Security-Policy: default-src 'self';",
+        "owner_hint": "DevOps",
+        "eta": "\u226430m"
+      },
+      "notes": "Security headers should be configured at the server level for all components."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/menubar.tsx:1-200",
+        "src/components/ui/dialog.tsx:1-200",
+        "src/components/ui/badge.tsx:1-50"
+      ],
+      "evidence": "No Content Security Policy (CSP), X-Frame-Options, or HSTS headers found in the components.",
+      "impact": "Lack of security headers can lead to vulnerabilities such as clickjacking, XSS, and man-in-the-middle attacks.",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A6:2017",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Implement CSP, X-Frame-Options, and HSTS headers in the HTTP response.",
+          "Ensure headers are correctly configured in the server or middleware."
+        ],
+        "secure_example": "app.use(helmet());",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "Ensure headers are added at the server level or through middleware in the application."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Lack of Input Validation",
+      "type": "MissingControl",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/ui/menubar.tsx:1-200",
+        "src/components/ui/dialog.tsx:1-200"
+      ],
+      "evidence": "No input validation mechanisms found in the Menubar and Dialog components.",
+      "impact": "Without input validation, the application is susceptible to injection attacks such as XSS or SQL injection.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A1:2017",
+        "CWE-20"
+      ],
+      "fix": {
+        "steps": [
+          "Implement input validation for all user inputs.",
+          "Use libraries like Joi or express-validator for validation."
+        ],
+        "secure_example": "const schema = Joi.object({ input: Joi.string().required() });",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "Consider using a validation library to enforce input constraints."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Missing Audit Logging",
+      "type": "MissingControl",
+      "control": "Logging",
+      "category": "Logging",
+      "location": [
+        "src/components/ui/menubar.tsx:1-200",
+        "src/components/ui/dialog.tsx:1-200",
+        "src/components/ui/badge.tsx:1-50"
+      ],
+      "evidence": "No audit logging found in the components to track security events.",
+      "impact": "Without audit logging, it is difficult to detect and respond to security incidents.",
+      "likelihood": "Low",
+      "severity": "Low",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A10:2017",
+        "CWE-778"
+      ],
+      "fix": {
+        "steps": [
+          "Implement logging for security-relevant events.",
+          "Use a logging framework like Winston or Bunyan."
+        ],
+        "secure_example": "logger.info('User login attempt');",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "Ensure logs are stored securely and monitored for suspicious activity."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Insecure Cookie Handling",
+      "type": "Issue",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/sidebar.tsx:87-89"
+      ],
+      "evidence": "document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`",
+      "impact": "Cookies are set without the Secure or HttpOnly flags, making them vulnerable to theft via XSS or network attacks.",
+      "likelihood": "High",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A3",
+        "CWE-614"
+      ],
+      "fix": {
+        "steps": [
+          "Add Secure and HttpOnly flags to the cookie.",
+          "Ensure cookies are only set over HTTPS."
+        ],
+        "secure_example": "document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}; Secure; HttpOnly`",
+        "owner_hint": "Frontend",
+        "eta": "\u226430m"
+      },
+      "notes": "The setOpen function in SidebarProvider is responsible for setting the cookie."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/sidebar.tsx"
+      ],
+      "evidence": "No Content Security Policy (CSP) or other security headers found in the component.",
+      "impact": "Without security headers like CSP, X-Frame-Options, and HSTS, the application is vulnerable to clickjacking, XSS, and man-in-the-middle attacks.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A6",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Implement CSP, X-Frame-Options, and HSTS headers in the server configuration."
+        ],
+        "secure_example": "Content-Security-Policy: default-src 'self';",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "Needs verification with server-side configuration."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Security Headers in UI Components",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/button.tsx:1-50",
+        "src/components/ui/toggle.tsx:1-50",
+        "src/components/ui/toast.tsx:1-100"
+      ],
+      "evidence": "No Content Security Policy (CSP) or other security headers found in the UI component files.",
+      "impact": "Lack of security headers can lead to vulnerabilities such as XSS and data injection attacks.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A6",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Implement CSP headers in the server configuration.",
+          "Ensure all UI components are served with appropriate security headers."
+        ],
+        "secure_example": "Content-Security-Policy: default-src 'self';",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "Ensure that all UI components are served with security headers to mitigate potential attacks."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Lack of Input Validation in Button Component",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/ui/button.tsx:30-50"
+      ],
+      "evidence": "The Button component does not validate input props, which could lead to unexpected behavior.",
+      "impact": "Without input validation, the component may be susceptible to injection attacks or other unexpected behavior.",
+      "likelihood": "Low",
+      "severity": "Low",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A1",
+        "CWE-20"
+      ],
+      "fix": {
+        "steps": [
+          "Add prop type validation for the Button component.",
+          "Use PropTypes or TypeScript interfaces to enforce input types."
+        ],
+        "secure_example": "interface ButtonProps { variant: 'default' | 'destructive'; size: 'sm' | 'lg'; }",
+        "owner_hint": "Frontend",
+        "eta": "\u226430m"
+      },
+      "notes": "Consider using TypeScript interfaces to enforce stricter input validation."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Missing Rate Limiting for Toast Notifications",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "src/components/ui/toast.tsx:1-100"
+      ],
+      "evidence": "No rate limiting mechanism found for toast notifications, which could lead to spam or denial of service.",
+      "impact": "Without rate limiting, an attacker could flood the UI with toast notifications, leading to a denial of service.",
+      "likelihood": "Low",
+      "severity": "Low",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A7",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement a rate limiting mechanism for toast notifications.",
+          "Use a debounce or throttle function to limit the frequency of toast displays."
+        ],
+        "secure_example": "function showToast() { if (!isRateLimited()) { displayToast(); } }",
+        "owner_hint": "Frontend",
+        "eta": "\u226430m"
+      },
+      "notes": "Consider using a library or custom implementation to handle rate limiting for UI components."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Input Validation in Chat Input Component",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/ui/chat-input.tsx:10-20"
+      ],
+      "evidence": "The ChatInput component does not perform any input validation on the 'message' field. Function: ChatInput",
+      "impact": "Lack of input validation can lead to injection attacks such as XSS, potentially compromising user data and application integrity.",
+      "likelihood": "High",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A01:2021",
+        "CWE-79"
+      ],
+      "fix": {
+        "steps": [
+          "Implement input validation for the 'message' field.",
+          "Sanitize input to prevent XSS."
+        ],
+        "secure_example": "<Textarea {...props} onChange={validateInput} />",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "The ChatInput component is used for user-generated content, making it a critical point for input validation."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui"
+      ],
+      "evidence": "No security headers such as CSP, HSTS, or X-Frame-Options are implemented in the application.",
+      "impact": "Absence of security headers increases the risk of attacks like clickjacking, man-in-the-middle, and content injection.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A06:2021",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Add security headers in the HTTP response.",
+          "Configure web server to include CSP, HSTS, and X-Frame-Options."
+        ],
+        "secure_example": "Content-Security-Policy: default-src 'self';",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "Security headers should be configured at the server level to protect all components."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Missing Audit Logging",
+      "type": "MissingControl",
+      "control": "Logging",
+      "category": "Logging",
+      "location": [
+        "src/components/ui"
+      ],
+      "evidence": "No audit logging mechanism is implemented to track security events.",
+      "impact": "Without audit logging, it is difficult to detect and respond to security incidents, increasing the risk of undetected breaches.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0.3",
+        "OWASP Top 10 A09:2021",
+        "CWE-778"
+      ],
+      "fix": {
+        "steps": [
+          "Implement logging for security-relevant events.",
+          "Ensure logs are stored securely and monitored."
+        ],
+        "secure_example": "logger.info('User login attempt', { userId: user.id });",
+        "owner_hint": "Backend",
+        "eta": "\u22641d"
+      },
+      "notes": "Audit logging is essential for incident response and forensic analysis."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Input Validation in Textarea Component",
+      "type": "MissingControl",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/ui/textarea.tsx:10-22"
+      ],
+      "evidence": "No input validation implementation found in Textarea component.",
+      "impact": "Lack of input validation can lead to injection attacks such as XSS if user input is not properly sanitized.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A01",
+        "CWE-20"
+      ],
+      "fix": {
+        "steps": [
+          "Implement input validation for the Textarea component.",
+          "Use libraries like DOMPurify to sanitize input."
+        ],
+        "secure_example": "<textarea {...props} onInput={sanitizeInput} />",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "The Textarea component does not currently validate or sanitize user input, which could be exploited in certain contexts."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Missing Security Headers in Dropdown and Select Components",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/dropdown-menu.tsx:1-100",
+        "src/components/ui/select.tsx:1-100"
+      ],
+      "evidence": "No security headers implementation found in Dropdown and Select components.",
+      "impact": "Absence of security headers like CSP and X-Frame-Options can lead to vulnerabilities such as clickjacking and data injection.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A06",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Add security headers in the HTTP response for components.",
+          "Use middleware to enforce headers like CSP and X-Frame-Options."
+        ],
+        "secure_example": "app.use(helmet());",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "Security headers are not enforced in the HTTP responses for these components, increasing the risk of certain attacks."
+    },
+    {
+      "id": "SEC-098",
+      "title": "Missing Input Validation in Input Component",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/ui/input.tsx:6-18"
+      ],
+      "evidence": "The Input component does not perform any input validation on the 'type' or other props, potentially allowing for injection attacks.",
+      "impact": "Without input validation, the application is vulnerable to injection attacks, which could compromise data integrity and security.",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A01",
+        "CWE-20"
+      ],
+      "fix": {
+        "steps": [
+          "Implement input validation for 'type' and other props.",
+          "Use a validation library to ensure inputs are sanitized."
+        ],
+        "secure_example": "<input type={sanitize(type)} {...props} />",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "The Input component in 'src/components/ui/input.tsx' lacks input validation, which is crucial for preventing injection attacks."
+    },
+    {
+      "id": "SEC-099",
+      "title": "Missing Security Headers in Context Menu Component",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/context-menu.tsx:1-100"
+      ],
+      "evidence": "No security headers such as Content Security Policy (CSP) or X-Frame-Options are set in the context menu component.",
+      "impact": "The absence of security headers increases the risk of clickjacking and other client-side attacks.",
+      "likelihood": "High",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A06",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Add security headers like CSP and X-Frame-Options to the HTTP response.",
+          "Ensure headers are set server-side for all components."
+        ],
+        "secure_example": "Content-Security-Policy: default-src 'self';",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "The Context Menu component in 'src/components/ui/context-menu.tsx' does not include security headers, which are essential for protecting against client-side attacks."
+    },
+    {
+      "id": "SEC-002",
+      "title": "Missing Input Validation in Form Components",
+      "type": "Issue",
+      "control": "InputValidation",
+      "category": "InputValidation",
+      "location": [
+        "src/components/ui/form.tsx:45-67"
+      ],
+      "evidence": "The FormField component uses Controller from react-hook-form without explicit input validation.",
+      "impact": "Lack of input validation can lead to injection attacks, potentially compromising data integrity and security.",
+      "likelihood": "Medium",
+      "severity": "High",
+      "confidence": "High",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A01",
+        "CWE-20"
+      ],
+      "fix": {
+        "steps": [
+          "Implement input validation using validation schema.",
+          "Use libraries like Yup for schema validation."
+        ],
+        "secure_example": "const schema = Yup.object().shape({ name: Yup.string().required() });",
+        "owner_hint": "Frontend",
+        "eta": "\u22641h"
+      },
+      "notes": "The FormField component should enforce validation rules to prevent invalid data submission."
+    },
+    {
+      "id": "SEC-003",
+      "title": "Missing Security Headers",
+      "type": "MissingControl",
+      "control": "Headers",
+      "category": "Headers",
+      "location": [
+        "src/components/ui/carousel.tsx:1-100"
+      ],
+      "evidence": "No security headers are set in the Carousel component.",
+      "impact": "Absence of security headers like CSP and HSTS can lead to vulnerabilities such as XSS and downgrade attacks.",
+      "likelihood": "Medium",
+      "severity": "Medium",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A06",
+        "CWE-693"
+      ],
+      "fix": {
+        "steps": [
+          "Set security headers in the server configuration.",
+          "Use middleware to enforce headers."
+        ],
+        "secure_example": "app.use(helmet());",
+        "owner_hint": "DevOps",
+        "eta": "\u22641h"
+      },
+      "notes": "Ensure that all components are served with appropriate security headers."
+    },
+    {
+      "id": "SEC-004",
+      "title": "Lack of Rate Limiting",
+      "type": "MissingControl",
+      "control": "RateLimiting",
+      "category": "Other",
+      "location": [
+        "src/components/ui/chat-message-list.tsx:1-50"
+      ],
+      "evidence": "No rate limiting mechanism is implemented for the ChatMessageList component.",
+      "impact": "Without rate limiting, the application is vulnerable to denial-of-service attacks.",
+      "likelihood": "Low",
+      "severity": "Low",
+      "confidence": "Medium",
+      "standards": [
+        "OWASP-ASVS V4.0",
+        "OWASP Top 10 A10",
+        "CWE-770"
+      ],
+      "fix": {
+        "steps": [
+          "Implement rate limiting using middleware.",
+          "Configure limits based on expected traffic."
+        ],
+        "secure_example": "app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }));",
+        "owner_hint": "Backend",
+        "eta": "\u22641h"
+      },
+      "notes": "Consider using libraries like express-rate-limit to enforce rate limiting."
+    }
+  ],
+  "analysis_metadata": {
+    "total_agents": 37,
+    "total_files": 0,
+    "context_management": "enabled"
+  }
+}
